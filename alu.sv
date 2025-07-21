@@ -1,9 +1,12 @@
 // combinational -- no clock
 // debug starting place: need 'assign?'
 /* Questions for TA:
- * load, store, move, compare in ALU or elsewhere?
+ * compare in ALU or elsewhere? doing compare right?
  * need pari, zero outputs?
+ * need +0 for moves?
  */
+import definitions::*;			         // includes package "definitions"
+
 module alu(
   input[3:0] alu_cmd,    // ALU instruction
   input[7:0] inA, inB,	 // 8-bit wide data path; inA is always implied register
@@ -14,6 +17,8 @@ module alu(
 			   zero      // NOR (output)
 );
 
+  op_mne op_mnemonic;			         // type enum: used for convenient waveform viewing
+
 always_comb begin 
   rslt = 'b0;            
   sc_o = 'b0;    
@@ -21,36 +26,32 @@ always_comb begin
   pari = ^rslt;
   case(alu_cmd)
 
-	4'b0000:	// load from memory
+	MOVF:	// move val from reg B to A
 	  rslt = inB;
-	4'b0001:	// store to memory
+	MOVT:	// move val to reg B from A
 	  rslt = inA;
-	4'b0010:	// move from reg inB to inA
+	MOVI:	// move immediate to register; immediate in inB
 	  rslt = inB;
-	4'b0011:	// move to reg inB from inA
-	  rslt = inA;
-	4'b0100:	// move immediate to register; immediate is inB
-	  rslt = inB;
-	4'b0101:	// compare
+	CMPR:	// compare
 	  if (inA == inB)
 	    rslt = 8'b00000000;
 	  else if (inA < inB)
 	    rslt = 8'b00000001;
 	  else
 	    rslt = 8'b00000010;
-	4'b0110:	// bitwise NOT; flips inB
+	BNOT:	// bitwise NOT; flips inB
 	  rslt = ~inB;
-	4'b0111:	// bitwise OR
+	BORR:	// bitwise OR
 	  rslt = inA | inB;
-	4'b1000:	// bitwise AND
+	BAND:	// bitwise AND
 	  rslt = inA & inB;
-	4'b1001:	// logical shift left
+	LSHL:	// logical shift left
 	  rslt = inA << inB;
-	4'b1010:	// logical shift right
+	LSHR:	// logical shift right
 	  rslt = inA >> inB;
-	4'b1011:	// add register value
+	ADDR:	// add register value
 	  {sc_o,rslt} = inA + inB + sc_i;
-	4'b1100:	// subtract register value
+	SUBBR:	// subtract register value
 	  {sc_o,rslt} = inA - inB + sc_i;
 
   endcase
