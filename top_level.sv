@@ -17,7 +17,6 @@ module top_level(
 			  muxWA,
 			  muxWD,
 			  rslt,               // alu output
-              immed,
 			  mem_out;
   logic equalQ,			          // registered compare flags from ALU
 		less_thanQ,			      // registered compare flags from ALU
@@ -34,6 +33,7 @@ module top_level(
   wire[8:0]   mach_code;          // machine code
   wire[3:0] rd_addrA, rd_adrB;    // address pointers to reg_file
   logic[5:0] how_high;
+  logic[3:0] immed;
 // fetch subassembly
   PC #(.D(D)) 					  // D sets program counter width
      pc1 (.reset            ,
@@ -54,6 +54,7 @@ module top_level(
                .mach_code);
 			   
   assign how_high = mach_code[5:0];
+  assign immed = mach_code[3:0];
 
 // control decoder
   Control ctl1(
