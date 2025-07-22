@@ -17,23 +17,25 @@ module top_level(
 			  muxWA,
 			  muxWD,
 			  rslt,               // alu output
+              immed,
 			  mem_out;
   logic equalQ,			          // registered compare flags from ALU
 		less_thanQ,			      // registered compare flags from ALU
 		greater_thanQ;			  // registered compare flags from ALU
   wire  relj;                     // from control to PC; relative jump enable
   wire  equal,
-		less_than,
-		greater_than,
-		sc_clr,
-		sc_en,
+    less_than,
+    greater_than,
+    sc_clr,
+    sc_en,
         MemWrite,
         ALUSrc;		              // immediate switch
+
+  logic sc_in;
   wire[A-1:0] alu_cmd;
   wire[8:0]   mach_code;          // machine code
   wire[3:0] rd_addrA, rd_adrB;    // address pointers to reg_file
   logic[5:0] how_high;
-  logic[3:0] immed;
 // fetch subassembly
   PC #(.D(D)) 					  // D sets program counter width
      pc1 (.reset            ,
@@ -54,7 +56,6 @@ module top_level(
                .mach_code);
 			   
   assign how_high = mach_code[5:0];
-  assign immed = mach_code[3:0];
 
 // control decoder
   Control ctl1(
@@ -111,7 +112,7 @@ module top_level(
 	less_thanQ <= less_than;
 	greater_thanQ <= greater_than;
     if(sc_clr)
-	  sc_in <= 'b0;
+	    sc_in <= 'b0;
     else if(sc_en)
       sc_in <= sc_o;
   end
