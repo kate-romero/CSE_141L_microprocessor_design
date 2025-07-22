@@ -19,12 +19,13 @@ module top_level(
 			  rslt,               // alu output
               immed,
 			  mem_out;
-  logic sc_in,   				  // shift/carry out from/to ALU
-   		pariQ,              	  // registered parity flag from ALU
-		zeroQ;                    // registered zero flag from ALU 
+  logic equalQ,			          // registered compare flags from ALU
+		less_thanQ,			      // registered compare flags from ALU
+		greater_thanQ;			  // registered compare flags from ALU
   wire  relj;                     // from control to PC; relative jump enable
-  wire  pari,
-        zero,
+  wire  equal,
+		less_than,
+		greater_than,
 		sc_clr,
 		sc_en,
         MemWrite,
@@ -51,16 +52,23 @@ module top_level(
 // contains machine code
   instr_ROM ir1(.prog_ctr,
                .mach_code);
+			   
+  assign how_high = mach_code[5:0]
 
 // control decoder
-  Control ctl1(.instr(mach_code),
-  .Branch  (relj)  , 
-  .How_high(how_high) ,
+  Control ctl1(
+  .instrType(mach_code[8:8]),
+  .bopcode(mach_code[7:6}),
+  .ropcode(mach_code[7:4]),
+  .equalQ,
+  .less_thanQ,
+  .greater_thanQ,
+  .Branch  (relj)  ,
+  .MemtoReg,
   .MemWrite , 
   .ALUSrc   , 
   .RegWrite   , 
-  .RegWAddr,
-  .MemtoReg);
+  .RegWAddr);
 
   assign alu_cmd  = mach_code[7:4];
   assign rd_addrA = 'b0000;				// implied dest reg (for most ops)
@@ -86,7 +94,9 @@ module top_level(
 		 .sc_i   (sc),   // output from sc register
 		 .rslt       ,
 		 .sc_o   (sc_o), // input to sc register
-		 .pari  );  
+		 .equal,
+		 .less_than,
+		 .greater_than);  
 
   dat_mem dm1(.dat_in(datA)  ,  // from imp_reg
              .clk           ,
@@ -96,8 +106,9 @@ module top_level(
 
 // registered flags from ALU
   always_ff @(posedge clk) begin
-    pariQ <= pari;
-	zeroQ <= zero;
+    equalQ <= equal;
+	less_thanQ <= less_than;
+	greater_thanQ <= greater_than;
     if(sc_clr)
 	  sc_in <= 'b0;
     else if(sc_en)

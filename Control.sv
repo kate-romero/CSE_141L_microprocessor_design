@@ -7,10 +7,10 @@ import definitions::*;			        // includes package "definitions"
 module Control (
   input [8:8] instrType,	// instruction type (B=1 or R=0)
   input [7:6] bopcode,    	// branch opcode
-  input [5:0] jump_dist,	// branch distance
   input [7:4] ropcode,		// r-type intruction opcode
-  output logic RegDst, Branch, How_high,
-     MemtoReg, MemWrite, ALUSrc, RegWrite, RegWAddr);
+  input [0:0] equal, less_than, greater_than,
+  output logic Branch, MemtoReg, MemWrite, 
+			   ALUSrc, RegWrite, RegWAddr);
   
     op_mne op_mnemonic;			        // type enum: used for convenient waveform viewing
 
@@ -27,8 +27,12 @@ always_comb begin
   case(instrType)		// check instruction type
     'b1:	// b-type
 	  begin
-	    Branch = 'b1;
-		How_high = jump_dist;
+	    case(bopcode)
+		  00: Branch = equal;
+		  01: Branch = less_than;
+		  10: Branch = greater_than;
+		  11: Branch = less_than | greater_than;
+		endcase
 	  end
 	'b0:	// r-type
 	  begin
