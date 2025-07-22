@@ -10,7 +10,7 @@ module top_level(
   wire[D-1:0] //target, 			  // jump 
               prog_ctr;
   wire        RegWrite,
-			  RegWaddr,
+			  RegWAddr,
 			  MemtoReg;
   wire[7:0]   datA,datB,		  // from RegFile
               muxB, 
@@ -53,12 +53,12 @@ module top_level(
   instr_ROM ir1(.prog_ctr,
                .mach_code);
 			   
-  assign how_high = mach_code[5:0]
+  assign how_high = mach_code[5:0];
 
 // control decoder
   Control ctl1(
   .instrType(mach_code[8:8]),
-  .bopcode(mach_code[7:6}),
+  .bopcode(mach_code[7:6]),
   .ropcode(mach_code[7:4]),
   .equalQ,
   .less_thanQ,
