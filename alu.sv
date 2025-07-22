@@ -13,17 +13,21 @@ module alu(
   input      sc_i,       // shift_carry in
   output logic[7:0] rslt,// almost always sent to implied register
   output logic sc_o,     // shift_carry out
-               pari,     // reduction XOR (output)
-			   zero      // NOR (output)
+               zero,      // NOR (output)
+			   equal,
+			   less_than,
+			   greater_than
 );
 
   op_mne op_mnemonic;			         // type enum: used for convenient waveform viewing
 
 always_comb begin 
   rslt = 'b0;            
-  sc_o = 'b0;    
+  sc_o = 'b0;   
+  equal = 'b0;
+  less_than = 'b0;
+  greater_than = 'b0;
   zero = !rslt;
-  pari = ^rslt;
   case(alu_cmd)
 
 	MOVF:	// move val from reg B to A
@@ -33,12 +37,12 @@ always_comb begin
 	MOVI:	// move immediate to register; immediate in inB
 	  rslt = inB;
 	CMPR:	// compare
-	  if (inA == inB)
-	    rslt = 8'b00000000;
-	  else if (inA < inB)
-	    rslt = 8'b00000001;
-	  else
-	    rslt = 8'b00000010;
+	    if (inA == inB)
+			equal = 1'b1;
+	    else if (inA < inB)
+			less_than = 1'b1;
+	    else
+			greater_than = 1'b1;
 	BNOT:	// bitwise NOT; flips inB
 	  rslt = ~inB;
 	BORR:	// bitwise OR
@@ -51,7 +55,7 @@ always_comb begin
 	  rslt = inA >> inB;
 	ADDR:	// add register value
 	  {sc_o,rslt} = inA + inB + sc_i;
-	SUBBR:	// subtract register value
+	SUBR:	// subtract register value
 	  {sc_o,rslt} = inA - inB + sc_i;
 
   endcase
