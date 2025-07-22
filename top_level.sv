@@ -75,7 +75,7 @@ module top_level(
   assign rd_addrB = mach_code[3:0];
   
   assign muxWA = RegWAddr? rd_addrA : rd_addrB;
-  assign muxWD = MemtoReg? mem_out : result;
+  assign muxWD = MemtoReg? mem_out : rslt;
 
   reg_file #(.pw(3)) rf1(.dat_in(MemtoReg),	   // loads, most ops
               .clk         ,
@@ -91,7 +91,7 @@ module top_level(
   alu alu1(.alu_cmd,
          .inA    (datA),
 		 .inB    (muxB),
-		 .sc_i   (sc),   // output from sc register
+		 .sc_i	 (sc_in),   // output from sc register
 		 .rslt       ,
 		 .sc_o   (sc_o), // input to sc register
 		 .equal,
