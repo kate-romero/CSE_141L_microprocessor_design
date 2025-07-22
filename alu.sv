@@ -39,9 +39,12 @@ always_comb begin
 	MOVI:	// move immediate to register; immediate in inB
 	  rslt = inB;
 	CMPR:	// compare
-	    equal = (inA == inB);
-	    less_than = (inA < inB);
-	    greater_than = (inA > inB);
+	    if (inA == inB)
+			equal = 1'b1;
+	    else if (inA < inB)
+			less_than = 1'b1;
+	    else
+			greater_than = 1'b1;
 	BNOT:	// bitwise NOT; flips inB
 	  rslt = ~inB;
 	BORR:	// bitwise OR
