@@ -13,8 +13,7 @@ module alu(
   input      sc_i,       // shift_carry in
   output logic[7:0] rslt,// almost always sent to implied register
   output logic sc_o,     // shift_carry out
-               pari,     // reduction XOR (output)
-			   zero,      // NOR (output)
+               zero,      // NOR (output)
 			   equal,
 			   less_than,
 			   greater_than
@@ -29,7 +28,6 @@ always_comb begin
   less_than = 'b0;
   greater_than = 'b0;
   zero = !rslt;
-  pari = ^rslt;
   case(alu_cmd)
 
 	MOVF:	// move val from reg B to A
