@@ -2,7 +2,7 @@
 
 // TA Questions: how to change relative jump to absolute branch?
 
-module top_level(
+module TopLevel(
   input        clk, reset, req, 
   output logic done);
   parameter D = 12,             // program counter width

@@ -1,0 +1,57 @@
+# Compile of alu.sv was successful.
+# Compile of Control.sv was successful.
+# Compile of dat_mem.sv was successful.
+# Compile of PC.sv was successful.
+# Compile of reg_file.sv was successful.
+# Compile of top_level.sv was successful.
+# Compile of new_fix2flt_tb.sv was successful.
+# Compile of data_mem0.sv was successful.
+# Compile of Top_level0.sv was successful.
+# 9 compiles, 0 failed with no errors.
+vsim -gui work.new_int2flt_tb
+# vsim -gui work.new_int2flt_tb 
+# Start time: 17:56:33 on Jul 23,2025
+# Loading sv_std.std
+# Loading work.new_int2flt_tb
+# ** Error: (vsim-3033) Instantiation of 'TopLevel' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /new_int2flt_tb File: C:/Users/kate_/OneDrive/Desktop/CSE 141L/CSE_141L_microprocessor_design/program_1_export/new_fix2flt_tb.sv Line: 28
+#         Searched libraries:
+#             C:/Users/kate_/OneDrive/Desktop/CSE 141L/CSE_141L_microprocessor_design/work
+# Loading work.TopLevel0
+# Loading work.data_mem0
+# Error loading design
+# End time: 17:56:34 on Jul 23,2025, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 6
+# Compile of alu.sv was successful.
+# Compile of Control.sv was successful.
+# Compile of dat_mem.sv was successful.
+# Compile of PC.sv was successful.
+# Compile of reg_file.sv was successful.
+# Compile of top_level.sv was successful.
+# Compile of new_fix2flt_tb.sv was successful.
+# Compile of data_mem0.sv was successful.
+# Compile of Top_level0.sv was successful.
+# 9 compiles, 0 failed with no errors.
+vsim -gui work.new_int2flt_tb
+# vsim -gui work.new_int2flt_tb 
+# Start time: 17:58:40 on Jul 23,2025
+# Loading sv_std.std
+# Loading work.new_int2flt_tb
+# Loading work.TopLevel
+# Loading work.PC
+# ** Error: (vsim-3033) Instantiation of 'instr_ROM' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /new_int2flt_tb/f1 File: C:/Users/kate_/OneDrive/Desktop/CSE 141L/CSE_141L_microprocessor_design/top_level.sv Line: 55
+#         Searched libraries:
+#             C:/Users/kate_/OneDrive/Desktop/CSE 141L/CSE_141L_microprocessor_design/work
+# Loading work.definitions
+# Loading work.Control_sv_unit
+# Loading work.Control
+# Loading work.reg_file
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.dat_mem
+# Loading work.TopLevel0
+# Loading work.data_mem0
+# Error loading design
+# End time: 17:58:42 on Jul 23,2025, Elapsed time: 0:00:02
+# Errors: 1, Warnings: 2

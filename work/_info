@@ -1,0 +1,373 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/kate_/OneDrive/Desktop/CSE 141L/CSE_141L_example_processor_1
+valu
+Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z1 DXx4 work 11 definitions 0 22 9=Xi5^F9[9d]QD2`Obk^X0
+DXx4 work 11 alu_sv_unit 0 22 gF?_a8@iY=6GQNje]k9US3
+Z2 !s110 1753318704
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+!i10b 1
+!s100 OoeMI1lS5on]oljz>OFVQ1
+IIo9nGIUhXDJARJRZU76Hc1
+!s105 alu_sv_unit
+S1
+Z4 dC:/Users/kate_/OneDrive/Desktop/CSE 141L/CSE_141L_microprocessor_design
+Z5 w1753317732
+Z6 8C:/Users/kate_/OneDrive/Desktop/CSE 141L/CSE_141L_microprocessor_design/alu.sv
+Z7 FC:/Users/kate_/OneDrive/Desktop/CSE 141L/CSE_141L_microprocessor_design/alu.sv
+!i122 37
+L0 29 55
+Z8 OV;L;2020.1;71
+31
+Z9 !s108 1753318704.000000
+Z10 !s107 C:/Users/kate_/OneDrive/Desktop/CSE 141L/CSE_141L_microprocessor_design/alu.sv|
+Z11 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/kate_/OneDrive/Desktop/CSE 141L/CSE_141L_microprocessor_design/alu.sv|
+!i113 1
+Z12 o-work work -sv
+Z13 tCvgOpt 0
+Xalu_sv_unit
+R0
+R1
+R2
+VgF?_a8@iY=6GQNje]k9US3
+r1
+!s85 0
+!i10b 1
+!s100 _BAWBE_oFNAIUL`58S7PW3
+IgF?_a8@iY=6GQNje]k9US3
+!i103 1
+S1
+R4
+R5
+R6
+R7
+!i122 37
+L0 8 0
+R8
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+vControl
+R0
+R1
+DXx4 work 15 Control_sv_unit 0 22 H@<`]__eY8]gF`lTY0iQ`0
+R2
+R3
+r1
+!s85 0
+!i10b 1
+!s100 9;jbgVfB9^l@_i4Vn6LTk0
+IbaJ>JEE:Men]jLVAmKkJ63
+!s105 Control_sv_unit
+S1
+R4
+Z14 w1753317830
+Z15 8C:/Users/kate_/OneDrive/Desktop/CSE 141L/CSE_141L_microprocessor_design/Control.sv
+Z16 FC:/Users/kate_/OneDrive/Desktop/CSE 141L/CSE_141L_microprocessor_design/Control.sv
+!i122 38
+L0 26 59
+R8
+31
+R9
+Z17 !s107 C:/Users/kate_/OneDrive/Desktop/CSE 141L/CSE_141L_microprocessor_design/Control.sv|
+Z18 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/kate_/OneDrive/Desktop/CSE 141L/CSE_141L_microprocessor_design/Control.sv|
+!i113 1
+R12
+R13
+n@control
+XControl_sv_unit
+R0
+R1
+R2
+VH@<`]__eY8]gF`lTY0iQ`0
+r1
+!s85 0
+!i10b 1
+!s100 LNLhA8IX>5E@TkD5^DLbK0
+IH@<`]__eY8]gF`lTY0iQ`0
+!i103 1
+S1
+R4
+R14
+R15
+R16
+!i122 38
+L0 5 0
+R8
+31
+R9
+R17
+R18
+!i113 1
+R12
+R13
+n@control_sv_unit
+vdat_mem
+R0
+R2
+!i10b 1
+!s100 PgPV4^zJZl0nj@YZba^;f1
+Z19 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I:QE@LTZb=Z@Oc6HjKQ=;]1
+R3
+S1
+R4
+w1753144861
+8C:/Users/kate_/OneDrive/Desktop/CSE 141L/CSE_141L_microprocessor_design/dat_mem.sv
+FC:/Users/kate_/OneDrive/Desktop/CSE 141L/CSE_141L_microprocessor_design/dat_mem.sv
+!i122 39
+L0 3 18
+R8
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/kate_/OneDrive/Desktop/CSE 141L/CSE_141L_microprocessor_design/dat_mem.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/kate_/OneDrive/Desktop/CSE 141L/CSE_141L_microprocessor_design/dat_mem.sv|
+!i113 1
+R12
+R13
+vdata_mem0
+R0
+Z20 !s110 1753318706
+!i10b 1
+!s100 hODB;n<D5bVodK1?e@J`B0
+R19
+I6[JJoadA23eYQzkJ8?:_V3
+R3
+S1
+R4
+Z21 w1753318322
+8C:/Users/kate_/OneDrive/Desktop/CSE 141L/CSE_141L_microprocessor_design/program_1_export/data_mem0.sv
+FC:/Users/kate_/OneDrive/Desktop/CSE 141L/CSE_141L_microprocessor_design/program_1_export/data_mem0.sv
+!i122 44
+L0 9 31
+R8
+r1
+!s85 0
+31
+Z22 !s108 1753318706.000000
+!s107 C:/Users/kate_/OneDrive/Desktop/CSE 141L/CSE_141L_microprocessor_design/program_1_export/data_mem0.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/kate_/OneDrive/Desktop/CSE 141L/CSE_141L_microprocessor_design/program_1_export/data_mem0.sv|
+!i113 1
+R12
+R13
+Xdefinitions
+R0
+Z23 !s110 1753317837
+!i10b 1
+!s100 37:9]Y<];kLRG@YT>0b2<1
+R19
+I9=Xi5^F9[9d]QD2`Obk^X0
+V9=Xi5^F9[9d]QD2`Obk^X0
+S1
+R4
+w1753149200
+8C:/Users/kate_/OneDrive/Desktop/CSE 141L/CSE_141L_microprocessor_design/definitions.sv
+FC:/Users/kate_/OneDrive/Desktop/CSE 141L/CSE_141L_microprocessor_design/definitions.sv
+!i122 23
+L0 4 0
+R8
+r1
+!s85 0
+31
+Z24 !s108 1753317837.000000
+!s107 C:/Users/kate_/OneDrive/Desktop/CSE 141L/CSE_141L_microprocessor_design/definitions.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/kate_/OneDrive/Desktop/CSE 141L/CSE_141L_microprocessor_design/definitions.sv|
+!i113 1
+R12
+R13
+vnew_int2flt_tb
+R0
+R20
+!i10b 1
+!s100 K<o=AgQBNk_5Em;6E<m:>3
+R19
+I[KzNXal<5Pk^;6G1EZ`d>3
+R3
+S1
+R4
+R21
+8C:/Users/kate_/OneDrive/Desktop/CSE 141L/CSE_141L_microprocessor_design/program_1_export/new_fix2flt_tb.sv
+FC:/Users/kate_/OneDrive/Desktop/CSE 141L/CSE_141L_microprocessor_design/program_1_export/new_fix2flt_tb.sv
+!i122 43
+L0 10 149
+R8
+r1
+!s85 0
+31
+Z25 !s108 1753318705.000000
+!s107 C:/Users/kate_/OneDrive/Desktop/CSE 141L/CSE_141L_microprocessor_design/program_1_export/new_fix2flt_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/kate_/OneDrive/Desktop/CSE 141L/CSE_141L_microprocessor_design/program_1_export/new_fix2flt_tb.sv|
+!i113 1
+R12
+R13
+vPC
+R0
+Z26 !s110 1753318705
+!i10b 1
+!s100 Db1U@Y]5c_9Z]H_6[DcJh0
+R19
+IUcJSijRXicWCzEKNFgY?E3
+R3
+S1
+R4
+w1753143801
+8C:/Users/kate_/OneDrive/Desktop/CSE 141L/CSE_141L_microprocessor_design/PC.sv
+FC:/Users/kate_/OneDrive/Desktop/CSE 141L/CSE_141L_microprocessor_design/PC.sv
+!i122 40
+L0 4 21
+R8
+r1
+!s85 0
+31
+R25
+!s107 C:/Users/kate_/OneDrive/Desktop/CSE 141L/CSE_141L_microprocessor_design/PC.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/kate_/OneDrive/Desktop/CSE 141L/CSE_141L_microprocessor_design/PC.sv|
+!i113 1
+R12
+R13
+n@p@c
+vPC_tb
+R0
+R23
+!i10b 1
+!s100 JAfhoBMHOL=POe97;?aIi1
+R19
+INOl]=M1FXZif`D9G4ceS>2
+R3
+S1
+R4
+Z27 w1753152048
+8C:/Users/kate_/OneDrive/Desktop/CSE 141L/CSE_141L_microprocessor_design/PC_tb.sv
+FC:/Users/kate_/OneDrive/Desktop/CSE 141L/CSE_141L_microprocessor_design/PC_tb.sv
+!i122 25
+L0 2 60
+R8
+r1
+!s85 0
+31
+R24
+!s107 C:/Users/kate_/OneDrive/Desktop/CSE 141L/CSE_141L_microprocessor_design/PC_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/kate_/OneDrive/Desktop/CSE 141L/CSE_141L_microprocessor_design/PC_tb.sv|
+!i113 1
+R12
+R13
+n@p@c_tb
+vreg_file
+R0
+R26
+!i10b 1
+!s100 E2Xo6j`39@>PU6cOLS@o73
+R19
+IOSNEOQ74@I4Q7j<c6W?iF0
+R3
+S1
+R4
+w1752938021
+8C:/Users/kate_/OneDrive/Desktop/CSE 141L/CSE_141L_microprocessor_design/reg_file.sv
+FC:/Users/kate_/OneDrive/Desktop/CSE 141L/CSE_141L_microprocessor_design/reg_file.sv
+!i122 41
+L0 3 22
+R8
+r1
+!s85 0
+31
+R25
+!s107 C:/Users/kate_/OneDrive/Desktop/CSE 141L/CSE_141L_microprocessor_design/reg_file.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/kate_/OneDrive/Desktop/CSE 141L/CSE_141L_microprocessor_design/reg_file.sv|
+!i113 1
+R12
+R13
+vtop_level
+R0
+!s110 1753318572
+!i10b 1
+!s100 WHP<QK>1FOn:XT20Ga@Zj3
+R19
+IDd<[nMjzflTEXPVXdkTac1
+R3
+S1
+R4
+R27
+Z28 8C:/Users/kate_/OneDrive/Desktop/CSE 141L/CSE_141L_microprocessor_design/top_level.sv
+Z29 FC:/Users/kate_/OneDrive/Desktop/CSE 141L/CSE_141L_microprocessor_design/top_level.sv
+!i122 33
+Z30 L0 5 118
+R8
+r1
+!s85 0
+31
+!s108 1753318572.000000
+Z31 !s107 C:/Users/kate_/OneDrive/Desktop/CSE 141L/CSE_141L_microprocessor_design/top_level.sv|
+Z32 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/kate_/OneDrive/Desktop/CSE 141L/CSE_141L_microprocessor_design/top_level.sv|
+!i113 1
+R12
+R13
+vTopLevel
+R0
+R26
+!i10b 1
+!s100 BQaULVL^S0aS8CHJ^;BcS1
+R19
+IZDcDfRoX_6kUX8:`8I2n?2
+R3
+S1
+R4
+w1753318691
+R28
+R29
+!i122 42
+R30
+R8
+r1
+!s85 0
+31
+R25
+R31
+R32
+!i113 1
+R12
+R13
+n@top@level
+vTopLevel0
+R0
+R20
+!i10b 1
+!s100 Q@O:IPR^Bh1_3B`Y3aSzU1
+R19
+IWdWGYR`f?<Z=EJIEaEajW0
+R3
+S1
+R4
+R21
+8C:/Users/kate_/OneDrive/Desktop/CSE 141L/CSE_141L_microprocessor_design/program_1_export/Top_level0.sv
+FC:/Users/kate_/OneDrive/Desktop/CSE 141L/CSE_141L_microprocessor_design/program_1_export/Top_level0.sv
+!i122 45
+L0 7 49
+R8
+r1
+!s85 0
+31
+R22
+!s107 C:/Users/kate_/OneDrive/Desktop/CSE 141L/CSE_141L_microprocessor_design/program_1_export/Top_level0.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/kate_/OneDrive/Desktop/CSE 141L/CSE_141L_microprocessor_design/program_1_export/Top_level0.sv|
+!i113 1
+R12
+R13
+n@top@level0
