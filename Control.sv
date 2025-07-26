@@ -18,10 +18,11 @@ import definitions::*;			        // includes package "definitions"
     const logic [3:0]kLSHR  = 4'b1010;
     const logic [3:0]kADDR  = 4'b1011;
 	const logic [3:0]kSUBR  = 4'b1100;
+	const logic [3:0]kHALT  = 4'b1101;
 // enum names will appear in timing diagram
     typedef enum logic[3:0] {
         LOAD, STOR, MOVF, MOVT, MOVI, CMPR, BNOT, 
-		BORR, BAND, LSHL, LSHR, ADDR, SUBR } op_mne;
+		BORR, BAND, LSHL, LSHR, ADDR, SUBR, HALT } op_mne;
 
 module Control (
   input [8:8] instrType,	// instruction type (B=1 or R=0)
@@ -74,6 +75,10 @@ always_comb begin
 		  MOVT, BNOT:
 			begin
 			  RegWAddr = 'b1;	// dest reg B (not imp_reg A)
+			end
+		  HALT:
+		    begin
+			  RegWrite = 'b0;	// Don't write to register on HALT
 			end
 		endcase
 	  end
