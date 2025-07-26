@@ -2,7 +2,7 @@
 
 // TA Questions: how to change relative jump to absolute branch?
 
-module TopLevel(
+module top_level(
   input        clk, reset, req, 
   output logic done);
   parameter D = 12,             // program counter width
@@ -76,10 +76,11 @@ module TopLevel(
   assign rd_addrA = 'b0000;				// implied dest reg (for most ops)
   assign rd_addrB = mach_code[3:0];
   
-  assign muxWA = RegWAddr? rd_addrA : rd_addrB;
+  assign muxWA = RegWAddr? rd_addrB : rd_addrA;
   assign muxWD = MemtoReg? mem_out : rslt;
+  assign immed = mach_code[3:0];  // Get immediate from instruction bits [3:0]
 
-  reg_file #(.pw(3)) rf1(.dat_in(MemtoReg),	   // loads, most ops
+  reg_file #(.pw(4)) rf1(.dat_in(muxWD),	   // Fixed: pw=4 for 16 registers, use muxWD
               .clk         ,
               .wr_en   (RegWrite),
               .rd_addrA(rd_addrA),
