@@ -11,8 +11,8 @@ MOVT R5
 MOVI b1000  //8
 LSHL R5
 MOVT R5
-// max exponent R6 = 6
-MOVI b0110  //6
+// max exponent R6 = 7
+MOVI b0111  //7
 MOVT R6
 // exponent bias R7 = 15
 MOVI b1111  //15
@@ -23,6 +23,9 @@ MOVT R15
 // one reg for decrementing and shifting R14 = 1
 MOVI 1
 MOVT R14
+MOVT R12    // leading 1 in upper byte?
+MOVI 2
+MOVT R13    // exp +- 2
 
 // grab sign bit
 MOVF R1
@@ -45,11 +48,8 @@ CMPR R15
 BNEQ $label_2    // branch if leading 1 in lower byte
 DONE
 
-// put lower byte in R1
-MOVT R1     // $label_2
-
-// find leading 1
-MOVF R1     // re-get leading 1 byte    $label_0
+// find leading 1 in upper byte
+MOVF R1     // re-get upper byte    $label_0
 BAND R5
 CMPR R15    // #49.if ((reg_imp & reg_sign_mask) != 0)
 BNEQ $label_1
@@ -68,14 +68,133 @@ MOVT R5
 CMPR R15    // R0 ? 0    #47.while (reg_sign_mask)
 BNEQ $label_0
 
-// reset R1
-LOAD M1
-// clear sign bit
-BNOT R5
-MOVF R1
+// prep to find leading 1 in lower byte
+MOVI 0      // $label_2
+MOVT R12
+MOVI 1
+MOVT R6
+// find leading 1 in lower byte
+MOVF R2     // re-get lower byte    $label_3
 BAND R5
-MOVT R1
-BNOT R5
+CMPR R15    // #49.if ((reg_imp & reg_sign_mask) != 0)
+BNEQ $label_4
+
+// increment exponent
+MOVF R6
+ADDR R14
+MOVT R6
+
+// sign mask logic shift right
+MOVF R5
+LSHR R14
+MOVT R5
+
+// loop back
+CMPR R15    // R0 ? 0    #47.while (reg_sign_mask)
+BNEQ $label_3
 
 // have exponent; TODO: shift
-XXXX RRR    // label_1
+// upper: set exponent + bias in upper byte out
+MOVF R7    // $label_1
+ADDR R6
+LSHL R13
+BORR R3
+MOVT R3
+MOVI 1
+CMPR R12
+BREQ $label_5   // long branch stepping stone
+DONE            // should never hit
+
+// lower: set exponent + bias in upper byte out
+MOVF R7    // $label_4
+SUBR R6
+LSHL R13
+BORR R3
+MOVT R3
+MOVI 0
+CMPR R12
+BREQ $label_7   // long branch stepping stone
+DONE            // should never hit
+
+/**************** upper shift exp >= 2 ****************/
+// adjust exp for hidden 1
+MOVF R6     // $label_5
+CMPR R13
+BRLT $label_7   // handle lead up exp < 2
+SUBR R13
+MOVT R11
+
+// build up_out
+MOVF R1
+LSHR R11
+MOVT R10
+// hide 1
+MOVI b1011
+BAND R10
+MOVT R10
+// upper mantissa
+MOVF R3
+BORR R10
+STOR M3
+
+// build low_out
+MOVF R2
+LSHR R11
+MOVT R2
+MOVI 8
+SUBR R3
+MOVT R11
+MOVF R1
+LSHL R11
+BORR R2
+STOR M2
+DONE
+
+MOVI 0      //$label_7
+CMPR        // long branch stepping stone
+BREQ $label_6
+/**************** upper shift exp < 2 ****************/
+// adjust for hidden 1
+MOVF R13
+SUBR R6
+MOVF R11
+
+// build low_out
+MOVF R2
+LSHL R11
+STOR M2
+
+// build up_out
+MOVF R1
+LSHL R11
+BORR R3
+MOVT R3
+MOVI 8
+SUBR R11
+MOVT R11
+MOVF R2
+LSHR R11
+BORR R3
+STOR M3
+DONE
+
+/**************** lower shift exp ****************/
+// adjust exp for hidden 1
+MOVF R6     // $label_6
+ADDR R13
+MOVT R11
+
+// build low_out
+MOVF R2
+LSHL R11
+STOR M2
+
+// build up_out
+MOVI 8
+SUBR R11
+MOVT R11
+MOVF R2
+LSHR R11
+BORR R3
+STOR M3
+DONE
