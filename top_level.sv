@@ -118,6 +118,6 @@ module top_level(
       sc_in <= sc_o;
   end
 
-  assign done = prog_ctr == 128;
- 
+  assign done = (mach_code[8:4] == {1'b0, HALT});
+	
 endmodule
