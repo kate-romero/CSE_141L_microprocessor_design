@@ -21,10 +21,11 @@ import definitions::*;			         // includes package "definitions"
     const logic [3:0]kLSHR  = 4'b1010;
     const logic [3:0]kADDR  = 4'b1011;
 	const logic [3:0]kSUBR  = 4'b1100;
+	const logic [3:0]kHALT  = 4'b1101;
 // enum names will appear in timing diagram
     typedef enum logic[3:0] {
         LOAD, STOR, MOVF, MOVT, MOVI, CMPR, BNOT, 
-		BORR, BAND, LSHL, LSHR, ADDR, SUBR } op_mne;
+		BORR, BAND, LSHL, LSHR, ADDR, SUBR, HALT } op_mne;
 
 module alu(
   input[3:0] alu_cmd,    // ALU instruction
@@ -76,8 +77,10 @@ always_comb begin
 	  {sc_o,rslt} = inA + inB + sc_i;
 	SUBR:	// subtract register value
 	  {sc_o,rslt} = inA - inB + sc_i;
+	HALT:	// halt execution - no operation needed
+	  rslt = 8'b0;  // ALU does nothing for HALT
 
   endcase
 end
    
-endmodule
+endmodule 
