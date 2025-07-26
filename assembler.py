@@ -13,7 +13,7 @@ def convert(inFile, outFile1, outFile2):
 	opcodes = {'LOAD' : '0000', 'STOR' : '0001', 'MOVF' : '0010', 'MOVT' : '0011',
 	'MOVI' : '0100', 'CMPR' : '0101', 'BNOT' : '0110', 'BORR' : '0111',
 	'BAND' : '1000', 'LSHL' : '1001', 'LSHR' : '1010', 'ADDR' : '1011', 
-	'SUBR' : '1100'}
+	'SUBR' : '1100', 'HALT' : '1101'}
 	
 	# Branch opcodes (2-bit for b-type instructions)
 	branch_opcodes = {'BEQ' : '00', 'BLT' : '01', 'BGT' : '10', 'BNE' : '11'}
@@ -28,6 +28,9 @@ def convert(inFile, outFile1, outFile2):
 	for line in assembly:
 		instr = line.split()
 		lineNum += 1
+		#skip empty lines and comments
+		if not instr or instr[0].startswith('//'):
+			continue
 		#check if it is a label (ends with ':') or branch instruction
 		if instr[0].endswith(':') or (instr[0] not in opcodes and instr[0] not in branch_opcodes):
 			lut[instr[0].replace(':', '')] = labelsNum
@@ -38,6 +41,9 @@ def convert(inFile, outFile1, outFile2):
 	for line in assembly:
 		output = ""
 		instr = line.split(); #split to get instruction and different operands
+		#skip empty lines and comments
+		if not instr or instr[0].startswith('//'):
+			continue
 		#make sure it is an instruction, skip over labels
 		if instr[0] in opcodes:
 			# R-type instruction format: [instrType=0][opcode=4bits][reg=4bits]
@@ -59,7 +65,7 @@ def convert(inFile, outFile1, outFile2):
 				while len(imm) < 4:
 					imm = '0' + imm
 				output += imm
-			elif instr[0] in ['MOVF', 'MOVT', 'CMPR', 'BNOT']:
+			elif instr[0] in ['MOVF', 'MOVT', 'CMPR', 'BNOT', 'HALT']:
 				# Single register operand
 				if len(instr) > 1:
 					reg = instr[1].replace(',', '')
@@ -114,7 +120,6 @@ def convert(inFile, outFile1, outFile2):
 	assembly_file.close()
 	machine_file.close()
 
-#convert("assembly.txt", "machine.txt", "lut.txt")
-convert("stringmatch.txt", "sm_machine.txt", "sm_lut.txt")
-convert("cordic.txt", "c_machine.txt", "c_lut.txt")
-convert("division.txt", "d_machine.txt", "d_lut.txt")
+convert("program1.txt", "mach_code.txt", "lut.txt")
+# convert("program2.txt", "mach_code.txt", "lut.txt")
+# convert("program3.txt", "mach_code.txt", "lut.txt")
