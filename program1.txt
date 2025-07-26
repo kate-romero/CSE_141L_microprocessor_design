@@ -36,11 +36,23 @@ BAND R5
 MOVT R1
 BNOT R5
 
-// find leading 1 in upper byte
-MOVF R1     // re-get upper byte    #label_0
+// determine which byte contains leading 1
+MOVF R1
+CMPR R15
+BNEQ $label_0   // branch if leading 1 in upper byte
+MOVF R2
+CMPR R15
+BNEQ $label_2    // branch if leading 1 in lower byte
+DONE
+
+// put lower byte in R1
+MOVT R1     // $label_2
+
+// find leading 1
+MOVF R1     // re-get leading 1 byte    $label_0
 BAND R5
 CMPR R15    // #49.if ((reg_imp & reg_sign_mask) != 0)
-BNEQ #label_1       // TODO
+BNEQ $label_1
 
 // decrement exponent
 MOVF R6
@@ -54,9 +66,16 @@ MOVT R5
 
 // loop back
 CMPR R15    // R0 ? 0    #47.while (reg_sign_mask)
-BNEQ #label_0   // TODO
+BNEQ $label_0
 
-// TODO: find leading 1 in lower byte
+// reset R1
+LOAD M1
+// clear sign bit
+BNOT R5
+MOVF R1
+BAND R5
+MOVT R1
+BNOT R5
 
 // have exponent; TODO: shift
 XXXX RRR    // label_1
