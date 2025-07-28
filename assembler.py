@@ -16,26 +16,32 @@ def convert(inFile, outFile1, outFile2):
 	'SUBR' : '1100', 'HALT' : '1101'}
 	
 	# Branch opcodes (2-bit for b-type instructions)
-	branch_opcodes = {'BEQ' : '00', 'BLT' : '01', 'BGT' : '10', 'BNE' : '11'}
+	branch_opcodes = {'BREQ' : '00', 'BRLT' : '01', 'BRGT' : '10', 'BNEQ' : '11'}
 	
-	registers = {'r0' : '0000', 'r1' : '0001', 'r2' : '0010', 'r3' : '0011',
-	'r4' : '0100', 'r5' : '0101', 'r6' : '0110', 'r7' : '0111',
-	'r8' : '1000', 'r9' : '1001', 'r10' : '1010', 'r11' : '1011',
-	'r12' : '1100', 'r13' : '1101', 'r14' : '1110', 'r15' : '1111'}
+	registers = {'R0' : '0000', 'R1' : '0001', 'R2' : '0010', 'R3' : '0011',
+	'R4' : '0100', 'R5' : '0101', 'R6' : '0110', 'R7' : '0111',
+	'R8' : '1000', 'R9' : '1001', 'R10' : '1010', 'R11' : '1011',
+	'R12' : '1100', 'R13' : '1101', 'R14' : '1110', 'R15' : '1111'}
 	
 	#reads through assembly and collects labels to populate lookup table
 	lut = {}
+	machine_line_num = 1
 	for line in assembly:
 		instr = line.split()
-		lineNum += 1
 		#skip empty lines and comments
 		if not instr or instr[0].startswith('//'):
 			continue
-		#check if it is a label (ends with ':') or branch instruction
-		if instr[0].endswith(':') or (instr[0] not in opcodes and instr[0] not in branch_opcodes):
-			lut[instr[0].replace(':', '')] = labelsNum
-			lut_file.write(str(lineNum) + '\n')
-			labelsNum += 1
+		#check if it is a label (ends with ':')
+		if instr[0].endswith(':'):
+			label_name = instr[0].replace(':', '')
+			# Handle both $label_X and label formats
+			if label_name.startswith('$'):
+				label_name = label_name[1:]  # Remove the $ prefix
+			lut[label_name] = machine_line_num
+			lut_file.write(str(machine_line_num) + '\n')
+		# Only increment machine_line_num for actual instructions (not labels)
+		elif instr[0] in opcodes or instr[0] in branch_opcodes:
+			machine_line_num += 1
 	
 	#reads through file to convert instructions to machine code
 	for line in assembly:
@@ -60,8 +66,13 @@ def convert(inFile, outFile1, outFile2):
 					output += '0000'
 			elif instr[0] == 'MOVI':
 				# MOVI: Move immediate 
-				imm = bin(int(instr[1]))[2:]  # convert to binary
-				# pad to 4 bits for immediate
+				imm_value = int(instr[1])
+				# Validate 4-bit immediate range (0-15)
+				if imm_value < 0 or imm_value > 15:
+					imm_value = imm_value & 0xF  # Truncate to 4 bits
+				
+				imm = bin(imm_value)[2:]  # convert to binary
+				# pad to exactly 4 bits for immediate
 				while len(imm) < 4:
 					imm = '0' + imm
 				output += imm
@@ -74,7 +85,7 @@ def convert(inFile, outFile1, outFile2):
 					else:
 						output += '0000'
 				else:
-					reg = 'r0'
+					reg = 'R0'
 					if reg in registers:
 						output += registers[reg]
 					else:
@@ -88,7 +99,7 @@ def convert(inFile, outFile1, outFile2):
 					else:
 						output += '0000'
 				else:
-					reg = 'r0'
+					reg = 'R0'
 					if reg in registers:
 						output += registers[reg]
 					else:
@@ -103,13 +114,22 @@ def convert(inFile, outFile1, outFile2):
 			
 			# Get branch target address
 			target_label = instr[1]
+			# Handle both $label_X and label formats
+			if target_label.startswith('$'):
+				target_label = target_label[1:]  # Remove the $ prefix
+			
 			if target_label in lut:
 				addr = lut[target_label]
+				# Ensure address fits in 6 bits (0-63)
+				if addr > 63:
+					# print(f"Warning: Label {instr[1]} address {addr} exceeds 6-bit limit (63)")
+					addr = addr & 0x3F  # Truncate to 6 bits
 				addr_bin = bin(addr)[2:]
 				for i in range(0, 6 - len(addr_bin)):
 					addr_bin = '0' + addr_bin
 				output += addr_bin
 			else:
+				# print(f"Warning: Label {instr[1]} not found")
 				output += '000000'  # default address
 		else:
 			continue  # skip unknown instructions
@@ -120,6 +140,6 @@ def convert(inFile, outFile1, outFile2):
 	assembly_file.close()
 	machine_file.close()
 
-convert("program1.txt", "mach_code.txt", "lut.txt")
-# convert("program2.txt", "mach_code.txt", "lut.txt")
-# convert("program3.txt", "mach_code.txt", "lut.txt")
+convert("program1.txt", "mach_code1.txt", "lut1.txt")
+convert("program2.txt", "mach_code2.txt", "lut2.txt")
+convert("program3.txt", "mach_code3.txt", "lut3.txt")
