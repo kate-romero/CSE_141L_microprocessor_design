@@ -3,7 +3,7 @@
 // TA Questions: how to change relative jump to absolute branch?
 
 module top_level(
-  input        clk, reset, req, 
+  input        clk, reset, start, 
   output logic done);
   parameter D = 12,             // program counter width
     A = 4;             		  	// ALU command bit width
