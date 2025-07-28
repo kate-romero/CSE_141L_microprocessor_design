@@ -7,7 +7,7 @@ module top_level(
   output logic done);
   parameter D = 12,             // program counter width
     A = 4;             		  	// ALU command bit width
-  wire[D-1:0] //target, 			  // jump 
+  wire[D-1:0] target, 			  // jump 
               prog_ctr;
   wire        RegWrite,
 			  RegWAddr,
@@ -23,6 +23,7 @@ module top_level(
 		less_thanQ,			      // registered compare flags from ALU
 		greater_thanQ;			  // registered compare flags from ALU
   wire  relj;                     // from control to PC; relative jump enable
+  wire  absj;
   wire  equal,
     less_than,
     greater_than,
@@ -41,15 +42,15 @@ module top_level(
      pc1 (.reset            ,
          .clk              ,
 		 .reljump_en (relj),
-//		 .absjump_en (absj),
-//		 .target           ,
+		 .absjump_en (absj),
+		 .target           ,
 		 .how_high		   ,
 		 .prog_ctr          );
 
-// lookup table to facilitate jumps/branches
-//  PC_LUT #(.D(D))
-//    pl1 (.addr  (how_high),
-//         .target          );   
+//  lookup table to facilitate jumps/branches
+  PC_LUT #(.D(D))
+    pl1 (.addr  (how_high),
+         .target          );   
 
 // contains machine code
   instr_ROM ir1(.prog_ctr,

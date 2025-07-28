@@ -1,21 +1,21 @@
 // get upper and lower bytes
-LOAD M1
+LOAD R1
 MOVT R1
-LOAD M0
+LOAD R0
 MOVT R2
 
 // prep registers
 // sign mask R5 = b10000000
-MOVI b0100  //4
+MOVI 4
 MOVT R5
-MOVI b1000  //8
+MOVI 8
 LSHL R5
 MOVT R5
 // max exponent R6 = 7
-MOVI b0111  //7
+MOVI 7
 MOVT R6
 // exponent bias R7 = 15
-MOVI b1111  //15
+MOVI 15
 MOVT R7
 // zero reg for comparing R15 = 0
 MOVI 0
@@ -23,9 +23,11 @@ MOVT R15
 // one reg for decrementing and shifting R14 = 1
 MOVI 1
 MOVT R14
-MOVT R12    // leading 1 in upper byte?
+// leading 1 in upper byte? (default yes R12 = 1)
+MOVT R12
 MOVI 2
-MOVT R13    // exp +- 2
+// exp +- 2: R13 = 2
+MOVT R13
 
 // grab sign bit
 MOVF R1
@@ -40,18 +42,25 @@ MOVT R1
 BNOT R5
 
 // determine which byte contains leading 1
-MOVF R1
 CMPR R15
-BNEQ $label_0   // branch if leading 1 in upper byte
+// branch if leading 1 in upper byte
+BNEQ $label_0
 MOVF R2
 CMPR R15
-BNEQ $label_2    // branch if leading 1 in lower byte
-DONE
+// branch if leading 1 in lower byte
+BNEQ $label_2
+STOR R2
+MOVF R1
+STOR R3
+HALT
 
 // find leading 1 in upper byte
-MOVF R1     // re-get upper byte    $label_0
+$label_0:
+// re-get upper byte
+MOVF R1
 BAND R5
-CMPR R15    // #49.if ((reg_imp & reg_sign_mask) != 0)
+// #49.if ((reg_imp & reg_sign_mask) != 0)
+CMPR R15
 BNEQ $label_1
 
 // decrement exponent
@@ -65,18 +74,22 @@ LSHR R14
 MOVT R5
 
 // loop back
-CMPR R15    // R0 ? 0    #47.while (reg_sign_mask)
+// R0 ? 0    #47.while (reg_sign_mask)
+CMPR R15
 BNEQ $label_0
 
 // prep to find leading 1 in lower byte
-MOVI 0      // $label_2
+$label_2:
+MOVI 0
 MOVT R12
 MOVI 1
 MOVT R6
 // find leading 1 in lower byte
-MOVF R2     // re-get lower byte    $label_3
+$label_3:
+MOVF R2
 BAND R5
-CMPR R15    // #49.if ((reg_imp & reg_sign_mask) != 0)
+// #49.if ((reg_imp & reg_sign_mask) != 0)
+CMPR R15
 BNEQ $label_4
 
 // increment exponent
@@ -90,37 +103,46 @@ LSHR R14
 MOVT R5
 
 // loop back
-CMPR R15    // R0 ? 0    #47.while (reg_sign_mask)
+// R0 ? 0    #47.while (reg_sign_mask)
+CMPR R15
 BNEQ $label_3
 
-// have exponent; TODO: shift
+// have exponent; shift
 // upper: set exponent + bias in upper byte out
-MOVF R7    // $label_1
+$label_1:
+MOVF R7
 ADDR R6
 LSHL R13
 BORR R3
 MOVT R3
 MOVI 1
 CMPR R12
-BREQ $label_5   // long branch stepping stone
-DONE            // should never hit
+// long branch stepping stone
+BREQ $label_5
+// should never hit
+HALT
 
 // lower: set exponent + bias in upper byte out
-MOVF R7    // $label_4
+$label_4:
+MOVF R7
 SUBR R6
 LSHL R13
 BORR R3
 MOVT R3
 MOVI 0
 CMPR R12
-BREQ $label_7   // long branch stepping stone
-DONE            // should never hit
+// long branch stepping stone
+BREQ $label_7
+// should never hit
+HALT
 
-/**************** upper shift exp >= 2 ****************/
+//**************** upper shift exp >= 2 ****************/
 // adjust exp for hidden 1
-MOVF R6     // $label_5
+$label_5:
+MOVF R6
 CMPR R13
-BRLT $label_7   // handle lead up exp < 2
+// handle lead up exp < 2
+BRLT $label_7
 SUBR R13
 MOVT R11
 
@@ -135,29 +157,31 @@ MOVT R10
 // upper mantissa
 MOVF R3
 BORR R10
-STOR M3
+STOR R3
 
 // build low_out
 MOVF R2
 LSHR R11
 MOVT R2
 MOVI 8
-SUBR R3
+SUBR R11
 MOVT R11
 MOVF R1
 LSHL R11
 BORR R2
-STOR M2
-DONE
+STOR R2
+HALT
 
-MOVI 0      //$label_7
-CMPR        // long branch stepping stone
+$label_7:
+MOVI 0
+// long branch stepping stone
+CMPR R12
 BREQ $label_6
-/**************** upper shift exp < 2 ****************/
+//**************** upper shift exp < 2 ****************/
 // adjust for hidden 1
 MOVF R13
 SUBR R6
-MOVF R11
+MOVT R11
 
 // build low_out
 MOVF R2
@@ -167,6 +191,12 @@ STOR M2
 // build up_out
 MOVF R1
 LSHL R11
+// hide 1
+MOVT R8
+MOVI 4
+BNOT R0
+BAND R8
+// end hide
 BORR R3
 MOVT R3
 MOVI 8
@@ -174,13 +204,20 @@ SUBR R11
 MOVT R11
 MOVF R2
 LSHR R11
+// hide 1
+MOVT R8
+MOVI 4
+BNOT R0
+BAND R8
+// end hide
 BORR R3
-STOR M3
-DONE
+STOR R3
+HALT
 
-/**************** lower shift exp ****************/
+//**************** lower shift exp ****************/
 // adjust exp for hidden 1
-MOVF R6     // $label_6
+$label_6:
+MOVF R6
 ADDR R13
 MOVT R11
 
@@ -195,6 +232,12 @@ SUBR R11
 MOVT R11
 MOVF R2
 LSHR R11
+// hide 1
+MOVT R8
+MOVI 4
+BNOT R0
+BAND R8
+// end hide
 BORR R3
-STOR M3
-DONE
+STOR R3
+HALT
