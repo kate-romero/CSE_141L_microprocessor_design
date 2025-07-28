@@ -2,6 +2,8 @@
 
 // TA Questions: how to change relative jump to absolute branch?
 
+import definitions::*;			         // includes package "definitions"
+
 module top_level(
   input        clk, reset, start, 
   output logic done);
@@ -13,8 +15,7 @@ module top_level(
 			  RegWAddr,
 			  MemtoReg;
   wire[7:0]   datA,datB,		  // from RegFile
-              muxB, 
-			  muxWA,
+              muxB,
 			  muxWD,
 			  rslt,               // alu output
               immed,
@@ -35,7 +36,7 @@ module top_level(
   logic sc_in;
   wire[A-1:0] alu_cmd;
   wire[8:0]   mach_code;          // machine code
-  wire[3:0] rd_addrA, rd_adrB;    // address pointers to reg_file
+  wire[3:0] rd_addrA, rd_addrB, muxWA;    // address pointers to reg_file
   logic[5:0] how_high;
 // fetch subassembly
   PC #(.D(D)) 					  // D sets program counter width
@@ -102,7 +103,7 @@ module top_level(
 		 .less_than,
 		 .greater_than);  
 
-  dat_mem dm1(.dat_in(datA)  ,  // from imp_reg
+  data_mem data_mem(.dat_in(datA)  ,  // from imp_reg
              .clk           ,
 			 .wr_en  (MemWrite), // stores
 			 .addr   ({4'b0000, rd_addrB}),

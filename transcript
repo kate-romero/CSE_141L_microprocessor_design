@@ -1,57 +1,416 @@
-# Compile of alu.sv was successful.
-# Compile of Control.sv was successful.
-# Compile of dat_mem.sv was successful.
+# Errors: 1, Warnings: 0
+# Errors: 1, Warnings: 0
+# Errors: 0, Warnings: 0
+# Compile of data_mem.sv was successful.
+# Errors: 0, Warnings: 0
+# Compile of definitions.sv was successful.
+# Errors: 0, Warnings: 0
+# Compile of instr_ROM.sv was successful.
+# Errors: 0, Warnings: 0
 # Compile of PC.sv was successful.
+# Errors: 0, Warnings: 0
+# Compile of PC_LUT.sv was successful.
+# Errors: 0, Warnings: 0
+# Compile of PC_tb.sv was successful.
+# Errors: 0, Warnings: 0
 # Compile of reg_file.sv was successful.
+# Errors: 0, Warnings: 0
 # Compile of top_level.sv was successful.
-# Compile of new_fix2flt_tb.sv was successful.
+# Errors: 0, Warnings: 0
 # Compile of data_mem0.sv was successful.
+# Errors: 0, Warnings: 0
+# Compile of new_fix2flt_tb.sv was successful.
+# Errors: 0, Warnings: 0
 # Compile of Top_level0.sv was successful.
-# 9 compiles, 0 failed with no errors.
+# Errors: 0, Warnings: 0
+# Compile of alu.sv was successful.
+# Errors: 0, Warnings: 0
+# Compile of Control.sv was successful.
 vsim -gui work.new_int2flt_tb
 # vsim -gui work.new_int2flt_tb 
-# Start time: 17:56:33 on Jul 23,2025
+# Start time: 12:46:58 on Jul 28,2025
 # Loading sv_std.std
 # Loading work.new_int2flt_tb
 # ** Error: (vsim-3033) Instantiation of 'TopLevel' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /new_int2flt_tb File: C:/Users/kate_/OneDrive/Desktop/CSE 141L/CSE_141L_microprocessor_design/program_1_export/new_fix2flt_tb.sv Line: 28
+#    Time: 0 ps  Iteration: 0  Instance: /new_int2flt_tb File: C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/program_1_export/new_fix2flt_tb.sv Line: 28
 #         Searched libraries:
-#             C:/Users/kate_/OneDrive/Desktop/CSE 141L/CSE_141L_microprocessor_design/work
+#             C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/work
 # Loading work.TopLevel0
 # Loading work.data_mem0
 # Error loading design
-# End time: 17:56:34 on Jul 23,2025, Elapsed time: 0:00:01
+# End time: 12:47:00 on Jul 28,2025, Elapsed time: 0:00:02
 # Errors: 1, Warnings: 6
-# Compile of alu.sv was successful.
-# Compile of Control.sv was successful.
-# Compile of dat_mem.sv was successful.
-# Compile of PC.sv was successful.
-# Compile of reg_file.sv was successful.
-# Compile of top_level.sv was successful.
 # Compile of new_fix2flt_tb.sv was successful.
-# Compile of data_mem0.sv was successful.
-# Compile of Top_level0.sv was successful.
-# 9 compiles, 0 failed with no errors.
 vsim -gui work.new_int2flt_tb
 # vsim -gui work.new_int2flt_tb 
-# Start time: 17:58:40 on Jul 23,2025
+# Start time: 12:48:32 on Jul 28,2025
 # Loading sv_std.std
 # Loading work.new_int2flt_tb
-# Loading work.TopLevel
-# Loading work.PC
-# ** Error: (vsim-3033) Instantiation of 'instr_ROM' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /new_int2flt_tb/f1 File: C:/Users/kate_/OneDrive/Desktop/CSE 141L/CSE_141L_microprocessor_design/top_level.sv Line: 55
-#         Searched libraries:
-#             C:/Users/kate_/OneDrive/Desktop/CSE 141L/CSE_141L_microprocessor_design/work
 # Loading work.definitions
+# Loading work.top_level_sv_unit
+# Loading work.top_level
+# Loading work.PC
+# Loading work.PC_LUT
+# Loading work.instr_ROM
 # Loading work.Control_sv_unit
 # Loading work.Control
 # Loading work.reg_file
 # Loading work.alu_sv_unit
 # Loading work.alu
-# Loading work.dat_mem
+# Loading work.data_mem
 # Loading work.TopLevel0
 # Loading work.data_mem0
+# ** Warning: (vsim-3008) [CNNODP] - Component name (data_mem) is not on a downward path.
+#    Time: 0 ps  Iteration: 0  Instance: /new_int2flt_tb File: C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/program_1_export/new_fix2flt_tb.sv Line: 125
+# ** Error: (vsim-3043) Unresolved reference to 'data_mem' in f1.data_mem.
+#    Time: 0 ps  Iteration: 0  Instance: /new_int2flt_tb File: C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/program_1_export/new_fix2flt_tb.sv Line: 125
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'rd_addrB'. The port definition is at: C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/reg_file.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /new_int2flt_tb/f1/rf1 File: C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/top_level.sv Line: 86
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (8) for port 'wr_addr'. The port definition is at: C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/reg_file.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /new_int2flt_tb/f1/rf1 File: C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/top_level.sv Line: 86
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'alu1'.  Expected 10, found 9.
+#    Time: 0 ps  Iteration: 0  Instance: /new_int2flt_tb/f1/alu1 File: C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/top_level.sv Line: 97
+# ** Warning: (vsim-3722) C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/top_level.sv(97): [TFMPC] - Missing connection for port 'zero'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (5) for port 'addr'. The port definition is at: C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/data_mem.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /new_int2flt_tb/f1/dm1 File: C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/top_level.sv Line: 107
 # Error loading design
-# End time: 17:58:42 on Jul 23,2025, Elapsed time: 0:00:02
-# Errors: 1, Warnings: 2
+# End time: 12:48:34 on Jul 28,2025, Elapsed time: 0:00:02
+# Errors: 1, Warnings: 8
+# Compile of top_level.sv was successful.
+vsim -gui work.new_int2flt_tb
+# vsim -gui work.new_int2flt_tb 
+# Start time: 13:00:42 on Jul 28,2025
+# Loading sv_std.std
+# Loading work.new_int2flt_tb
+# Loading work.definitions
+# Loading work.top_level_sv_unit
+# Loading work.top_level
+# Loading work.PC
+# Loading work.PC_LUT
+# Loading work.instr_ROM
+# Loading work.Control_sv_unit
+# Loading work.Control
+# Loading work.reg_file
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.data_mem
+# Loading work.TopLevel0
+# Loading work.data_mem0
+# ** Warning: (vsim-3008) [CNNODP] - Component name (mem_core) is not on a downward path.
+#    Time: 0 ps  Iteration: 0  Instance: /new_int2flt_tb File: C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/program_1_export/new_fix2flt_tb.sv Line: 125
+# ** Error: (vsim-3043) Unresolved reference to 'mem_core' in f1.data_mem.mem_core.
+#    Time: 0 ps  Iteration: 0  Instance: /new_int2flt_tb File: C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/program_1_export/new_fix2flt_tb.sv Line: 125
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'rd_addrB'. The port definition is at: C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/reg_file.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /new_int2flt_tb/f1/rf1 File: C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/top_level.sv Line: 86
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (8) for port 'wr_addr'. The port definition is at: C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/reg_file.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /new_int2flt_tb/f1/rf1 File: C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/top_level.sv Line: 86
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'alu1'.  Expected 10, found 9.
+#    Time: 0 ps  Iteration: 0  Instance: /new_int2flt_tb/f1/alu1 File: C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/top_level.sv Line: 97
+# ** Warning: (vsim-3722) C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/top_level.sv(97): [TFMPC] - Missing connection for port 'zero'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (5) for port 'addr'. The port definition is at: C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/data_mem.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /new_int2flt_tb/f1/data_mem File: C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/top_level.sv Line: 107
+# Error loading design
+# End time: 13:00:43 on Jul 28,2025, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 8
+# Compile of data_mem.sv was successful.
+vsim -gui work.new_int2flt_tb
+# vsim -gui work.new_int2flt_tb 
+# Start time: 13:02:02 on Jul 28,2025
+# Loading sv_std.std
+# Loading work.new_int2flt_tb
+# Loading work.definitions
+# Loading work.top_level_sv_unit
+# Loading work.top_level
+# Loading work.PC
+# Loading work.PC_LUT
+# Loading work.instr_ROM
+# Loading work.Control_sv_unit
+# Loading work.Control
+# Loading work.reg_file
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.data_mem
+# Loading work.TopLevel0
+# Loading work.data_mem0
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'rd_addrB'. The port definition is at: C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/reg_file.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /new_int2flt_tb/f1/rf1 File: C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/top_level.sv Line: 86
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (8) for port 'wr_addr'. The port definition is at: C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/reg_file.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /new_int2flt_tb/f1/rf1 File: C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/top_level.sv Line: 86
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'alu1'.  Expected 10, found 9.
+#    Time: 0 ps  Iteration: 0  Instance: /new_int2flt_tb/f1/alu1 File: C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/top_level.sv Line: 97
+# ** Warning: (vsim-3722) C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/top_level.sv(97): [TFMPC] - Missing connection for port 'zero'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (5) for port 'addr'. The port definition is at: C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/data_mem.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /new_int2flt_tb/f1/data_mem File: C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/top_level.sv Line: 107
+run -all
+#  
+# what's feeding the case 0000000000000000
+# IN=0x0000,  DUT=0xxxxx, REF=0x0000, MATH=0x0000
+# Mismatch DUT vs REF: DUT=0xxxxx REF=0x0000
+# Mismatch DUT vs MATH: DUT=0xxxxx MATH=0x0000
+# Scores so far: vs REF=0, vs MATH=0, tests=1
+#  
+# what's feeding the case 1000000000000000
+# IN=0x8000,  DUT=0xxxxx, REF=0x8000, MATH=0x8000
+# Mismatch DUT vs REF: DUT=0xxxxx REF=0x8000
+# Mismatch DUT vs MATH: DUT=0xxxxx MATH=0x8000
+# Scores so far: vs REF=0, vs MATH=0, tests=2
+#  
+# what's feeding the case 0000000000000001
+# IN=0x0001,  DUT=0xxxxx, REF=0x1c00, MATH=0x1c00
+# Mismatch DUT vs REF: DUT=0xxxxx REF=0x1c00
+# Mismatch DUT vs MATH: DUT=0xxxxx MATH=0x1c00
+# Scores so far: vs REF=0, vs MATH=0, tests=3
+#  
+# what's feeding the case 1000000000000001
+# IN=0x8001,  DUT=0xxxxx, REF=0x9c00, MATH=0x9c00
+# Mismatch DUT vs REF: DUT=0xxxxx REF=0x9c00
+# Mismatch DUT vs MATH: DUT=0xxxxx MATH=0x9c00
+# Scores so far: vs REF=0, vs MATH=0, tests=4
+#  
+# what's feeding the case 0000000000000010
+# IN=0x0002,  DUT=0xxxxx, REF=0x2000, MATH=0x2000
+# Mismatch DUT vs REF: DUT=0xxxxx REF=0x2000
+# Mismatch DUT vs MATH: DUT=0xxxxx MATH=0x2000
+# Scores so far: vs REF=0, vs MATH=0, tests=5
+#  
+# what's feeding the case 1000000000000010
+# IN=0x8002,  DUT=0xxxxx, REF=0xa000, MATH=0xa000
+# Mismatch DUT vs REF: DUT=0xxxxx REF=0xa000
+# Mismatch DUT vs MATH: DUT=0xxxxx MATH=0xa000
+# Scores so far: vs REF=0, vs MATH=0, tests=6
+#  
+# what's feeding the case 0000000000000011
+# IN=0x0003,  DUT=0xxxxx, REF=0x2200, MATH=0x2200
+# Mismatch DUT vs REF: DUT=0xxxxx REF=0x2200
+# Mismatch DUT vs MATH: DUT=0xxxxx MATH=0x2200
+# Scores so far: vs REF=0, vs MATH=0, tests=7
+#  
+# what's feeding the case 1000000000000011
+# IN=0x8003,  DUT=0xxxxx, REF=0xa200, MATH=0xa200
+# Mismatch DUT vs REF: DUT=0xxxxx REF=0xa200
+# Mismatch DUT vs MATH: DUT=0xxxxx MATH=0xa200
+# Scores so far: vs REF=0, vs MATH=0, tests=8
+#  
+# what's feeding the case 0000000000001100
+# IN=0x000c,  DUT=0xxxxx, REF=0x2a00, MATH=0x2a00
+# Mismatch DUT vs REF: DUT=0xxxxx REF=0x2a00
+# Mismatch DUT vs MATH: DUT=0xxxxx MATH=0x2a00
+# Scores so far: vs REF=0, vs MATH=0, tests=9
+#  
+# what's feeding the case 0000000000110000
+# IN=0x0030,  DUT=0xxxxx, REF=0x3200, MATH=0x3200
+# Mismatch DUT vs REF: DUT=0xxxxx REF=0x3200
+# Mismatch DUT vs MATH: DUT=0xxxxx MATH=0x3200
+# Scores so far: vs REF=0, vs MATH=0, tests=10
+#  
+# what's feeding the case 0001111111111111
+# IN=0x1fff,  DUT=0xxxxx, REF=0x4fff, MATH=0x4fff
+# Mismatch DUT vs REF: DUT=0xxxxx REF=0x4fff
+# Mismatch DUT vs MATH: DUT=0xxxxx MATH=0x4fff
+# Scores so far: vs REF=0, vs MATH=0, tests=11
+#  
+# what's feeding the case 0011111111111111
+# IN=0x3fff,  DUT=0xxxxx, REF=0x53ff, MATH=0x53ff
+# Mismatch DUT vs REF: DUT=0xxxxx REF=0x53ff
+# Mismatch DUT vs MATH: DUT=0xxxxx MATH=0x53ff
+# Scores so far: vs REF=0, vs MATH=0, tests=12
+#  
+# what's feeding the case 0111111111111111
+# IN=0x7fff,  DUT=0xxxxx, REF=0x57ff, MATH=0x57ff
+# Mismatch DUT vs REF: DUT=0xxxxx REF=0x57ff
+# Mismatch DUT vs MATH: DUT=0xxxxx MATH=0x57ff
+# Scores so far: vs REF=0, vs MATH=0, tests=13
+#  
+# what's feeding the case 1111111111111111
+# IN=0xffff,  DUT=0xxxxx, REF=0xd7ff, MATH=0xd7ff
+# Mismatch DUT vs REF: DUT=0xxxxx REF=0xd7ff
+# Mismatch DUT vs MATH: DUT=0xxxxx MATH=0xd7ff
+# Scores so far: vs REF=0, vs MATH=0, tests=14
+#  
+# what's feeding the case 1100000000000000
+# IN=0xc000,  DUT=0xxxxx, REF=0xd400, MATH=0xd400
+# Mismatch DUT vs REF: DUT=0xxxxx REF=0xd400
+# Mismatch DUT vs MATH: DUT=0xxxxx MATH=0xd400
+# Scores so far: vs REF=0, vs MATH=0, tests=15
+#  
+# what's feeding the case 0100000000000000
+# IN=0x4000,  DUT=0xxxxx, REF=0x5400, MATH=0x5400
+# Mismatch DUT vs REF: DUT=0xxxxx REF=0x5400
+# Mismatch DUT vs MATH: DUT=0xxxxx MATH=0x5400
+# Scores so far: vs REF=0, vs MATH=0, tests=16
+#  
+# what's feeding the case 0011010100100100
+# IN=0x3524,  DUT=0xxxxx, REF=0x52a4, MATH=0x52a4
+# Mismatch DUT vs REF: DUT=0xxxxx REF=0x52a4
+# Mismatch DUT vs MATH: DUT=0xxxxx MATH=0x52a4
+# Scores so far: vs REF=0, vs MATH=0, tests=17
+#  
+# what's feeding the case 0101111010000001
+# IN=0x5e81,  DUT=0xxxxx, REF=0x55e8, MATH=0x55e8
+# Mismatch DUT vs REF: DUT=0xxxxx REF=0x55e8
+# Mismatch DUT vs MATH: DUT=0xxxxx MATH=0x55e8
+# Scores so far: vs REF=0, vs MATH=0, tests=18
+#  
+# what's feeding the case 1101011000001001
+# IN=0xd609,  DUT=0xxxxx, REF=0xd560, MATH=0xd560
+# Mismatch DUT vs REF: DUT=0xxxxx REF=0xd560
+# Mismatch DUT vs MATH: DUT=0xxxxx MATH=0xd560
+# Scores so far: vs REF=0, vs MATH=0, tests=19
+#  
+# what's feeding the case 0101011001100011
+# IN=0x5663,  DUT=0xxxxx, REF=0x5566, MATH=0x5566
+# Mismatch DUT vs REF: DUT=0xxxxx REF=0x5566
+# Mismatch DUT vs MATH: DUT=0xxxxx MATH=0x5566
+# Scores so far: vs REF=0, vs MATH=0, tests=20
+# scores =           0           0 out of          20
+# ** Note: $stop    : C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/program_1_export/new_fix2flt_tb.sv(92)
+#    Time: 401025 ns  Iteration: 0  Instance: /new_int2flt_tb
+# Break in Module new_int2flt_tb at C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/program_1_export/new_fix2flt_tb.sv line 92
+add wave -position insertpoint sim:/new_int2flt_tb/f1/pc1/*
+add wave -position insertpoint sim:/new_int2flt_tb/f1/rf1/*
+add wave -position insertpoint  \
+sim:/new_int2flt_tb/f1/rf1/core
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'rd_addrB'. The port definition is at: C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/reg_file.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /new_int2flt_tb/f1/rf1 File: C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/top_level.sv Line: 86
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (8) for port 'wr_addr'. The port definition is at: C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/reg_file.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /new_int2flt_tb/f1/rf1 File: C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/top_level.sv Line: 86
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'alu1'.  Expected 10, found 9.
+#    Time: 0 ps  Iteration: 0  Instance: /new_int2flt_tb/f1/alu1 File: C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/top_level.sv Line: 97
+# ** Warning: (vsim-3722) C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/top_level.sv(97): [TFMPC] - Missing connection for port 'zero'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (5) for port 'addr'. The port definition is at: C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/data_mem.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /new_int2flt_tb/f1/data_mem File: C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/top_level.sv Line: 107
+# Compile of top_level.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.top_level_sv_unit
+# Loading work.top_level
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'alu1'.  Expected 10, found 9.
+#    Time: 0 ps  Iteration: 0  Instance: /new_int2flt_tb/f1/alu1 File: C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/top_level.sv Line: 96
+# ** Warning: (vsim-3722) C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/top_level.sv(96): [TFMPC] - Missing connection for port 'zero'.
+run -all
+#  
+# what's feeding the case 0000000000000000
+# IN=0x0000,  DUT=0xxxxx, REF=0x0000, MATH=0x0000
+# Mismatch DUT vs REF: DUT=0xxxxx REF=0x0000
+# Mismatch DUT vs MATH: DUT=0xxxxx MATH=0x0000
+# Scores so far: vs REF=0, vs MATH=0, tests=1
+#  
+# what's feeding the case 1000000000000000
+# IN=0x8000,  DUT=0xxxxx, REF=0x8000, MATH=0x8000
+# Mismatch DUT vs REF: DUT=0xxxxx REF=0x8000
+# Mismatch DUT vs MATH: DUT=0xxxxx MATH=0x8000
+# Scores so far: vs REF=0, vs MATH=0, tests=2
+#  
+# what's feeding the case 0000000000000001
+# IN=0x0001,  DUT=0xxxxx, REF=0x1c00, MATH=0x1c00
+# Mismatch DUT vs REF: DUT=0xxxxx REF=0x1c00
+# Mismatch DUT vs MATH: DUT=0xxxxx MATH=0x1c00
+# Scores so far: vs REF=0, vs MATH=0, tests=3
+#  
+# what's feeding the case 1000000000000001
+# IN=0x8001,  DUT=0xxxxx, REF=0x9c00, MATH=0x9c00
+# Mismatch DUT vs REF: DUT=0xxxxx REF=0x9c00
+# Mismatch DUT vs MATH: DUT=0xxxxx MATH=0x9c00
+# Scores so far: vs REF=0, vs MATH=0, tests=4
+#  
+# what's feeding the case 0000000000000010
+# IN=0x0002,  DUT=0xxxxx, REF=0x2000, MATH=0x2000
+# Mismatch DUT vs REF: DUT=0xxxxx REF=0x2000
+# Mismatch DUT vs MATH: DUT=0xxxxx MATH=0x2000
+# Scores so far: vs REF=0, vs MATH=0, tests=5
+#  
+# what's feeding the case 1000000000000010
+# IN=0x8002,  DUT=0xxxxx, REF=0xa000, MATH=0xa000
+# Mismatch DUT vs REF: DUT=0xxxxx REF=0xa000
+# Mismatch DUT vs MATH: DUT=0xxxxx MATH=0xa000
+# Scores so far: vs REF=0, vs MATH=0, tests=6
+#  
+# what's feeding the case 0000000000000011
+# IN=0x0003,  DUT=0xxxxx, REF=0x2200, MATH=0x2200
+# Mismatch DUT vs REF: DUT=0xxxxx REF=0x2200
+# Mismatch DUT vs MATH: DUT=0xxxxx MATH=0x2200
+# Scores so far: vs REF=0, vs MATH=0, tests=7
+#  
+# what's feeding the case 1000000000000011
+# IN=0x8003,  DUT=0xxxxx, REF=0xa200, MATH=0xa200
+# Mismatch DUT vs REF: DUT=0xxxxx REF=0xa200
+# Mismatch DUT vs MATH: DUT=0xxxxx MATH=0xa200
+# Scores so far: vs REF=0, vs MATH=0, tests=8
+#  
+# what's feeding the case 0000000000001100
+# IN=0x000c,  DUT=0xxxxx, REF=0x2a00, MATH=0x2a00
+# Mismatch DUT vs REF: DUT=0xxxxx REF=0x2a00
+# Mismatch DUT vs MATH: DUT=0xxxxx MATH=0x2a00
+# Scores so far: vs REF=0, vs MATH=0, tests=9
+#  
+# what's feeding the case 0000000000110000
+# IN=0x0030,  DUT=0xxxxx, REF=0x3200, MATH=0x3200
+# Mismatch DUT vs REF: DUT=0xxxxx REF=0x3200
+# Mismatch DUT vs MATH: DUT=0xxxxx MATH=0x3200
+# Scores so far: vs REF=0, vs MATH=0, tests=10
+#  
+# what's feeding the case 0001111111111111
+# IN=0x1fff,  DUT=0xxxxx, REF=0x4fff, MATH=0x4fff
+# Mismatch DUT vs REF: DUT=0xxxxx REF=0x4fff
+# Mismatch DUT vs MATH: DUT=0xxxxx MATH=0x4fff
+# Scores so far: vs REF=0, vs MATH=0, tests=11
+#  
+# what's feeding the case 0011111111111111
+# IN=0x3fff,  DUT=0xxxxx, REF=0x53ff, MATH=0x53ff
+# Mismatch DUT vs REF: DUT=0xxxxx REF=0x53ff
+# Mismatch DUT vs MATH: DUT=0xxxxx MATH=0x53ff
+# Scores so far: vs REF=0, vs MATH=0, tests=12
+#  
+# what's feeding the case 0111111111111111
+# IN=0x7fff,  DUT=0xxxxx, REF=0x57ff, MATH=0x57ff
+# Mismatch DUT vs REF: DUT=0xxxxx REF=0x57ff
+# Mismatch DUT vs MATH: DUT=0xxxxx MATH=0x57ff
+# Scores so far: vs REF=0, vs MATH=0, tests=13
+#  
+# what's feeding the case 1111111111111111
+# IN=0xffff,  DUT=0xxxxx, REF=0xd7ff, MATH=0xd7ff
+# Mismatch DUT vs REF: DUT=0xxxxx REF=0xd7ff
+# Mismatch DUT vs MATH: DUT=0xxxxx MATH=0xd7ff
+# Scores so far: vs REF=0, vs MATH=0, tests=14
+#  
+# what's feeding the case 1100000000000000
+# IN=0xc000,  DUT=0xxxxx, REF=0xd400, MATH=0xd400
+# Mismatch DUT vs REF: DUT=0xxxxx REF=0xd400
+# Mismatch DUT vs MATH: DUT=0xxxxx MATH=0xd400
+# Scores so far: vs REF=0, vs MATH=0, tests=15
+#  
+# what's feeding the case 0100000000000000
+# IN=0x4000,  DUT=0xxxxx, REF=0x5400, MATH=0x5400
+# Mismatch DUT vs REF: DUT=0xxxxx REF=0x5400
+# Mismatch DUT vs MATH: DUT=0xxxxx MATH=0x5400
+# Scores so far: vs REF=0, vs MATH=0, tests=16
+#  
+# what's feeding the case 0011010100100100
+# IN=0x3524,  DUT=0xxxxx, REF=0x52a4, MATH=0x52a4
+# Mismatch DUT vs REF: DUT=0xxxxx REF=0x52a4
+# Mismatch DUT vs MATH: DUT=0xxxxx MATH=0x52a4
+# Scores so far: vs REF=0, vs MATH=0, tests=17
+#  
+# what's feeding the case 0101111010000001
+# IN=0x5e81,  DUT=0xxxxx, REF=0x55e8, MATH=0x55e8
+# Mismatch DUT vs REF: DUT=0xxxxx REF=0x55e8
+# Mismatch DUT vs MATH: DUT=0xxxxx MATH=0x55e8
+# Scores so far: vs REF=0, vs MATH=0, tests=18
+#  
+# what's feeding the case 1101011000001001
+# IN=0xd609,  DUT=0xxxxx, REF=0xd560, MATH=0xd560
+# Mismatch DUT vs REF: DUT=0xxxxx REF=0xd560
+# Mismatch DUT vs MATH: DUT=0xxxxx MATH=0xd560
+# Scores so far: vs REF=0, vs MATH=0, tests=19
+#  
+# what's feeding the case 0101011001100011
+# IN=0x5663,  DUT=0xxxxx, REF=0x5566, MATH=0x5566
+# Mismatch DUT vs REF: DUT=0xxxxx REF=0x5566
+# Mismatch DUT vs MATH: DUT=0xxxxx MATH=0x5566
+# Scores so far: vs REF=0, vs MATH=0, tests=20
+# scores =           0           0 out of          20
+# ** Note: $stop    : C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/program_1_export/new_fix2flt_tb.sv(92)
+#    Time: 401025 ns  Iteration: 0  Instance: /new_int2flt_tb
+# Break in Module new_int2flt_tb at C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/program_1_export/new_fix2flt_tb.sv line 92

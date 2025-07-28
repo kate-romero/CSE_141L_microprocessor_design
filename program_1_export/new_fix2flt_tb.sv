@@ -25,7 +25,7 @@ module new_int2flt_tb();
               score0,	     // your DUT vs. mine
 			  count = 0;     // number of trials
 
-  TopLevel f1(				 // your DUT to generate right answer
+  top_level f1(				 // your DUT to generate right answer
     .clk  (clk),
 	.start(req),
     .reset(reset),
@@ -42,7 +42,7 @@ module new_int2flt_tb();
   end
 
   initial begin				 // test sequence
-//    $monitor("data_mem.core1,0 = %b  %b %t",f0.data_mem1.mem_core[1],f1.data_mem1.mem_core[0],$time);
+//    $monitor("data_mem.core1,0 = %b  %b %t",f0.data_mem.mem_core[1],f1.data_mem.mem_core[0],$time);
 
     //#20ns reset = '0;
 	disp2(int_in);
@@ -122,8 +122,8 @@ task automatic disp2(input logic [15:0] int_in);
 	#10ns;
 	reset = 0;
 
-	f1.data_mem1.mem_core[1] = int_in[15:8];   // load operands into your memory
-	f1.data_mem1.mem_core[0] = int_in[ 7:0];
+	f1.data_mem.mem_core[1] = int_in[15:8];   // load operands into your memory
+	f1.data_mem.mem_core[0] = int_in[ 7:0];
 	f0.data_mem0.mem_core[1] = int_in[15:8];   // load operands into my memory
 	f0.data_mem0.mem_core[0] = int_in[ 7:0];
     //flt_out_M[15]     = sgn_M;                 // sign is a passthrough
@@ -132,7 +132,7 @@ task automatic disp2(input logic [15:0] int_in);
 	wait(ack);
 	wait(ack0);
 	#10ns;
-  	flt_out  = {f1.data_mem1.mem_core[3],f1.data_mem1.mem_core[2]};	 // results from your memory
+  	flt_out  = {f1.data_mem.mem_core[3],f1.data_mem.mem_core[2]};	 // results from your memory
     flt_out0 = {f0.data_mem0.mem_core[3],f0.data_mem0.mem_core[2]};	 // results from my dummy DUT
     $display("what's feeding the case %b",int_in);
 	flt_outM = float_M;
