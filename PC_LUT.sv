@@ -4,7 +4,7 @@
  */
 
 module PC_LUT #(parameter D=12)(
-  input       [ 5:0] addr,	   // target 4 values
+  input       [5:0] addr,	   // target 4 values
   output logic[D-1:0] target);
 
 //   always_comb case(addr)
@@ -15,9 +15,9 @@ module PC_LUT #(parameter D=12)(
 //   endcase
   logic[D-1:0] core[2**D];
   initial							    // load the program
-    $readmemb("LUT.txt",core);
+    $readmemb("lut.txt",core);
 
-  always_comb  mach_code = core[prog_ctr];
+  always_comb  target = core[addr];
 
 endmodule
 
