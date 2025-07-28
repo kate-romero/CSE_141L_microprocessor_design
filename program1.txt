@@ -151,7 +151,8 @@ MOVF R1
 LSHR R11
 MOVT R10
 // hide 1
-MOVI b1011
+// b1011
+MOVI 11
 BAND R10
 MOVT R10
 // upper mantissa
