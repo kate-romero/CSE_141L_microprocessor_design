@@ -1,0 +1,256 @@
+// Program: float2int_simple (based on provided pseudocode)
+// Converts a 16-bit IEEE 754 float to 16-bit sign-and-magnitude fixed point (8.8 format)
+// Input: Float MSW at memory location 5, Float LSW at memory location 4
+// Output: Fixed-point MSW at memory location 7, Fixed-point LSW at memory location 6
+
+START:
+    // Build constants
+    MOVI 15      // r0 = 15
+    MOVT r1      // r1 = 15 (bias constant)
+    
+    MOVI 10      // r0 = 10  
+    MOVT r2      // r2 = 10 (shift reference)
+    
+    // Load float MSW from memory[5]
+    MOVI 5       // r0 = 5
+    MOVT r3      // r3 = 5
+    LOAD r3      // r0 = float_msw
+    MOVT r4      // r4 = float_msw
+    
+    // Load float LSW from memory[4]  
+    MOVI 4       // r0 = 4
+    MOVT r3      // r3 = 4
+    LOAD r3      // r0 = float_lsw
+    MOVT r5      // r5 = float_lsw
+    
+    // Extract sign bit (bit 15 of MSW)
+    MOVF r4      // r0 = float_msw
+    MOVI 7       // r0 = 7 (shift amount to get bit 15 to bit 8)
+    MOVT r3      // r3 = 7
+    MOVF r4      // r0 = float_msw
+    LSHR r3      // r0 = float_msw >> 7 (bit 15 now at bit 8)
+    MOVI 1       // r0 = 1
+    MOVT r3      // r3 = 1 (mask)
+    MOVF r4      // r0 = shifted value
+    BAND r3      // r0 = sign_bit (0 or 1)
+    MOVT r6      // r6 = sign_bit
+    
+    // Extract exponent (bits 14:10 of MSW, which are bits 6:2 after bit 15 removed)
+    MOVF r4      // r0 = float_msw
+    MOVI 2       // r0 = 2 (shift amount)
+    MOVT r3      // r3 = 2
+    MOVF r4      // r0 = float_msw
+    LSHR r3      // r0 = float_msw >> 2
+    MOVI 15      // r0 = 15 (mask for 5 bits: 01111b)  
+    MOVT r3      // r3 = 15
+    MOVF r4      // r0 = shifted value
+    BAND r3      // r0 = raw_exponent (5 bits)
+    MOVT r7      // r7 = raw_exponent
+    
+    // Calculate actual exponent = raw_exponent - 15
+    MOVF r7      // r0 = raw_exponent
+    MOVF r1      // r0 = 15 (bias)
+    MOVT r3      // r3 = 15
+    MOVF r7      // r0 = raw_exponent
+    SUBR r3      // r0 = raw_exponent - 15 = actual_exponent
+    MOVT r8      // r8 = actual_exponent
+    
+    // Check if exponent is negative (< 0 means number < 1.0)
+    MOVF r8      // r0 = actual_exponent
+    MOVI 0       // r0 = 0
+    MOVT r3      // r3 = 0
+    MOVF r8      // r0 = actual_exponent
+    BLT RETURN_ZERO // If actual_exponent < 0, return 0
+    
+    // Calculate shift amount = exponent - 10  
+    MOVF r8      // r0 = actual_exponent
+    MOVF r2      // r0 = 10
+    MOVT r3      // r3 = 10
+    MOVF r8      // r0 = actual_exponent
+    SUBR r3      // r0 = actual_exponent - 10 = shift_amount
+    MOVT r9      // r9 = shift_amount
+    
+    // Build 11-bit mantissa: {1, mantissa[9:0]}
+    // mantissa[9:8] are bits 1:0 of MSW
+    MOVF r4      // r0 = float_msw
+    MOVI 3       // r0 = 3 (mask for bits 1:0)
+    MOVT r3      // r3 = 3
+    MOVF r4      // r0 = float_msw
+    BAND r3      // r0 = mantissa_high (bits 9:8)
+    MOVT r10     // r10 = mantissa_high
+    
+    // mantissa[7:0] are all bits of LSW
+    MOVF r5      // r0 = float_lsw (mantissa_low)
+    MOVT r11     // r11 = mantissa_low
+    
+    // Construct 16-bit value: {1, mantissa[9:0], 00000}
+    // MSW = {1, mantissa[9:8], 00000} = 128 + (mantissa_high << 5)
+    MOVI 8       // r0 = 8 (to build 128)
+    MOVT r3      // r3 = 8
+    MOVI 4       // r0 = 4
+    MOVT r12     // r12 = 4
+    MOVF r3      // r0 = 8
+    LSHL r12     // r0 = 8 << 4 = 128
+    MOVT r12     // r12 = 128 (implicit 1 in MSB position)
+    
+    MOVF r10     // r0 = mantissa_high
+    MOVI 5       // r0 = 5 (shift amount)
+    MOVT r3      // r3 = 5
+    MOVF r10     // r0 = mantissa_high
+    LSHL r3      // r0 = mantissa_high << 5
+    MOVT r13     // r13 = shifted mantissa_high
+    
+    MOVF r12     // r0 = 128
+    MOVF r13     // r0 = shifted mantissa_high
+    MOVT r3      // r3 = shifted mantissa_high
+    MOVF r12     // r0 = 128
+    BORR r3      // r0 = 128 | shifted_mantissa_high
+    MOVT r14     // r14 = result_msw_base
+    
+    // LSW = {mantissa[7:0], 00000}
+    MOVF r11     // r0 = mantissa_low
+    MOVI 5       // r0 = 5 (shift amount)
+    MOVT r3      // r3 = 5
+    MOVF r11     // r0 = mantissa_low
+    LSHL r3      // r0 = mantissa_low << 5
+    MOVT r15     // r15 = result_lsw_base
+    
+    // Now we have a 16-bit value in r14:r15 that needs to be shifted
+    // Check shift direction
+    MOVF r9      // r0 = shift_amount
+    MOVI 0       // r0 = 0
+    MOVT r3      // r3 = 0
+    MOVF r9      // r0 = shift_amount
+    CMPR r3      // Compare shift_amount with 0
+    BEQ APPLY_SIGN // No shift needed
+    BLT RIGHT_SHIFT // If shift_amount < 0, do right shift
+    
+    // Left shift (shift_amount > 0)
+    MOVF r9      // r0 = shift_amount
+    MOVT r10     // r10 = loop_counter
+    
+LEFT_SHIFT_LOOP:
+    MOVF r10     // r0 = loop_counter
+    MOVI 0       // r0 = 0
+    MOVT r3      // r3 = 0
+    MOVF r10     // r0 = loop_counter
+    CMPR r3      // Compare with 0
+    BEQ APPLY_SIGN // Done shifting
+    
+    // Shift r14:r15 left by 1
+    MOVI 1       // r0 = 1
+    MOVT r3      // r3 = 1
+    MOVF r15     // r0 = result_lsw
+    LSHL r3      // r0 = result_lsw << 1
+    MOVT r15     // r15 = shifted lsw
+    
+    MOVF r14     // r0 = result_msw
+    LSHL r3      // r0 = result_msw << 1
+    MOVT r14     // r14 = shifted msw
+    
+    // Decrement counter
+    MOVF r10     // r0 = loop_counter
+    MOVI 1       // r0 = 1
+    MOVT r3      // r3 = 1
+    MOVF r10     // r0 = loop_counter
+    SUBR r3      // r0 = loop_counter - 1
+    MOVT r10     // r10 = decremented counter
+    
+    // Jump back to loop
+    MOVI 0       // r0 = 0
+    MOVT r3      // r3 = 0
+    CMPR r3      // Always equal
+    BEQ LEFT_SHIFT_LOOP
+    
+RIGHT_SHIFT:
+    // Convert negative shift_amount to positive
+    MOVF r9      // r0 = shift_amount (negative)
+    MOVT r3      // r3 = shift_amount
+    BNOT r3      // r0 = ~shift_amount
+    MOVI 1       // r0 = 1
+    MOVT r12     // r12 = 1
+    ADDR r12     // r0 = ~shift_amount + 1 = -shift_amount (positive)
+    MOVT r10     // r10 = positive shift amount (loop counter)
+    
+RIGHT_SHIFT_LOOP:
+    MOVF r10     // r0 = loop_counter
+    MOVI 0       // r0 = 0
+    MOVT r3      // r3 = 0
+    MOVF r10     // r0 = loop_counter
+    CMPR r3      // Compare with 0
+    BEQ APPLY_SIGN // Done shifting
+    
+    // Shift r14:r15 right by 1
+    MOVI 1       // r0 = 1
+    MOVT r3      // r3 = 1
+    MOVF r14     // r0 = result_msw
+    LSHR r3      // r0 = result_msw >> 1
+    MOVT r14     // r14 = shifted msw
+    
+    MOVF r15     // r0 = result_lsw
+    LSHR r3      // r0 = result_lsw >> 1
+    MOVT r15     // r15 = shifted lsw
+    
+    // Decrement counter
+    MOVF r10     // r0 = loop_counter
+    MOVI 1       // r0 = 1
+    MOVT r3      // r3 = 1
+    MOVF r10     // r0 = loop_counter
+    SUBR r3      // r0 = loop_counter - 1
+    MOVT r10     // r10 = decremented counter
+    
+    // Jump back to loop
+    MOVI 0       // r0 = 0
+    MOVT r3      // r3 = 0
+    CMPR r3      // Always equal
+    BEQ RIGHT_SHIFT_LOOP
+    
+APPLY_SIGN:
+    // Check if number should be negative
+    MOVF r6      // r0 = sign_bit
+    MOVI 0       // r0 = 0
+    MOVT r3      // r3 = 0
+    MOVF r6      // r0 = sign_bit
+    CMPR r3      // Compare sign_bit with 0
+    BEQ STORE_RESULT // If positive, store as-is
+    
+    // Apply negative sign (set MSB of result)
+    MOVI 8       // r0 = 8
+    MOVT r3      // r3 = 8
+    MOVI 4       // r0 = 4
+    MOVT r12     // r12 = 4
+    MOVF r3      // r0 = 8
+    LSHL r12     // r0 = 8 << 4 = 128 (MSB mask)
+    MOVT r3      // r3 = 128
+    
+    MOVF r14     // r0 = result_msw
+    BORR r3      // r0 = result_msw | 128 (set sign bit)
+    MOVT r14     // r14 = signed result_msw
+    
+    // Jump to store
+    MOVI 0       // r0 = 0
+    MOVT r3      // r3 = 0
+    CMPR r3      // Always equal
+    BEQ STORE_RESULT
+    
+RETURN_ZERO:
+    // Return 0 for numbers < 1.0
+    MOVI 0       // r0 = 0
+    MOVT r14     // r14 = 0
+    MOVT r15     // r15 = 0
+    
+STORE_RESULT:
+    // Store MSW to memory[7]
+    MOVI 7       // r0 = 7
+    MOVT r3      // r3 = 7
+    MOVF r14     // r0 = result_msw
+    STOR r3      // Store to memory[7]
+    
+    // Store LSW to memory[6]
+    MOVI 6       // r0 = 6
+    MOVT r3      // r3 = 6
+    MOVF r15     // r0 = result_lsw
+    STOR r3      // Store to memory[6]
+    
+    // End program
+    HALT
