@@ -31,14 +31,15 @@ module Control (
   input [7:6] bopcode,    	// branch opcode
   input [7:4] ropcode,		// r-type intruction opcode
   input [0:0] equalQ, less_thanQ, greater_thanQ,
-  output logic Branch, MemtoReg, MemWrite, 
+  output logic RelBranch, AbsBranch, MemtoReg, MemWrite, 
 			   ALUSrc, RegWrite, RegWAddr);
   
     op_mne op_mnemonic;			        // type enum: used for convenient waveform viewing
 
 always_comb begin
   // defaults
-  Branch 	=   'b0;   // 1: branch (jump)
+  AbsBranch 	=   'b0;   // 1: abs branch (jump)
+  // RelBranch 	=   'b0;   // 1: rel branch (jump)
   MemWrite  =	'b0;   // 1: store to memory
   ALUSrc 	=	'b0;   // 1: immediate  0: second reg file output
   RegWrite  =	'b1;   // 0: for store or no op  1: most other operations 
@@ -48,11 +49,18 @@ always_comb begin
     'b1:	// b-type
 	  begin
 	    case(bopcode)
-		  00: Branch = equalQ;
-		  01: Branch = less_thanQ;
-		  10: Branch = greater_thanQ;
-		  11: Branch = less_thanQ | greater_thanQ;
+		  00: AbsBranch = equalQ;
+		  01: AbsBranch = less_thanQ;
+		  10: AbsBranch = greater_thanQ;
+		  11: AbsBranch = less_thanQ | greater_thanQ;
 		endcase
+		// uncomment if change to relative branching
+		// case(bopcode)
+		//   00: AbsBranch = equalQ;
+		//   01: AbsBranch = less_thanQ;
+		//   10: AbsBranch = greater_thanQ;
+		//   11: AbsBranch = less_thanQ | greater_thanQ;
+		// endcase
 	  end
 	'b0:	// r-type
 	  begin
