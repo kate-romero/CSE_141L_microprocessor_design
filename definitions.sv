@@ -18,8 +18,10 @@ package definitions;
     const logic [3:0]kADDR  = 4'b1011;
 	const logic [3:0]kSUBR  = 4'b1100;
 	const logic [3:0]kHALT  = 4'b1101;
+    const logic [3:0]kADDC  = 4'b1110;
+	const logic [3:0]kSUBC  = 4'b1111;
 // enum names will appear in timing diagram
     typedef enum logic[3:0] {
         LOAD, STOR, MOVF, MOVT, MOVI, CMPR, BNOT, 
-		BORR, BAND, LSHL, LSHR, ADDR, SUBR, HALT } op_mne;
+		BORR, BAND, LSHL, LSHR, ADDR, SUBR, HALT, ADDC, SUBC } op_mne;
 endpackage // definitions

@@ -27,8 +27,8 @@ module top_level(
   wire  equal,
     less_than,
     greater_than,
-    sc_clr,
-    sc_en,
+//    sc_clr,
+//    sc_en,
         MemWrite,
         ALUSrc;		              // immediate switch
 
@@ -111,12 +111,9 @@ module top_level(
 // registered flags from ALU
   always_ff @(posedge clk) begin
     equalQ <= equal;
-	less_thanQ <= less_than;
-	greater_thanQ <= greater_than;
-    if(sc_clr)
-	    sc_in <= 'b0;
-    else if(sc_en)
-      sc_in <= sc_o;
+	  less_thanQ <= less_than;
+	  greater_thanQ <= greater_than;
+    sc_in <= sc_o;
   end
 
   assign done = (mach_code[8:4] == {1'b0, HALT});
