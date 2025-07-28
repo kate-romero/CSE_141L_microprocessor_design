@@ -79,7 +79,7 @@ module top_level(
   
   assign muxWA = RegWAddr? rd_addrB : rd_addrA;
   assign muxWD = MemtoReg? mem_out : rslt;
-  assign immed = mach_code[3:0];  // Get immediate from instruction bits [3:0]
+  assign immed = ({4'b0000, mach_code[3:0]});  // Get immediate from instruction bits [3:0] and cast to 8 bits
 
   reg_file #(.pw(4)) rf1(.dat_in(muxWD),	   // Fixed: pw=4 for 16 registers, use muxWD
               .clk         ,
