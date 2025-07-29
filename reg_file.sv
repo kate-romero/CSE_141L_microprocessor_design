@@ -13,7 +13,7 @@ module reg_file #(parameter pw=4)(
   logic[7:0] core[2**pw];    // 2-dim array  8 wide  16 deep
 
 // reads are combinational
-  assign datA_out = rd_addrA? core[rd_addrA] : 'b0;
+  assign datA_out = core[rd_addrA];
   assign datB_out = core[rd_addrB];
 
 // writes are sequential (clocked)

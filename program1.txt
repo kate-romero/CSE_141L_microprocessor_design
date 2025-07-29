@@ -187,7 +187,7 @@ MOVT R11
 // build low_out
 MOVF R2
 LSHL R11
-STOR M2
+STOR R2
 
 // build up_out
 MOVF R1
@@ -225,7 +225,7 @@ MOVT R11
 // build low_out
 MOVF R2
 LSHL R11
-STOR M2
+STOR R2
 
 // build up_out
 MOVI 8

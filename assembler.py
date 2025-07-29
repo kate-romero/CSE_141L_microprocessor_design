@@ -13,7 +13,7 @@ def convert(inFile, outFile1, outFile2):
 	opcodes = {'LOAD' : '0000', 'STOR' : '0001', 'MOVF' : '0010', 'MOVT' : '0011',
 	'MOVI' : '0100', 'CMPR' : '0101', 'BNOT' : '0110', 'BORR' : '0111',
 	'BAND' : '1000', 'LSHL' : '1001', 'LSHR' : '1010', 'ADDR' : '1011', 
-	'SUBR' : '1100', 'HALT' : '1101'}
+	'SUBR' : '1100', 'HALT' : '1101', 'ADDC ' : '1110', 'SUBC' : '1111'}
 	
 	# Branch opcodes (2-bit for b-type instructions)
 	branch_opcodes = {'BREQ' : '00', 'BRLT' : '01', 'BRGT' : '10', 'BNEQ' : '11'}
@@ -48,7 +48,7 @@ def convert(inFile, outFile1, outFile2):
 		output = ""
 		instr = line.split(); #split to get instruction and different operands
 		#skip empty lines and comments
-		if not instr or instr[0].startswith('//'):
+		if not instr or instr[0].startswith('//') or instr[0].startswith('$') or instr[0].endswith(':'):
 			continue
 		#make sure it is an instruction, skip over labels
 		if instr[0] in opcodes:
@@ -63,7 +63,7 @@ def convert(inFile, outFile1, outFile2):
 				if reg in registers:
 					output += registers[reg]
 				else:
-					output += '0000'
+					output += 'ERROR'
 			elif instr[0] == 'MOVI':
 				# MOVI: Move immediate 
 				imm_value = int(instr[1])
@@ -76,36 +76,37 @@ def convert(inFile, outFile1, outFile2):
 				while len(imm) < 4:
 					imm = '0' + imm
 				output += imm
-			elif instr[0] in ['MOVF', 'MOVT', 'CMPR', 'BNOT', 'HALT']:
+			elif instr[0] in ['MOVF', 'MOVT', 'CMPR', 'BNOT', 'BORR', 'BAND', 
+					 'LSHL', 'LSHR', 'ADDR', 'SUBR', 'HALT', 'ADDC', 'SUBC']:
 				# Single register operand
 				if len(instr) > 1:
 					reg = instr[1].replace(',', '')
 					if reg in registers:
 						output += registers[reg]
 					else:
-						output += '0000'
+						output += 'ERROR'
 				else:
 					reg = 'R0'
 					if reg in registers:
 						output += registers[reg]
 					else:
-						output += '0000'
-			elif instr[0] in ['BORR', 'BAND', 'LSHL', 'LSHR', 'ADDR', 'SUBR']:
-				# Two register operands (second register)
-				if len(instr) > 2:
-					reg = instr[2].replace(',', '')
-					if reg in registers:
-						output += registers[reg]
-					else:
-						output += '0000'
-				else:
-					reg = 'R0'
-					if reg in registers:
-						output += registers[reg]
-					else:
-						output += '0000'
+						output += 'ERROR'
+			# elif instr[0] in ['BORR', 'BAND', 'LSHL', 'LSHR', 'ADDR', 'SUBR']:
+			# 	# Two register operands (second register)
+			# 	if len(instr) > 2:
+			# 		reg = instr[2].replace(',', '')
+			# 		if reg in registers:
+			# 			output += registers[reg]
+			# 		else:
+			# 			output += '0000'
+			# 	else:
+			# 		reg = 'R0'
+			# 		if reg in registers:
+			# 			output += registers[reg]
+			# 		else:
+			# 			output += '0000'
 			else:
-				output += '0000'  # default register
+				output += 'ERROR'  # default register
 				
 		elif instr[0] in branch_opcodes:
 			# B-type instruction format: [instrType=1][bopcode=2bits][address=6bits]
@@ -130,9 +131,10 @@ def convert(inFile, outFile1, outFile2):
 				output += addr_bin
 			else:
 				# print(f"Warning: Label {instr[1]} not found")
-				output += '000000'  # default address
+				output += 'ERROR'  # default address
 		else:
-			continue  # skip unknown instructions
+			# continue  # skip unknown instructions
+			output += 'ERROR'
 			
 		#write binary to machine code output file
 		machine_file.write(str(output) + '\t// ' + line + '\n')

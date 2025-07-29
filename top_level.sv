@@ -79,7 +79,7 @@ module top_level(
   assign rd_addrA = 'b0000;				// implied dest reg (for most ops)
   assign rd_addrB = mach_code[3:0];
   
-  assign muxWA = RegWAddr? rd_addrB : rd_addrA;
+  assign muxWA = RegWAddr? rd_addrB : rd_addrA; // if MOVT: write to addrB; else: write to accum
   assign muxWD = MemtoReg? mem_out : rslt;
   assign immed = ({4'b0000, mach_code[3:0]});  // Get immediate from instruction bits [3:0] and cast to 8 bits
 
