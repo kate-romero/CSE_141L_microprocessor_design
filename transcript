@@ -960,3 +960,1083 @@ run -all
 # ** Note: $stop    : C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/program_1_export/new_fix2flt_tb.sv(92)
 #    Time: 401025 ns  Iteration: 0  Instance: /new_int2flt_tb
 # Break in Module new_int2flt_tb at C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/program_1_export/new_fix2flt_tb.sv line 92
+quit -sim
+# End time: 23:58:31 on Jul 28,2025, Elapsed time: 1:08:35
+# Errors: 0, Warnings: 3
+# Errors: 0, Warnings: 0
+# Compile of data_mem.sv was successful.
+# Errors: 0, Warnings: 0
+# Compile of definitions.sv was successful.
+# Errors: 0, Warnings: 0
+# Compile of instr_ROM.sv was successful.
+# Errors: 0, Warnings: 0
+# Compile of PC.sv was successful.
+# Errors: 0, Warnings: 0
+# Compile of PC_LUT.sv was successful.
+# Errors: 0, Warnings: 0
+# Compile of PC_tb.sv was successful.
+# Errors: 0, Warnings: 0
+# Compile of reg_file.sv was successful.
+# Errors: 0, Warnings: 0
+# Compile of top_level.sv was successful.
+# Errors: 0, Warnings: 0
+# Compile of data_mem0.sv was successful.
+# Errors: 0, Warnings: 0
+# Compile of new_fix2flt_tb.sv was successful.
+# Errors: 0, Warnings: 0
+# Compile of Top_level0.sv was successful.
+# Errors: 0, Warnings: 0
+# Compile of alu.sv was successful.
+# Errors: 0, Warnings: 0
+# Compile of Control.sv was successful.
+vsim -gui work.new_int2flt_tb
+# vsim -gui work.new_int2flt_tb 
+# Start time: 23:59:07 on Jul 28,2025
+# Loading sv_std.std
+# Loading work.new_int2flt_tb
+# Loading work.definitions
+# Loading work.top_level_sv_unit
+# Loading work.top_level
+# Loading work.PC
+# Loading work.PC_LUT
+# Loading work.instr_ROM
+# Loading work.Control_sv_unit
+# Loading work.Control
+# Loading work.reg_file
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.data_mem
+# Loading work.TopLevel0
+# Loading work.data_mem0
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'alu1'.  Expected 10, found 9.
+#    Time: 0 ps  Iteration: 0  Instance: /new_int2flt_tb/f1/alu1 File: C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/top_level.sv Line: 97
+# ** Warning: (vsim-3722) C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/top_level.sv(97): [TFMPC] - Missing connection for port 'zero'.
+run -all
+#  
+# what's feeding the case 0000000000000000
+# IN=0x0000,  DUT=0x0000, REF=0x0000, MATH=0x0000
+# Scores so far: vs REF=1, vs MATH=1, tests=1
+#  
+# what's feeding the case 1000000000000000
+# IN=0x8000,  DUT=0x0000, REF=0x8000, MATH=0x8000
+# Mismatch DUT vs REF: DUT=0x0000 REF=0x8000
+# Mismatch DUT vs MATH: DUT=0x0000 MATH=0x8000
+# Scores so far: vs REF=1, vs MATH=1, tests=2
+#  
+# what's feeding the case 0000000000000001
+# IN=0x0001,  DUT=0x0000, REF=0x1c00, MATH=0x1c00
+# Mismatch DUT vs REF: DUT=0x0000 REF=0x1c00
+# Mismatch DUT vs MATH: DUT=0x0000 MATH=0x1c00
+# Scores so far: vs REF=1, vs MATH=1, tests=3
+#  
+# what's feeding the case 1000000000000001
+# IN=0x8001,  DUT=0x0000, REF=0x9c00, MATH=0x9c00
+# Mismatch DUT vs REF: DUT=0x0000 REF=0x9c00
+# Mismatch DUT vs MATH: DUT=0x0000 MATH=0x9c00
+# Scores so far: vs REF=1, vs MATH=1, tests=4
+#  
+# what's feeding the case 0000000000000010
+# IN=0x0002,  DUT=0x0000, REF=0x2000, MATH=0x2000
+# Mismatch DUT vs REF: DUT=0x0000 REF=0x2000
+# Mismatch DUT vs MATH: DUT=0x0000 MATH=0x2000
+# Scores so far: vs REF=1, vs MATH=1, tests=5
+#  
+# what's feeding the case 1000000000000010
+# IN=0x8002,  DUT=0x0000, REF=0xa000, MATH=0xa000
+# Mismatch DUT vs REF: DUT=0x0000 REF=0xa000
+# Mismatch DUT vs MATH: DUT=0x0000 MATH=0xa000
+# Scores so far: vs REF=1, vs MATH=1, tests=6
+#  
+# what's feeding the case 0000000000000011
+# IN=0x0003,  DUT=0x0000, REF=0x2200, MATH=0x2200
+# Mismatch DUT vs REF: DUT=0x0000 REF=0x2200
+# Mismatch DUT vs MATH: DUT=0x0000 MATH=0x2200
+# Scores so far: vs REF=1, vs MATH=1, tests=7
+#  
+# what's feeding the case 1000000000000011
+# IN=0x8003,  DUT=0x0000, REF=0xa200, MATH=0xa200
+# Mismatch DUT vs REF: DUT=0x0000 REF=0xa200
+# Mismatch DUT vs MATH: DUT=0x0000 MATH=0xa200
+# Scores so far: vs REF=1, vs MATH=1, tests=8
+#  
+# what's feeding the case 0000000000001100
+# IN=0x000c,  DUT=0x0000, REF=0x2a00, MATH=0x2a00
+# Mismatch DUT vs REF: DUT=0x0000 REF=0x2a00
+# Mismatch DUT vs MATH: DUT=0x0000 MATH=0x2a00
+# Scores so far: vs REF=1, vs MATH=1, tests=9
+#  
+# what's feeding the case 0000000000110000
+# IN=0x0030,  DUT=0x0000, REF=0x3200, MATH=0x3200
+# Mismatch DUT vs REF: DUT=0x0000 REF=0x3200
+# Mismatch DUT vs MATH: DUT=0x0000 MATH=0x3200
+# Scores so far: vs REF=1, vs MATH=1, tests=10
+#  
+# what's feeding the case 0001111111111111
+# IN=0x1fff,  DUT=0x1f00, REF=0x4fff, MATH=0x4fff
+# Mismatch DUT vs REF: DUT=0x1f00 REF=0x4fff
+# Mismatch DUT vs MATH: DUT=0x1f00 MATH=0x4fff
+# Scores so far: vs REF=1, vs MATH=1, tests=11
+#  
+# what's feeding the case 0011111111111111
+# IN=0x3fff,  DUT=0x3f00, REF=0x53ff, MATH=0x53ff
+# Mismatch DUT vs REF: DUT=0x3f00 REF=0x53ff
+# Mismatch DUT vs MATH: DUT=0x3f00 MATH=0x53ff
+# Scores so far: vs REF=1, vs MATH=1, tests=12
+#  
+# what's feeding the case 0111111111111111
+# IN=0x7fff,  DUT=0x7f00, REF=0x57ff, MATH=0x57ff
+# Mismatch DUT vs REF: DUT=0x7f00 REF=0x57ff
+# Mismatch DUT vs MATH: DUT=0x7f00 MATH=0x57ff
+# Scores so far: vs REF=1, vs MATH=1, tests=13
+#  
+# what's feeding the case 1111111111111111
+# IN=0xffff,  DUT=0x7f00, REF=0xd7ff, MATH=0xd7ff
+# Mismatch DUT vs REF: DUT=0x7f00 REF=0xd7ff
+# Mismatch DUT vs MATH: DUT=0x7f00 MATH=0xd7ff
+# Scores so far: vs REF=1, vs MATH=1, tests=14
+#  
+# what's feeding the case 1100000000000000
+# IN=0xc000,  DUT=0x4000, REF=0xd400, MATH=0xd400
+# Mismatch DUT vs REF: DUT=0x4000 REF=0xd400
+# Mismatch DUT vs MATH: DUT=0x4000 MATH=0xd400
+# Scores so far: vs REF=1, vs MATH=1, tests=15
+#  
+# what's feeding the case 0100000000000000
+# IN=0x4000,  DUT=0x4000, REF=0x5400, MATH=0x5400
+# Mismatch DUT vs REF: DUT=0x4000 REF=0x5400
+# Mismatch DUT vs MATH: DUT=0x4000 MATH=0x5400
+# Scores so far: vs REF=1, vs MATH=1, tests=16
+#  
+# what's feeding the case 0011010100100100
+# IN=0x3524,  DUT=0x3500, REF=0x52a4, MATH=0x52a4
+# Mismatch DUT vs REF: DUT=0x3500 REF=0x52a4
+# Mismatch DUT vs MATH: DUT=0x3500 MATH=0x52a4
+# Scores so far: vs REF=1, vs MATH=1, tests=17
+#  
+# what's feeding the case 0101111010000001
+# IN=0x5e81,  DUT=0x5e00, REF=0x55e8, MATH=0x55e8
+# Mismatch DUT vs REF: DUT=0x5e00 REF=0x55e8
+# Mismatch DUT vs MATH: DUT=0x5e00 MATH=0x55e8
+# Scores so far: vs REF=1, vs MATH=1, tests=18
+#  
+# what's feeding the case 1101011000001001
+# IN=0xd609,  DUT=0x5600, REF=0xd560, MATH=0xd560
+# Mismatch DUT vs REF: DUT=0x5600 REF=0xd560
+# Mismatch DUT vs MATH: DUT=0x5600 MATH=0xd560
+# Scores so far: vs REF=1, vs MATH=1, tests=19
+#  
+# what's feeding the case 0101011001100011
+# IN=0x5663,  DUT=0x5600, REF=0x5566, MATH=0x5566
+# Mismatch DUT vs REF: DUT=0x5600 REF=0x5566
+# Mismatch DUT vs MATH: DUT=0x5600 MATH=0x5566
+# Scores so far: vs REF=1, vs MATH=1, tests=20
+# scores =           1           1 out of          20
+# ** Note: $stop    : C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/program_1_export/new_fix2flt_tb.sv(92)
+#    Time: 401025 ns  Iteration: 0  Instance: /new_int2flt_tb
+# Break in Module new_int2flt_tb at C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/program_1_export/new_fix2flt_tb.sv line 92
+add wave -position insertpoint  \
+sim:/new_int2flt_tb/clk \
+sim:/new_int2flt_tb/reset \
+sim:/new_int2flt_tb/req \
+sim:/new_int2flt_tb/ack \
+sim:/new_int2flt_tb/ack0
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: kate_  Hostname: DESKTOP-LKSAD13  ProcessID: 30316
+#           Attempting to use alternate WLF file "./wlft3ve60a".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft3ve60a
+add wave -position insertpoint  \
+sim:/new_int2flt_tb/f1/pc1/prog_ctr
+add wave -position insertpoint  \
+sim:/new_int2flt_tb/f1/mach_code
+add wave -position insertpoint  \
+sim:/new_int2flt_tb/f1/rf1/core
+add wave -position insertpoint  \
+sim:/new_int2flt_tb/f1/ctl1/AbsBranch \
+sim:/new_int2flt_tb/f1/ctl1/MemtoReg \
+sim:/new_int2flt_tb/f1/ctl1/MemWrite \
+sim:/new_int2flt_tb/f1/ctl1/ALUSrc \
+sim:/new_int2flt_tb/f1/ctl1/RegWrite \
+sim:/new_int2flt_tb/f1/ctl1/RegWAddr
+add wave -position insertpoint  \
+sim:/new_int2flt_tb/f1/ctl1/instrType \
+sim:/new_int2flt_tb/f1/ctl1/bopcode \
+sim:/new_int2flt_tb/f1/ctl1/ropcode
+add wave -position insertpoint  \
+sim:/new_int2flt_tb/f1/alu1/alu_cmd \
+sim:/new_int2flt_tb/f1/alu1/inA \
+sim:/new_int2flt_tb/f1/alu1/inB \
+sim:/new_int2flt_tb/f1/alu1/sc_i \
+sim:/new_int2flt_tb/f1/alu1/rslt
+add wave -position insertpoint  \
+{sim:/new_int2flt_tb/f1/data_mem/mem_core[0]} \
+{sim:/new_int2flt_tb/f1/data_mem/mem_core[1]} \
+{sim:/new_int2flt_tb/f1/data_mem/mem_core[2]} \
+{sim:/new_int2flt_tb/f1/data_mem/mem_core[3]}
+add wave -position insertpoint  \
+sim:/new_int2flt_tb/scoreM \
+sim:/new_int2flt_tb/score0 \
+sim:/new_int2flt_tb/count
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'alu1'.  Expected 10, found 9.
+#    Time: 0 ps  Iteration: 0  Instance: /new_int2flt_tb/f1/alu1 File: C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/top_level.sv Line: 97
+# ** Warning: (vsim-3722) C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/top_level.sv(97): [TFMPC] - Missing connection for port 'zero'.
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+#  
+# what's feeding the case 0000000000000000
+# IN=0x0000,  DUT=0x0000, REF=0x0000, MATH=0x0000
+# Scores so far: vs REF=1, vs MATH=1, tests=1
+#  
+# what's feeding the case 1000000000000000
+# IN=0x8000,  DUT=0x0000, REF=0x8000, MATH=0x8000
+# Mismatch DUT vs REF: DUT=0x0000 REF=0x8000
+# Mismatch DUT vs MATH: DUT=0x0000 MATH=0x8000
+# Scores so far: vs REF=1, vs MATH=1, tests=2
+#  
+# what's feeding the case 0000000000000001
+# IN=0x0001,  DUT=0x0000, REF=0x1c00, MATH=0x1c00
+# Mismatch DUT vs REF: DUT=0x0000 REF=0x1c00
+# Mismatch DUT vs MATH: DUT=0x0000 MATH=0x1c00
+# Scores so far: vs REF=1, vs MATH=1, tests=3
+#  
+# what's feeding the case 1000000000000001
+# IN=0x8001,  DUT=0x0000, REF=0x9c00, MATH=0x9c00
+# Mismatch DUT vs REF: DUT=0x0000 REF=0x9c00
+# Mismatch DUT vs MATH: DUT=0x0000 MATH=0x9c00
+# Scores so far: vs REF=1, vs MATH=1, tests=4
+#  
+# what's feeding the case 0000000000000010
+# IN=0x0002,  DUT=0x0000, REF=0x2000, MATH=0x2000
+# Mismatch DUT vs REF: DUT=0x0000 REF=0x2000
+# Mismatch DUT vs MATH: DUT=0x0000 MATH=0x2000
+# Scores so far: vs REF=1, vs MATH=1, tests=5
+#  
+# what's feeding the case 1000000000000010
+# IN=0x8002,  DUT=0x0000, REF=0xa000, MATH=0xa000
+# Mismatch DUT vs REF: DUT=0x0000 REF=0xa000
+# Mismatch DUT vs MATH: DUT=0x0000 MATH=0xa000
+# Scores so far: vs REF=1, vs MATH=1, tests=6
+#  
+# what's feeding the case 0000000000000011
+# IN=0x0003,  DUT=0x0000, REF=0x2200, MATH=0x2200
+# Mismatch DUT vs REF: DUT=0x0000 REF=0x2200
+# Mismatch DUT vs MATH: DUT=0x0000 MATH=0x2200
+# Scores so far: vs REF=1, vs MATH=1, tests=7
+#  
+# what's feeding the case 1000000000000011
+# IN=0x8003,  DUT=0x0000, REF=0xa200, MATH=0xa200
+# Mismatch DUT vs REF: DUT=0x0000 REF=0xa200
+# Mismatch DUT vs MATH: DUT=0x0000 MATH=0xa200
+# Scores so far: vs REF=1, vs MATH=1, tests=8
+#  
+# what's feeding the case 0000000000001100
+# IN=0x000c,  DUT=0x0000, REF=0x2a00, MATH=0x2a00
+# Mismatch DUT vs REF: DUT=0x0000 REF=0x2a00
+# Mismatch DUT vs MATH: DUT=0x0000 MATH=0x2a00
+# Scores so far: vs REF=1, vs MATH=1, tests=9
+#  
+# what's feeding the case 0000000000110000
+# IN=0x0030,  DUT=0x0000, REF=0x3200, MATH=0x3200
+# Mismatch DUT vs REF: DUT=0x0000 REF=0x3200
+# Mismatch DUT vs MATH: DUT=0x0000 MATH=0x3200
+# Scores so far: vs REF=1, vs MATH=1, tests=10
+#  
+# what's feeding the case 0001111111111111
+# IN=0x1fff,  DUT=0x1f00, REF=0x4fff, MATH=0x4fff
+# Mismatch DUT vs REF: DUT=0x1f00 REF=0x4fff
+# Mismatch DUT vs MATH: DUT=0x1f00 MATH=0x4fff
+# Scores so far: vs REF=1, vs MATH=1, tests=11
+#  
+# what's feeding the case 0011111111111111
+# IN=0x3fff,  DUT=0x3f00, REF=0x53ff, MATH=0x53ff
+# Mismatch DUT vs REF: DUT=0x3f00 REF=0x53ff
+# Mismatch DUT vs MATH: DUT=0x3f00 MATH=0x53ff
+# Scores so far: vs REF=1, vs MATH=1, tests=12
+#  
+# what's feeding the case 0111111111111111
+# IN=0x7fff,  DUT=0x7f00, REF=0x57ff, MATH=0x57ff
+# Mismatch DUT vs REF: DUT=0x7f00 REF=0x57ff
+# Mismatch DUT vs MATH: DUT=0x7f00 MATH=0x57ff
+# Scores so far: vs REF=1, vs MATH=1, tests=13
+#  
+# what's feeding the case 1111111111111111
+# IN=0xffff,  DUT=0x7f00, REF=0xd7ff, MATH=0xd7ff
+# Mismatch DUT vs REF: DUT=0x7f00 REF=0xd7ff
+# Mismatch DUT vs MATH: DUT=0x7f00 MATH=0xd7ff
+# Scores so far: vs REF=1, vs MATH=1, tests=14
+#  
+# what's feeding the case 1100000000000000
+# IN=0xc000,  DUT=0x4000, REF=0xd400, MATH=0xd400
+# Mismatch DUT vs REF: DUT=0x4000 REF=0xd400
+# Mismatch DUT vs MATH: DUT=0x4000 MATH=0xd400
+# Scores so far: vs REF=1, vs MATH=1, tests=15
+#  
+# what's feeding the case 0100000000000000
+# IN=0x4000,  DUT=0x4000, REF=0x5400, MATH=0x5400
+# Mismatch DUT vs REF: DUT=0x4000 REF=0x5400
+# Mismatch DUT vs MATH: DUT=0x4000 MATH=0x5400
+# Scores so far: vs REF=1, vs MATH=1, tests=16
+#  
+# what's feeding the case 0011010100100100
+# IN=0x3524,  DUT=0x3500, REF=0x52a4, MATH=0x52a4
+# Mismatch DUT vs REF: DUT=0x3500 REF=0x52a4
+# Mismatch DUT vs MATH: DUT=0x3500 MATH=0x52a4
+# Scores so far: vs REF=1, vs MATH=1, tests=17
+#  
+# what's feeding the case 0101111010000001
+# IN=0x5e81,  DUT=0x5e00, REF=0x55e8, MATH=0x55e8
+# Mismatch DUT vs REF: DUT=0x5e00 REF=0x55e8
+# Mismatch DUT vs MATH: DUT=0x5e00 MATH=0x55e8
+# Scores so far: vs REF=1, vs MATH=1, tests=18
+#  
+# what's feeding the case 1101011000001001
+# IN=0xd609,  DUT=0x5600, REF=0xd560, MATH=0xd560
+# Mismatch DUT vs REF: DUT=0x5600 REF=0xd560
+# Mismatch DUT vs MATH: DUT=0x5600 MATH=0xd560
+# Scores so far: vs REF=1, vs MATH=1, tests=19
+#  
+# what's feeding the case 0101011001100011
+# IN=0x5663,  DUT=0x5600, REF=0x5566, MATH=0x5566
+# Mismatch DUT vs REF: DUT=0x5600 REF=0x5566
+# Mismatch DUT vs MATH: DUT=0x5600 MATH=0x5566
+# Scores so far: vs REF=1, vs MATH=1, tests=20
+# scores =           1           1 out of          20
+# ** Note: $stop    : C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/program_1_export/new_fix2flt_tb.sv(92)
+#    Time: 401025 ns  Iteration: 0  Instance: /new_int2flt_tb
+# Break in Module new_int2flt_tb at C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/program_1_export/new_fix2flt_tb.sv line 92
+# Compile of Control.sv failed with 2 errors.
+quit -sim
+# End time: 00:24:14 on Jul 29,2025, Elapsed time: 0:25:07
+# Errors: 0, Warnings: 4
+# Compile of Control.sv was successful.
+vsim -gui work.new_int2flt_tb
+# vsim -gui work.new_int2flt_tb 
+# Start time: 00:25:46 on Jul 29,2025
+# Loading sv_std.std
+# Loading work.new_int2flt_tb
+# Loading work.definitions
+# Loading work.top_level_sv_unit
+# Loading work.top_level
+# Loading work.PC
+# Loading work.PC_LUT
+# Loading work.instr_ROM
+# Loading work.Control_sv_unit
+# Loading work.Control
+# Loading work.reg_file
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.data_mem
+# Loading work.TopLevel0
+# Loading work.data_mem0
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'alu1'.  Expected 10, found 9.
+#    Time: 0 ps  Iteration: 0  Instance: /new_int2flt_tb/f1/alu1 File: C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/top_level.sv Line: 97
+# ** Warning: (vsim-3722) C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/top_level.sv(97): [TFMPC] - Missing connection for port 'zero'.
+run -all
+#  
+# what's feeding the case 0000000000000000
+# IN=0x0000,  DUT=0x0000, REF=0x0000, MATH=0x0000
+# Scores so far: vs REF=1, vs MATH=1, tests=1
+#  
+# what's feeding the case 1000000000000000
+# IN=0x8000,  DUT=0x0000, REF=0x8000, MATH=0x8000
+# Mismatch DUT vs REF: DUT=0x0000 REF=0x8000
+# Mismatch DUT vs MATH: DUT=0x0000 MATH=0x8000
+# Scores so far: vs REF=1, vs MATH=1, tests=2
+#  
+# what's feeding the case 0000000000000001
+# IN=0x0001,  DUT=0x0001, REF=0x1c00, MATH=0x1c00
+# Mismatch DUT vs REF: DUT=0x0001 REF=0x1c00
+# Mismatch DUT vs MATH: DUT=0x0001 MATH=0x1c00
+# Scores so far: vs REF=1, vs MATH=1, tests=3
+#  
+# what's feeding the case 1000000000000001
+# IN=0x8001,  DUT=0x0001, REF=0x9c00, MATH=0x9c00
+# Mismatch DUT vs REF: DUT=0x0001 REF=0x9c00
+# Mismatch DUT vs MATH: DUT=0x0001 MATH=0x9c00
+# Scores so far: vs REF=1, vs MATH=1, tests=4
+#  
+# what's feeding the case 0000000000000010
+# IN=0x0002,  DUT=0x0002, REF=0x2000, MATH=0x2000
+# Mismatch DUT vs REF: DUT=0x0002 REF=0x2000
+# Mismatch DUT vs MATH: DUT=0x0002 MATH=0x2000
+# Scores so far: vs REF=1, vs MATH=1, tests=5
+#  
+# what's feeding the case 1000000000000010
+# IN=0x8002,  DUT=0x0002, REF=0xa000, MATH=0xa000
+# Mismatch DUT vs REF: DUT=0x0002 REF=0xa000
+# Mismatch DUT vs MATH: DUT=0x0002 MATH=0xa000
+# Scores so far: vs REF=1, vs MATH=1, tests=6
+#  
+# what's feeding the case 0000000000000011
+# IN=0x0003,  DUT=0x0003, REF=0x2200, MATH=0x2200
+# Mismatch DUT vs REF: DUT=0x0003 REF=0x2200
+# Mismatch DUT vs MATH: DUT=0x0003 MATH=0x2200
+# Scores so far: vs REF=1, vs MATH=1, tests=7
+#  
+# what's feeding the case 1000000000000011
+# IN=0x8003,  DUT=0x0003, REF=0xa200, MATH=0xa200
+# Mismatch DUT vs REF: DUT=0x0003 REF=0xa200
+# Mismatch DUT vs MATH: DUT=0x0003 MATH=0xa200
+# Scores so far: vs REF=1, vs MATH=1, tests=8
+#  
+# what's feeding the case 0000000000001100
+# IN=0x000c,  DUT=0x000c, REF=0x2a00, MATH=0x2a00
+# Mismatch DUT vs REF: DUT=0x000c REF=0x2a00
+# Mismatch DUT vs MATH: DUT=0x000c MATH=0x2a00
+# Scores so far: vs REF=1, vs MATH=1, tests=9
+#  
+# what's feeding the case 0000000000110000
+# IN=0x0030,  DUT=0x0030, REF=0x3200, MATH=0x3200
+# Mismatch DUT vs REF: DUT=0x0030 REF=0x3200
+# Mismatch DUT vs MATH: DUT=0x0030 MATH=0x3200
+# Scores so far: vs REF=1, vs MATH=1, tests=10
+#  
+# what's feeding the case 0001111111111111
+# IN=0x1fff,  DUT=0x1fff, REF=0x4fff, MATH=0x4fff
+# Mismatch DUT vs REF: DUT=0x1fff REF=0x4fff
+# Mismatch DUT vs MATH: DUT=0x1fff MATH=0x4fff
+# Scores so far: vs REF=1, vs MATH=1, tests=11
+#  
+# what's feeding the case 0011111111111111
+# IN=0x3fff,  DUT=0x3fff, REF=0x53ff, MATH=0x53ff
+# Mismatch DUT vs REF: DUT=0x3fff REF=0x53ff
+# Mismatch DUT vs MATH: DUT=0x3fff MATH=0x53ff
+# Scores so far: vs REF=1, vs MATH=1, tests=12
+#  
+# what's feeding the case 0111111111111111
+# IN=0x7fff,  DUT=0x7fff, REF=0x57ff, MATH=0x57ff
+# Mismatch DUT vs REF: DUT=0x7fff REF=0x57ff
+# Mismatch DUT vs MATH: DUT=0x7fff MATH=0x57ff
+# Scores so far: vs REF=1, vs MATH=1, tests=13
+#  
+# what's feeding the case 1111111111111111
+# IN=0xffff,  DUT=0x7fff, REF=0xd7ff, MATH=0xd7ff
+# Mismatch DUT vs REF: DUT=0x7fff REF=0xd7ff
+# Mismatch DUT vs MATH: DUT=0x7fff MATH=0xd7ff
+# Scores so far: vs REF=1, vs MATH=1, tests=14
+#  
+# what's feeding the case 1100000000000000
+# IN=0xc000,  DUT=0x4000, REF=0xd400, MATH=0xd400
+# Mismatch DUT vs REF: DUT=0x4000 REF=0xd400
+# Mismatch DUT vs MATH: DUT=0x4000 MATH=0xd400
+# Scores so far: vs REF=1, vs MATH=1, tests=15
+#  
+# what's feeding the case 0100000000000000
+# IN=0x4000,  DUT=0x4000, REF=0x5400, MATH=0x5400
+# Mismatch DUT vs REF: DUT=0x4000 REF=0x5400
+# Mismatch DUT vs MATH: DUT=0x4000 MATH=0x5400
+# Scores so far: vs REF=1, vs MATH=1, tests=16
+#  
+# what's feeding the case 0011010100100100
+# IN=0x3524,  DUT=0x3524, REF=0x52a4, MATH=0x52a4
+# Mismatch DUT vs REF: DUT=0x3524 REF=0x52a4
+# Mismatch DUT vs MATH: DUT=0x3524 MATH=0x52a4
+# Scores so far: vs REF=1, vs MATH=1, tests=17
+#  
+# what's feeding the case 0101111010000001
+# IN=0x5e81,  DUT=0x5e81, REF=0x55e8, MATH=0x55e8
+# Mismatch DUT vs REF: DUT=0x5e81 REF=0x55e8
+# Mismatch DUT vs MATH: DUT=0x5e81 MATH=0x55e8
+# Scores so far: vs REF=1, vs MATH=1, tests=18
+#  
+# what's feeding the case 1101011000001001
+# IN=0xd609,  DUT=0x5609, REF=0xd560, MATH=0xd560
+# Mismatch DUT vs REF: DUT=0x5609 REF=0xd560
+# Mismatch DUT vs MATH: DUT=0x5609 MATH=0xd560
+# Scores so far: vs REF=1, vs MATH=1, tests=19
+#  
+# what's feeding the case 0101011001100011
+# IN=0x5663,  DUT=0x5663, REF=0x5566, MATH=0x5566
+# Mismatch DUT vs REF: DUT=0x5663 REF=0x5566
+# Mismatch DUT vs MATH: DUT=0x5663 MATH=0x5566
+# Scores so far: vs REF=1, vs MATH=1, tests=20
+# scores =           1           1 out of          20
+# ** Note: $stop    : C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/program_1_export/new_fix2flt_tb.sv(92)
+#    Time: 401025 ns  Iteration: 0  Instance: /new_int2flt_tb
+# Break in Module new_int2flt_tb at C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/program_1_export/new_fix2flt_tb.sv line 92
+add wave -position insertpoint  \
+sim:/new_int2flt_tb/clk \
+sim:/new_int2flt_tb/reset \
+sim:/new_int2flt_tb/req \
+sim:/new_int2flt_tb/ack \
+sim:/new_int2flt_tb/ack0
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: kate_  Hostname: DESKTOP-LKSAD13  ProcessID: 30316
+#           Attempting to use alternate WLF file "./wlfte57zzd".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfte57zzd
+add wave -position insertpoint  \
+sim:/new_int2flt_tb/f1/pc1/prog_ctr
+add wave -position insertpoint  \
+sim:/new_int2flt_tb/f1/mach_code
+add wave -position insertpoint  \
+sim:/new_int2flt_tb/f1/rf1/core
+add wave -position insertpoint  \
+sim:/new_int2flt_tb/f1/ctl1/instrType \
+sim:/new_int2flt_tb/f1/ctl1/bopcode \
+sim:/new_int2flt_tb/f1/ctl1/ropcode
+add wave -position insertpoint  \
+sim:/new_int2flt_tb/f1/alu1/alu_cmd \
+sim:/new_int2flt_tb/f1/alu1/inA \
+sim:/new_int2flt_tb/f1/alu1/inB \
+sim:/new_int2flt_tb/f1/alu1/sc_i \
+sim:/new_int2flt_tb/f1/alu1/rslt
+add wave -position insertpoint  \
+sim:/new_int2flt_tb/scoreM \
+sim:/new_int2flt_tb/score0 \
+sim:/new_int2flt_tb/count
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'alu1'.  Expected 10, found 9.
+#    Time: 0 ps  Iteration: 0  Instance: /new_int2flt_tb/f1/alu1 File: C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/top_level.sv Line: 97
+# ** Warning: (vsim-3722) C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/top_level.sv(97): [TFMPC] - Missing connection for port 'zero'.
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+#  
+# what's feeding the case 0000000000000000
+# IN=0x0000,  DUT=0x0000, REF=0x0000, MATH=0x0000
+# Scores so far: vs REF=1, vs MATH=1, tests=1
+#  
+# what's feeding the case 1000000000000000
+# IN=0x8000,  DUT=0x0000, REF=0x8000, MATH=0x8000
+# Mismatch DUT vs REF: DUT=0x0000 REF=0x8000
+# Mismatch DUT vs MATH: DUT=0x0000 MATH=0x8000
+# Scores so far: vs REF=1, vs MATH=1, tests=2
+#  
+# what's feeding the case 0000000000000001
+# IN=0x0001,  DUT=0x0001, REF=0x1c00, MATH=0x1c00
+# Mismatch DUT vs REF: DUT=0x0001 REF=0x1c00
+# Mismatch DUT vs MATH: DUT=0x0001 MATH=0x1c00
+# Scores so far: vs REF=1, vs MATH=1, tests=3
+#  
+# what's feeding the case 1000000000000001
+# IN=0x8001,  DUT=0x0001, REF=0x9c00, MATH=0x9c00
+# Mismatch DUT vs REF: DUT=0x0001 REF=0x9c00
+# Mismatch DUT vs MATH: DUT=0x0001 MATH=0x9c00
+# Scores so far: vs REF=1, vs MATH=1, tests=4
+#  
+# what's feeding the case 0000000000000010
+# IN=0x0002,  DUT=0x0002, REF=0x2000, MATH=0x2000
+# Mismatch DUT vs REF: DUT=0x0002 REF=0x2000
+# Mismatch DUT vs MATH: DUT=0x0002 MATH=0x2000
+# Scores so far: vs REF=1, vs MATH=1, tests=5
+#  
+# what's feeding the case 1000000000000010
+# IN=0x8002,  DUT=0x0002, REF=0xa000, MATH=0xa000
+# Mismatch DUT vs REF: DUT=0x0002 REF=0xa000
+# Mismatch DUT vs MATH: DUT=0x0002 MATH=0xa000
+# Scores so far: vs REF=1, vs MATH=1, tests=6
+#  
+# what's feeding the case 0000000000000011
+# IN=0x0003,  DUT=0x0003, REF=0x2200, MATH=0x2200
+# Mismatch DUT vs REF: DUT=0x0003 REF=0x2200
+# Mismatch DUT vs MATH: DUT=0x0003 MATH=0x2200
+# Scores so far: vs REF=1, vs MATH=1, tests=7
+#  
+# what's feeding the case 1000000000000011
+# IN=0x8003,  DUT=0x0003, REF=0xa200, MATH=0xa200
+# Mismatch DUT vs REF: DUT=0x0003 REF=0xa200
+# Mismatch DUT vs MATH: DUT=0x0003 MATH=0xa200
+# Scores so far: vs REF=1, vs MATH=1, tests=8
+#  
+# what's feeding the case 0000000000001100
+# IN=0x000c,  DUT=0x000c, REF=0x2a00, MATH=0x2a00
+# Mismatch DUT vs REF: DUT=0x000c REF=0x2a00
+# Mismatch DUT vs MATH: DUT=0x000c MATH=0x2a00
+# Scores so far: vs REF=1, vs MATH=1, tests=9
+#  
+# what's feeding the case 0000000000110000
+# IN=0x0030,  DUT=0x0030, REF=0x3200, MATH=0x3200
+# Mismatch DUT vs REF: DUT=0x0030 REF=0x3200
+# Mismatch DUT vs MATH: DUT=0x0030 MATH=0x3200
+# Scores so far: vs REF=1, vs MATH=1, tests=10
+#  
+# what's feeding the case 0001111111111111
+# IN=0x1fff,  DUT=0x1fff, REF=0x4fff, MATH=0x4fff
+# Mismatch DUT vs REF: DUT=0x1fff REF=0x4fff
+# Mismatch DUT vs MATH: DUT=0x1fff MATH=0x4fff
+# Scores so far: vs REF=1, vs MATH=1, tests=11
+#  
+# what's feeding the case 0011111111111111
+# IN=0x3fff,  DUT=0x3fff, REF=0x53ff, MATH=0x53ff
+# Mismatch DUT vs REF: DUT=0x3fff REF=0x53ff
+# Mismatch DUT vs MATH: DUT=0x3fff MATH=0x53ff
+# Scores so far: vs REF=1, vs MATH=1, tests=12
+#  
+# what's feeding the case 0111111111111111
+# IN=0x7fff,  DUT=0x7fff, REF=0x57ff, MATH=0x57ff
+# Mismatch DUT vs REF: DUT=0x7fff REF=0x57ff
+# Mismatch DUT vs MATH: DUT=0x7fff MATH=0x57ff
+# Scores so far: vs REF=1, vs MATH=1, tests=13
+#  
+# what's feeding the case 1111111111111111
+# IN=0xffff,  DUT=0x7fff, REF=0xd7ff, MATH=0xd7ff
+# Mismatch DUT vs REF: DUT=0x7fff REF=0xd7ff
+# Mismatch DUT vs MATH: DUT=0x7fff MATH=0xd7ff
+# Scores so far: vs REF=1, vs MATH=1, tests=14
+#  
+# what's feeding the case 1100000000000000
+# IN=0xc000,  DUT=0x4000, REF=0xd400, MATH=0xd400
+# Mismatch DUT vs REF: DUT=0x4000 REF=0xd400
+# Mismatch DUT vs MATH: DUT=0x4000 MATH=0xd400
+# Scores so far: vs REF=1, vs MATH=1, tests=15
+#  
+# what's feeding the case 0100000000000000
+# IN=0x4000,  DUT=0x4000, REF=0x5400, MATH=0x5400
+# Mismatch DUT vs REF: DUT=0x4000 REF=0x5400
+# Mismatch DUT vs MATH: DUT=0x4000 MATH=0x5400
+# Scores so far: vs REF=1, vs MATH=1, tests=16
+#  
+# what's feeding the case 0011010100100100
+# IN=0x3524,  DUT=0x3524, REF=0x52a4, MATH=0x52a4
+# Mismatch DUT vs REF: DUT=0x3524 REF=0x52a4
+# Mismatch DUT vs MATH: DUT=0x3524 MATH=0x52a4
+# Scores so far: vs REF=1, vs MATH=1, tests=17
+#  
+# what's feeding the case 0101111010000001
+# IN=0x5e81,  DUT=0x5e81, REF=0x55e8, MATH=0x55e8
+# Mismatch DUT vs REF: DUT=0x5e81 REF=0x55e8
+# Mismatch DUT vs MATH: DUT=0x5e81 MATH=0x55e8
+# Scores so far: vs REF=1, vs MATH=1, tests=18
+#  
+# what's feeding the case 1101011000001001
+# IN=0xd609,  DUT=0x5609, REF=0xd560, MATH=0xd560
+# Mismatch DUT vs REF: DUT=0x5609 REF=0xd560
+# Mismatch DUT vs MATH: DUT=0x5609 MATH=0xd560
+# Scores so far: vs REF=1, vs MATH=1, tests=19
+#  
+# what's feeding the case 0101011001100011
+# IN=0x5663,  DUT=0x5663, REF=0x5566, MATH=0x5566
+# Mismatch DUT vs REF: DUT=0x5663 REF=0x5566
+# Mismatch DUT vs MATH: DUT=0x5663 MATH=0x5566
+# Scores so far: vs REF=1, vs MATH=1, tests=20
+# scores =           1           1 out of          20
+# ** Note: $stop    : C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/program_1_export/new_fix2flt_tb.sv(92)
+#    Time: 401025 ns  Iteration: 0  Instance: /new_int2flt_tb
+# Break in Module new_int2flt_tb at C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/program_1_export/new_fix2flt_tb.sv line 92
+add wave -position insertpoint  \
+sim:/new_int2flt_tb/f1/ctl1/AbsBranch \
+sim:/new_int2flt_tb/f1/ctl1/MemtoReg \
+sim:/new_int2flt_tb/f1/ctl1/MemWrite \
+sim:/new_int2flt_tb/f1/ctl1/ALUSrc \
+sim:/new_int2flt_tb/f1/ctl1/RegWrite \
+sim:/new_int2flt_tb/f1/ctl1/RegWAddr
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'alu1'.  Expected 10, found 9.
+#    Time: 0 ps  Iteration: 0  Instance: /new_int2flt_tb/f1/alu1 File: C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/top_level.sv Line: 97
+# ** Warning: (vsim-3722) C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/top_level.sv(97): [TFMPC] - Missing connection for port 'zero'.
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+#  
+# what's feeding the case 0000000000000000
+# IN=0x0000,  DUT=0x0000, REF=0x0000, MATH=0x0000
+# Scores so far: vs REF=1, vs MATH=1, tests=1
+#  
+# what's feeding the case 1000000000000000
+# IN=0x8000,  DUT=0x0000, REF=0x8000, MATH=0x8000
+# Mismatch DUT vs REF: DUT=0x0000 REF=0x8000
+# Mismatch DUT vs MATH: DUT=0x0000 MATH=0x8000
+# Scores so far: vs REF=1, vs MATH=1, tests=2
+#  
+# what's feeding the case 0000000000000001
+# IN=0x0001,  DUT=0x0001, REF=0x1c00, MATH=0x1c00
+# Mismatch DUT vs REF: DUT=0x0001 REF=0x1c00
+# Mismatch DUT vs MATH: DUT=0x0001 MATH=0x1c00
+# Scores so far: vs REF=1, vs MATH=1, tests=3
+#  
+# what's feeding the case 1000000000000001
+# IN=0x8001,  DUT=0x0001, REF=0x9c00, MATH=0x9c00
+# Mismatch DUT vs REF: DUT=0x0001 REF=0x9c00
+# Mismatch DUT vs MATH: DUT=0x0001 MATH=0x9c00
+# Scores so far: vs REF=1, vs MATH=1, tests=4
+#  
+# what's feeding the case 0000000000000010
+# IN=0x0002,  DUT=0x0002, REF=0x2000, MATH=0x2000
+# Mismatch DUT vs REF: DUT=0x0002 REF=0x2000
+# Mismatch DUT vs MATH: DUT=0x0002 MATH=0x2000
+# Scores so far: vs REF=1, vs MATH=1, tests=5
+#  
+# what's feeding the case 1000000000000010
+# IN=0x8002,  DUT=0x0002, REF=0xa000, MATH=0xa000
+# Mismatch DUT vs REF: DUT=0x0002 REF=0xa000
+# Mismatch DUT vs MATH: DUT=0x0002 MATH=0xa000
+# Scores so far: vs REF=1, vs MATH=1, tests=6
+#  
+# what's feeding the case 0000000000000011
+# IN=0x0003,  DUT=0x0003, REF=0x2200, MATH=0x2200
+# Mismatch DUT vs REF: DUT=0x0003 REF=0x2200
+# Mismatch DUT vs MATH: DUT=0x0003 MATH=0x2200
+# Scores so far: vs REF=1, vs MATH=1, tests=7
+#  
+# what's feeding the case 1000000000000011
+# IN=0x8003,  DUT=0x0003, REF=0xa200, MATH=0xa200
+# Mismatch DUT vs REF: DUT=0x0003 REF=0xa200
+# Mismatch DUT vs MATH: DUT=0x0003 MATH=0xa200
+# Scores so far: vs REF=1, vs MATH=1, tests=8
+#  
+# what's feeding the case 0000000000001100
+# IN=0x000c,  DUT=0x000c, REF=0x2a00, MATH=0x2a00
+# Mismatch DUT vs REF: DUT=0x000c REF=0x2a00
+# Mismatch DUT vs MATH: DUT=0x000c MATH=0x2a00
+# Scores so far: vs REF=1, vs MATH=1, tests=9
+#  
+# what's feeding the case 0000000000110000
+# IN=0x0030,  DUT=0x0030, REF=0x3200, MATH=0x3200
+# Mismatch DUT vs REF: DUT=0x0030 REF=0x3200
+# Mismatch DUT vs MATH: DUT=0x0030 MATH=0x3200
+# Scores so far: vs REF=1, vs MATH=1, tests=10
+#  
+# what's feeding the case 0001111111111111
+# IN=0x1fff,  DUT=0x1fff, REF=0x4fff, MATH=0x4fff
+# Mismatch DUT vs REF: DUT=0x1fff REF=0x4fff
+# Mismatch DUT vs MATH: DUT=0x1fff MATH=0x4fff
+# Scores so far: vs REF=1, vs MATH=1, tests=11
+#  
+# what's feeding the case 0011111111111111
+# IN=0x3fff,  DUT=0x3fff, REF=0x53ff, MATH=0x53ff
+# Mismatch DUT vs REF: DUT=0x3fff REF=0x53ff
+# Mismatch DUT vs MATH: DUT=0x3fff MATH=0x53ff
+# Scores so far: vs REF=1, vs MATH=1, tests=12
+#  
+# what's feeding the case 0111111111111111
+# IN=0x7fff,  DUT=0x7fff, REF=0x57ff, MATH=0x57ff
+# Mismatch DUT vs REF: DUT=0x7fff REF=0x57ff
+# Mismatch DUT vs MATH: DUT=0x7fff MATH=0x57ff
+# Scores so far: vs REF=1, vs MATH=1, tests=13
+#  
+# what's feeding the case 1111111111111111
+# IN=0xffff,  DUT=0x7fff, REF=0xd7ff, MATH=0xd7ff
+# Mismatch DUT vs REF: DUT=0x7fff REF=0xd7ff
+# Mismatch DUT vs MATH: DUT=0x7fff MATH=0xd7ff
+# Scores so far: vs REF=1, vs MATH=1, tests=14
+#  
+# what's feeding the case 1100000000000000
+# IN=0xc000,  DUT=0x4000, REF=0xd400, MATH=0xd400
+# Mismatch DUT vs REF: DUT=0x4000 REF=0xd400
+# Mismatch DUT vs MATH: DUT=0x4000 MATH=0xd400
+# Scores so far: vs REF=1, vs MATH=1, tests=15
+#  
+# what's feeding the case 0100000000000000
+# IN=0x4000,  DUT=0x4000, REF=0x5400, MATH=0x5400
+# Mismatch DUT vs REF: DUT=0x4000 REF=0x5400
+# Mismatch DUT vs MATH: DUT=0x4000 MATH=0x5400
+# Scores so far: vs REF=1, vs MATH=1, tests=16
+#  
+# what's feeding the case 0011010100100100
+# IN=0x3524,  DUT=0x3524, REF=0x52a4, MATH=0x52a4
+# Mismatch DUT vs REF: DUT=0x3524 REF=0x52a4
+# Mismatch DUT vs MATH: DUT=0x3524 MATH=0x52a4
+# Scores so far: vs REF=1, vs MATH=1, tests=17
+#  
+# what's feeding the case 0101111010000001
+# IN=0x5e81,  DUT=0x5e81, REF=0x55e8, MATH=0x55e8
+# Mismatch DUT vs REF: DUT=0x5e81 REF=0x55e8
+# Mismatch DUT vs MATH: DUT=0x5e81 MATH=0x55e8
+# Scores so far: vs REF=1, vs MATH=1, tests=18
+#  
+# what's feeding the case 1101011000001001
+# IN=0xd609,  DUT=0x5609, REF=0xd560, MATH=0xd560
+# Mismatch DUT vs REF: DUT=0x5609 REF=0xd560
+# Mismatch DUT vs MATH: DUT=0x5609 MATH=0xd560
+# Scores so far: vs REF=1, vs MATH=1, tests=19
+#  
+# what's feeding the case 0101011001100011
+# IN=0x5663,  DUT=0x5663, REF=0x5566, MATH=0x5566
+# Mismatch DUT vs REF: DUT=0x5663 REF=0x5566
+# Mismatch DUT vs MATH: DUT=0x5663 MATH=0x5566
+# Scores so far: vs REF=1, vs MATH=1, tests=20
+# scores =           1           1 out of          20
+# ** Note: $stop    : C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/program_1_export/new_fix2flt_tb.sv(92)
+#    Time: 401025 ns  Iteration: 0  Instance: /new_int2flt_tb
+# Break in Module new_int2flt_tb at C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/program_1_export/new_fix2flt_tb.sv line 92
+add wave -position insertpoint  \
+{sim:/new_int2flt_tb/f1/data_mem/mem_core[0]} \
+{sim:/new_int2flt_tb/f1/data_mem/mem_core[1]} \
+{sim:/new_int2flt_tb/f1/data_mem/mem_core[2]} \
+{sim:/new_int2flt_tb/f1/data_mem/mem_core[3]}
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'alu1'.  Expected 10, found 9.
+#    Time: 0 ps  Iteration: 0  Instance: /new_int2flt_tb/f1/alu1 File: C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/top_level.sv Line: 97
+# ** Warning: (vsim-3722) C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/top_level.sv(97): [TFMPC] - Missing connection for port 'zero'.
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+#  
+# what's feeding the case 0000000000000000
+# IN=0x0000,  DUT=0x0000, REF=0x0000, MATH=0x0000
+# Scores so far: vs REF=1, vs MATH=1, tests=1
+#  
+# what's feeding the case 1000000000000000
+# IN=0x8000,  DUT=0x0000, REF=0x8000, MATH=0x8000
+# Mismatch DUT vs REF: DUT=0x0000 REF=0x8000
+# Mismatch DUT vs MATH: DUT=0x0000 MATH=0x8000
+# Scores so far: vs REF=1, vs MATH=1, tests=2
+#  
+# what's feeding the case 0000000000000001
+# IN=0x0001,  DUT=0x0001, REF=0x1c00, MATH=0x1c00
+# Mismatch DUT vs REF: DUT=0x0001 REF=0x1c00
+# Mismatch DUT vs MATH: DUT=0x0001 MATH=0x1c00
+# Scores so far: vs REF=1, vs MATH=1, tests=3
+#  
+# what's feeding the case 1000000000000001
+# IN=0x8001,  DUT=0x0001, REF=0x9c00, MATH=0x9c00
+# Mismatch DUT vs REF: DUT=0x0001 REF=0x9c00
+# Mismatch DUT vs MATH: DUT=0x0001 MATH=0x9c00
+# Scores so far: vs REF=1, vs MATH=1, tests=4
+#  
+# what's feeding the case 0000000000000010
+# IN=0x0002,  DUT=0x0002, REF=0x2000, MATH=0x2000
+# Mismatch DUT vs REF: DUT=0x0002 REF=0x2000
+# Mismatch DUT vs MATH: DUT=0x0002 MATH=0x2000
+# Scores so far: vs REF=1, vs MATH=1, tests=5
+#  
+# what's feeding the case 1000000000000010
+# IN=0x8002,  DUT=0x0002, REF=0xa000, MATH=0xa000
+# Mismatch DUT vs REF: DUT=0x0002 REF=0xa000
+# Mismatch DUT vs MATH: DUT=0x0002 MATH=0xa000
+# Scores so far: vs REF=1, vs MATH=1, tests=6
+#  
+# what's feeding the case 0000000000000011
+# IN=0x0003,  DUT=0x0003, REF=0x2200, MATH=0x2200
+# Mismatch DUT vs REF: DUT=0x0003 REF=0x2200
+# Mismatch DUT vs MATH: DUT=0x0003 MATH=0x2200
+# Scores so far: vs REF=1, vs MATH=1, tests=7
+#  
+# what's feeding the case 1000000000000011
+# IN=0x8003,  DUT=0x0003, REF=0xa200, MATH=0xa200
+# Mismatch DUT vs REF: DUT=0x0003 REF=0xa200
+# Mismatch DUT vs MATH: DUT=0x0003 MATH=0xa200
+# Scores so far: vs REF=1, vs MATH=1, tests=8
+#  
+# what's feeding the case 0000000000001100
+# IN=0x000c,  DUT=0x000c, REF=0x2a00, MATH=0x2a00
+# Mismatch DUT vs REF: DUT=0x000c REF=0x2a00
+# Mismatch DUT vs MATH: DUT=0x000c MATH=0x2a00
+# Scores so far: vs REF=1, vs MATH=1, tests=9
+#  
+# what's feeding the case 0000000000110000
+# IN=0x0030,  DUT=0x0030, REF=0x3200, MATH=0x3200
+# Mismatch DUT vs REF: DUT=0x0030 REF=0x3200
+# Mismatch DUT vs MATH: DUT=0x0030 MATH=0x3200
+# Scores so far: vs REF=1, vs MATH=1, tests=10
+#  
+# what's feeding the case 0001111111111111
+# IN=0x1fff,  DUT=0x1fff, REF=0x4fff, MATH=0x4fff
+# Mismatch DUT vs REF: DUT=0x1fff REF=0x4fff
+# Mismatch DUT vs MATH: DUT=0x1fff MATH=0x4fff
+# Scores so far: vs REF=1, vs MATH=1, tests=11
+#  
+# what's feeding the case 0011111111111111
+# IN=0x3fff,  DUT=0x3fff, REF=0x53ff, MATH=0x53ff
+# Mismatch DUT vs REF: DUT=0x3fff REF=0x53ff
+# Mismatch DUT vs MATH: DUT=0x3fff MATH=0x53ff
+# Scores so far: vs REF=1, vs MATH=1, tests=12
+#  
+# what's feeding the case 0111111111111111
+# IN=0x7fff,  DUT=0x7fff, REF=0x57ff, MATH=0x57ff
+# Mismatch DUT vs REF: DUT=0x7fff REF=0x57ff
+# Mismatch DUT vs MATH: DUT=0x7fff MATH=0x57ff
+# Scores so far: vs REF=1, vs MATH=1, tests=13
+#  
+# what's feeding the case 1111111111111111
+# IN=0xffff,  DUT=0x7fff, REF=0xd7ff, MATH=0xd7ff
+# Mismatch DUT vs REF: DUT=0x7fff REF=0xd7ff
+# Mismatch DUT vs MATH: DUT=0x7fff MATH=0xd7ff
+# Scores so far: vs REF=1, vs MATH=1, tests=14
+#  
+# what's feeding the case 1100000000000000
+# IN=0xc000,  DUT=0x4000, REF=0xd400, MATH=0xd400
+# Mismatch DUT vs REF: DUT=0x4000 REF=0xd400
+# Mismatch DUT vs MATH: DUT=0x4000 MATH=0xd400
+# Scores so far: vs REF=1, vs MATH=1, tests=15
+#  
+# what's feeding the case 0100000000000000
+# IN=0x4000,  DUT=0x4000, REF=0x5400, MATH=0x5400
+# Mismatch DUT vs REF: DUT=0x4000 REF=0x5400
+# Mismatch DUT vs MATH: DUT=0x4000 MATH=0x5400
+# Scores so far: vs REF=1, vs MATH=1, tests=16
+#  
+# what's feeding the case 0011010100100100
+# IN=0x3524,  DUT=0x3524, REF=0x52a4, MATH=0x52a4
+# Mismatch DUT vs REF: DUT=0x3524 REF=0x52a4
+# Mismatch DUT vs MATH: DUT=0x3524 MATH=0x52a4
+# Scores so far: vs REF=1, vs MATH=1, tests=17
+#  
+# what's feeding the case 0101111010000001
+# IN=0x5e81,  DUT=0x5e81, REF=0x55e8, MATH=0x55e8
+# Mismatch DUT vs REF: DUT=0x5e81 REF=0x55e8
+# Mismatch DUT vs MATH: DUT=0x5e81 MATH=0x55e8
+# Scores so far: vs REF=1, vs MATH=1, tests=18
+#  
+# what's feeding the case 1101011000001001
+# IN=0xd609,  DUT=0x5609, REF=0xd560, MATH=0xd560
+# Mismatch DUT vs REF: DUT=0x5609 REF=0xd560
+# Mismatch DUT vs MATH: DUT=0x5609 MATH=0xd560
+# Scores so far: vs REF=1, vs MATH=1, tests=19
+#  
+# what's feeding the case 0101011001100011
+# IN=0x5663,  DUT=0x5663, REF=0x5566, MATH=0x5566
+# Mismatch DUT vs REF: DUT=0x5663 REF=0x5566
+# Mismatch DUT vs MATH: DUT=0x5663 MATH=0x5566
+# Scores so far: vs REF=1, vs MATH=1, tests=20
+# scores =           1           1 out of          20
+# ** Note: $stop    : C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/program_1_export/new_fix2flt_tb.sv(92)
+#    Time: 401025 ns  Iteration: 0  Instance: /new_int2flt_tb
+# Break in Module new_int2flt_tb at C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/program_1_export/new_fix2flt_tb.sv line 92
+quit -sim
+# End time: 00:44:49 on Jul 29,2025, Elapsed time: 0:19:03
+# Errors: 0, Warnings: 3
+vsim -gui work.new_int2flt_tb
+# vsim -gui work.new_int2flt_tb 
+# Start time: 00:45:01 on Jul 29,2025
+# Loading sv_std.std
+# Loading work.new_int2flt_tb
+# Loading work.definitions
+# Loading work.top_level_sv_unit
+# Loading work.top_level
+# Loading work.PC
+# Loading work.PC_LUT
+# Loading work.instr_ROM
+# Loading work.Control_sv_unit
+# Loading work.Control
+# Loading work.reg_file
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.data_mem
+# Loading work.TopLevel0
+# Loading work.data_mem0
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'alu1'.  Expected 10, found 9.
+#    Time: 0 ps  Iteration: 0  Instance: /new_int2flt_tb/f1/alu1 File: C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/top_level.sv Line: 97
+# ** Warning: (vsim-3722) C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/top_level.sv(97): [TFMPC] - Missing connection for port 'zero'.
+run -all
+#  
+# what's feeding the case 0000000000000000
+# IN=0x0000,  DUT=0x0000, REF=0x0000, MATH=0x0000
+# Scores so far: vs REF=1, vs MATH=1, tests=1
+#  
+# what's feeding the case 1000000000000000
+# IN=0x8000,  DUT=0x8000, REF=0x8000, MATH=0x8000
+# Scores so far: vs REF=2, vs MATH=2, tests=2
+#  
+# what's feeding the case 0000000000000001
+# IN=0x0001,  DUT=0x0001, REF=0x1c00, MATH=0x1c00
+# Mismatch DUT vs REF: DUT=0x0001 REF=0x1c00
+# Mismatch DUT vs MATH: DUT=0x0001 MATH=0x1c00
+# Scores so far: vs REF=2, vs MATH=2, tests=3
+#  
+# what's feeding the case 1000000000000001
+# IN=0x8001,  DUT=0x8001, REF=0x9c00, MATH=0x9c00
+# Mismatch DUT vs REF: DUT=0x8001 REF=0x9c00
+# Mismatch DUT vs MATH: DUT=0x8001 MATH=0x9c00
+# Scores so far: vs REF=2, vs MATH=2, tests=4
+#  
+# what's feeding the case 0000000000000010
+# IN=0x0002,  DUT=0x0002, REF=0x2000, MATH=0x2000
+# Mismatch DUT vs REF: DUT=0x0002 REF=0x2000
+# Mismatch DUT vs MATH: DUT=0x0002 MATH=0x2000
+# Scores so far: vs REF=2, vs MATH=2, tests=5
+#  
+# what's feeding the case 1000000000000010
+# IN=0x8002,  DUT=0x8002, REF=0xa000, MATH=0xa000
+# Mismatch DUT vs REF: DUT=0x8002 REF=0xa000
+# Mismatch DUT vs MATH: DUT=0x8002 MATH=0xa000
+# Scores so far: vs REF=2, vs MATH=2, tests=6
+#  
+# what's feeding the case 0000000000000011
+# IN=0x0003,  DUT=0x0003, REF=0x2200, MATH=0x2200
+# Mismatch DUT vs REF: DUT=0x0003 REF=0x2200
+# Mismatch DUT vs MATH: DUT=0x0003 MATH=0x2200
+# Scores so far: vs REF=2, vs MATH=2, tests=7
+#  
+# what's feeding the case 1000000000000011
+# IN=0x8003,  DUT=0x8003, REF=0xa200, MATH=0xa200
+# Mismatch DUT vs REF: DUT=0x8003 REF=0xa200
+# Mismatch DUT vs MATH: DUT=0x8003 MATH=0xa200
+# Scores so far: vs REF=2, vs MATH=2, tests=8
+#  
+# what's feeding the case 0000000000001100
+# IN=0x000c,  DUT=0x000c, REF=0x2a00, MATH=0x2a00
+# Mismatch DUT vs REF: DUT=0x000c REF=0x2a00
+# Mismatch DUT vs MATH: DUT=0x000c MATH=0x2a00
+# Scores so far: vs REF=2, vs MATH=2, tests=9
+#  
+# what's feeding the case 0000000000110000
+# IN=0x0030,  DUT=0x0030, REF=0x3200, MATH=0x3200
+# Mismatch DUT vs REF: DUT=0x0030 REF=0x3200
+# Mismatch DUT vs MATH: DUT=0x0030 MATH=0x3200
+# Scores so far: vs REF=2, vs MATH=2, tests=10
+#  
+# what's feeding the case 0001111111111111
+# IN=0x1fff,  DUT=0x00ff, REF=0x4fff, MATH=0x4fff
+# Mismatch DUT vs REF: DUT=0x00ff REF=0x4fff
+# Mismatch DUT vs MATH: DUT=0x00ff MATH=0x4fff
+# Scores so far: vs REF=2, vs MATH=2, tests=11
+#  
+# what's feeding the case 0011111111111111
+# IN=0x3fff,  DUT=0x00ff, REF=0x53ff, MATH=0x53ff
+# Mismatch DUT vs REF: DUT=0x00ff REF=0x53ff
+# Mismatch DUT vs MATH: DUT=0x00ff MATH=0x53ff
+# Scores so far: vs REF=2, vs MATH=2, tests=12
+#  
+# what's feeding the case 0111111111111111
+# IN=0x7fff,  DUT=0x00ff, REF=0x57ff, MATH=0x57ff
+# Mismatch DUT vs REF: DUT=0x00ff REF=0x57ff
+# Mismatch DUT vs MATH: DUT=0x00ff MATH=0x57ff
+# Scores so far: vs REF=2, vs MATH=2, tests=13
+#  
+# what's feeding the case 1111111111111111
+# IN=0xffff,  DUT=0x80ff, REF=0xd7ff, MATH=0xd7ff
+# Mismatch DUT vs REF: DUT=0x80ff REF=0xd7ff
+# Mismatch DUT vs MATH: DUT=0x80ff MATH=0xd7ff
+# Scores so far: vs REF=2, vs MATH=2, tests=14
+#  
+# what's feeding the case 1100000000000000
+# IN=0xc000,  DUT=0x8000, REF=0xd400, MATH=0xd400
+# Mismatch DUT vs REF: DUT=0x8000 REF=0xd400
+# Mismatch DUT vs MATH: DUT=0x8000 MATH=0xd400
+# Scores so far: vs REF=2, vs MATH=2, tests=15
+#  
+# what's feeding the case 0100000000000000
+# IN=0x4000,  DUT=0x0000, REF=0x5400, MATH=0x5400
+# Mismatch DUT vs REF: DUT=0x0000 REF=0x5400
+# Mismatch DUT vs MATH: DUT=0x0000 MATH=0x5400
+# Scores so far: vs REF=2, vs MATH=2, tests=16
+#  
+# what's feeding the case 0011010100100100
+# IN=0x3524,  DUT=0x0024, REF=0x52a4, MATH=0x52a4
+# Mismatch DUT vs REF: DUT=0x0024 REF=0x52a4
+# Mismatch DUT vs MATH: DUT=0x0024 MATH=0x52a4
+# Scores so far: vs REF=2, vs MATH=2, tests=17
+#  
+# what's feeding the case 0101111010000001
+# IN=0x5e81,  DUT=0x0081, REF=0x55e8, MATH=0x55e8
+# Mismatch DUT vs REF: DUT=0x0081 REF=0x55e8
+# Mismatch DUT vs MATH: DUT=0x0081 MATH=0x55e8
+# Scores so far: vs REF=2, vs MATH=2, tests=18
+#  
+# what's feeding the case 1101011000001001
+# IN=0xd609,  DUT=0x8009, REF=0xd560, MATH=0xd560
+# Mismatch DUT vs REF: DUT=0x8009 REF=0xd560
+# Mismatch DUT vs MATH: DUT=0x8009 MATH=0xd560
+# Scores so far: vs REF=2, vs MATH=2, tests=19
+#  
+# what's feeding the case 0101011001100011
+# IN=0x5663,  DUT=0x0063, REF=0x5566, MATH=0x5566
+# Mismatch DUT vs REF: DUT=0x0063 REF=0x5566
+# Mismatch DUT vs MATH: DUT=0x0063 MATH=0x5566
+# Scores so far: vs REF=2, vs MATH=2, tests=20
+# scores =           2           2 out of          20
+# ** Note: $stop    : C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/program_1_export/new_fix2flt_tb.sv(92)
+#    Time: 401025 ns  Iteration: 0  Instance: /new_int2flt_tb
+# Break in Module new_int2flt_tb at C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/program_1_export/new_fix2flt_tb.sv line 92

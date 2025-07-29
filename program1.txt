@@ -50,7 +50,7 @@ CMPR R15
 // branch if leading 1 in lower byte
 BNEQ $label_2
 STOR R2
-MOVF R1
+MOVF R3
 STOR R3
 HALT
 

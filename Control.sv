@@ -48,6 +48,7 @@ always_comb begin
   case(instrType)		// check instruction type
     'b1:	// b-type
 	  begin
+		RegWrite = 'b0;
 	    case(bopcode)
 		  00: AbsBranch = equalQ;
 		  01: AbsBranch = less_thanQ;
