@@ -24,7 +24,8 @@ def convert(inFile, outFile1, outFile2):
 	'R12' : '1100', 'R13' : '1101', 'R14' : '1110', 'R15' : '1111'}
 	
 	#reads through assembly and collects labels to populate lookup table
-	lut = {}
+	lut = []
+	label_names = []
 	machine_line_num = 1
 	for line in assembly:
 		instr = line.split()
@@ -37,8 +38,11 @@ def convert(inFile, outFile1, outFile2):
 			# Handle both $label_X and label formats
 			if label_name.startswith('$'):
 				label_name = label_name[1:]  # Remove the $ prefix
-			lut[label_name] = machine_line_num
-			lut_file.write(str(machine_line_num) + '\n')
+			label_names.append(label_name)
+			lut.append(machine_line_num)
+			if (len(lut) > 63):
+				lut_file.write("ERROR: too many labels for lut")
+			lut_file.write(str(machine_line_num) + '\t// ' + str(label_name) + ' = ' + str(bin(len(lut)-1)) + '\n')
 		# Only increment machine_line_num for actual instructions (not labels)
 		elif instr[0] in opcodes or instr[0] in branch_opcodes:
 			machine_line_num += 1
@@ -119,12 +123,13 @@ def convert(inFile, outFile1, outFile2):
 			if target_label.startswith('$'):
 				target_label = target_label[1:]  # Remove the $ prefix
 			
-			if target_label in lut:
-				addr = lut[target_label]
+			if target_label in label_names:
+				# addr = lut[target_label]
+				addr = label_names.index(target_label)
 				# Ensure address fits in 6 bits (0-63)
-				if addr > 63:
-					# print(f"Warning: Label {instr[1]} address {addr} exceeds 6-bit limit (63)")
-					addr = addr & 0x3F  # Truncate to 6 bits
+				# if addr > 63:
+				# 	print(f"ERROR: Label {instr[1]} address {addr} exceeds 6-bit limit (63)")
+					# addr = addr & 0x3F  # Truncate to 6 bits
 				addr_bin = bin(addr)[2:]
 				for i in range(0, 6 - len(addr_bin)):
 					addr_bin = '0' + addr_bin
