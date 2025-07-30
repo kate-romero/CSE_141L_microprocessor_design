@@ -1,8 +1,8 @@
-37	// find_up_lead1 = 0b0
-49	// prep_find_low_lead1 = 0b1
-53	// find_low_lead1 = 0b10
-65	// up_set_exp_plus_bias = 0b11
-95	// up_lead_shift = 0b100
-121	// low_set_exp_plus_bias_and_shift = 0b101
-143	// low_exp_plus_2_gtoeqt_8 = 0b110
-150	// hide_lead1 = 0b111
+000000100101	// find_up_lead1	//line: 37	//op2: 0000
+000000110001	// prep_find_low_lead1	//line: 49	//op2: 0001
+000000110101	// find_low_lead1	//line: 53	//op2: 0010
+000001000001	// up_set_exp_plus_bias	//line: 65	//op2: 0011
+000001011111	// up_lead_shift	//line: 95	//op2: 0100
+000001111001	// low_set_exp_plus_bias_and_shift	//line: 121	//op2: 0101
+000010001111	// low_exp_plus_2_gtoeqt_8	//line: 143	//op2: 0110
+000010010110	// hide_lead1	//line: 150	//op2: 0111

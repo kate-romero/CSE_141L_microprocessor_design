@@ -42,7 +42,7 @@ def convert(inFile, outFile1, outFile2):
 			lut.append(machine_line_num)
 			if (len(lut) > 63):
 				lut_file.write("ERROR: too many labels for lut")
-			lut_file.write(str(machine_line_num) + '\t// ' + str(label_name) + ' = ' + str(bin(len(lut)-1)) + '\n')
+			lut_file.write(format(machine_line_num, '012b') + '\t// ' + str(label_name) + '\t//line: ' + str(machine_line_num) + '\t//op2: ' + format(len(lut)-1, '04b') + '\n')
 		# Only increment machine_line_num for actual instructions (not labels)
 		elif instr[0] in opcodes or instr[0] in branch_opcodes:
 			machine_line_num += 1
