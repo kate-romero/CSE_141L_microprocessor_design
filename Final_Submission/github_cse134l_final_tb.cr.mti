@@ -1,0 +1,124 @@
+C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/Final_Submission/Control.sv {1 {vlog -work work -sv C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/Final_Submission/Control.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+Start time: 20:12:00 on Jul 29,2025
+vlog -reportprogress 300 -work work -sv C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/Final_Submission/Control.sv 
+-- Compiling package Control_sv_unit
+-- Importing package definitions
+-- Compiling module Control
+
+Top level modules:
+	Control
+End time: 20:12:00 on Jul 29,2025, Elapsed time: 0:00:00
+
+} {} {}} C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/Final_Submission/Top_level0.sv {1 {vlog -work work -sv C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/Final_Submission/Top_level0.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+Start time: 20:12:00 on Jul 29,2025
+vlog -reportprogress 300 -work work -sv C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/Final_Submission/Top_level0.sv 
+-- Compiling module TopLevel0
+
+Top level modules:
+	TopLevel0
+End time: 20:12:00 on Jul 29,2025, Elapsed time: 0:00:00
+
+} {} {}} C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/Final_Submission/PC.sv {1 {vlog -work work -sv C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/Final_Submission/PC.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+Start time: 20:11:59 on Jul 29,2025
+vlog -reportprogress 300 -work work -sv C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/Final_Submission/PC.sv 
+-- Compiling module PC
+
+Top level modules:
+	PC
+End time: 20:11:59 on Jul 29,2025, Elapsed time: 0:00:00
+
+} {} {}} C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/Final_Submission/definitions.sv {1 {vlog -work work -sv C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/Final_Submission/definitions.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+Start time: 20:11:59 on Jul 29,2025
+vlog -reportprogress 300 -work work -sv C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/Final_Submission/definitions.sv 
+-- Compiling package definitions
+
+Top level modules:
+	--none--
+End time: 20:11:59 on Jul 29,2025, Elapsed time: 0:00:00
+
+} {} {}} C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/Final_Submission/new_fix2flt_tb.sv {1 {vlog -work work -sv C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/Final_Submission/new_fix2flt_tb.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+Start time: 20:11:59 on Jul 29,2025
+vlog -reportprogress 300 -work work -sv C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/Final_Submission/new_fix2flt_tb.sv 
+-- Compiling module new_int2flt_tb
+
+Top level modules:
+	new_int2flt_tb
+End time: 20:11:59 on Jul 29,2025, Elapsed time: 0:00:00
+
+} {} {}} C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/Final_Submission/reg_file.sv {1 {vlog -work work -sv C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/Final_Submission/reg_file.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+Start time: 20:12:00 on Jul 29,2025
+vlog -reportprogress 300 -work work -sv C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/Final_Submission/reg_file.sv 
+-- Compiling module reg_file
+
+Top level modules:
+	reg_file
+End time: 20:12:00 on Jul 29,2025, Elapsed time: 0:00:00
+
+} {} {}} C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/Final_Submission/PC_LUT.sv {1 {vlog -work work -sv -stats=none C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/Final_Submission/PC_LUT.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module PC_LUT
+
+Top level modules:
+	PC_LUT
+
+} {} {}} C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/Final_Submission/data_mem1.sv {1 {vlog -work work -sv C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/Final_Submission/data_mem1.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+Start time: 20:11:59 on Jul 29,2025
+vlog -reportprogress 300 -work work -sv C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/Final_Submission/data_mem1.sv 
+-- Compiling module data_mem1
+
+Top level modules:
+	data_mem1
+End time: 20:11:59 on Jul 29,2025, Elapsed time: 0:00:00
+
+} {} {}} C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/Final_Submission/alu.sv {1 {vlog -work work -sv C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/Final_Submission/alu.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+Start time: 20:12:00 on Jul 29,2025
+vlog -reportprogress 300 -work work -sv C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/Final_Submission/alu.sv 
+-- Compiling package alu_sv_unit
+-- Importing package definitions
+-- Compiling module alu
+
+Top level modules:
+	alu
+End time: 20:12:00 on Jul 29,2025, Elapsed time: 0:00:00
+
+} {} {}} C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/Final_Submission/TopLevel.sv {1 {vlog -work work -sv C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/Final_Submission/TopLevel.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+Start time: 20:12:00 on Jul 29,2025
+vlog -reportprogress 300 -work work -sv C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/Final_Submission/TopLevel.sv 
+-- Compiling package TopLevel_sv_unit
+-- Importing package definitions
+-- Compiling module TopLevel
+
+Top level modules:
+	TopLevel
+End time: 20:12:00 on Jul 29,2025, Elapsed time: 0:00:00
+
+} {} {}} C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/Final_Submission/instr_ROM.sv {1 {vlog -work work -sv C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/Final_Submission/instr_ROM.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+Start time: 20:11:59 on Jul 29,2025
+vlog -reportprogress 300 -work work -sv C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/Final_Submission/instr_ROM.sv 
+-- Compiling module instr_ROM
+
+Top level modules:
+	instr_ROM
+End time: 20:11:59 on Jul 29,2025, Elapsed time: 0:00:00
+
+} {} {}} C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/Final_Submission/data_mem0.sv {1 {vlog -work work -sv C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/Final_Submission/data_mem0.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+Start time: 20:11:58 on Jul 29,2025
+vlog -reportprogress 300 -work work -sv C:/Users/kate_/OneDrive/Desktop/CSE_141L/CSE_141L_microprocessor_design/Final_Submission/data_mem0.sv 
+-- Compiling module data_mem0
+
+Top level modules:
+	data_mem0
+End time: 20:11:59 on Jul 29,2025, Elapsed time: 0:00:01
+
+} {} {}}

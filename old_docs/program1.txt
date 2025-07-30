@@ -1,0 +1,255 @@
+// get upper and lower bytes
+LOAD R1
+MOVT R1
+LOAD R0
+MOVT R2
+
+// prep registers
+// sign mask R5 = b10000000
+MOVI 4
+MOVT R5
+MOVI 8
+LSHL R5
+MOVT R5
+// max exponent R6 = 7
+MOVI 7
+MOVT R6
+// exponent bias R7 = 15
+MOVI 15
+MOVT R7
+// zero reg for comparing R15 = 0
+MOVI 0
+MOVT R15
+// one reg for decrementing and shifting R14 = 1
+MOVI 1
+MOVT R14
+// leading 1 in upper byte? (default yes R12 = 1)
+MOVT R12
+MOVI 2
+// exp +- 2: R13 = 2
+MOVT R13
+
+// grab sign bit
+MOVF R1
+BAND R5
+MOVT R3
+
+// clear sign bit to prevent false leading 1
+BNOT R5
+MOVF R1
+BAND R5
+MOVT R1
+BNOT R5
+
+// determine which byte contains leading 1
+CMPR R15
+// branch if leading 1 in upper byte
+BNEQ $label_0
+MOVF R2
+CMPR R15
+// branch if leading 1 in lower byte
+BNEQ $label_2
+STOR R2
+MOVF R3
+STOR R3
+HALT
+
+// find leading 1 in upper byte
+$label_0:
+// re-get upper byte
+MOVF R1
+BAND R5
+// #49.if ((reg_imp & reg_sign_mask) != 0)
+CMPR R15
+BNEQ $label_1
+
+// decrement exponent
+MOVF R6
+SUBR R14
+MOVT R6
+
+// sign mask logic shift right
+MOVF R5
+LSHR R14
+MOVT R5
+
+// loop back
+// R0 ? 0    #47.while (reg_sign_mask)
+CMPR R15
+BNEQ $label_0
+
+// prep to find leading 1 in lower byte
+$label_2:
+MOVI 0
+MOVT R12
+MOVI 1
+MOVT R6
+// find leading 1 in lower byte
+$label_3:
+MOVF R2
+BAND R5
+// #49.if ((reg_imp & reg_sign_mask) != 0)
+CMPR R15
+BNEQ $label_4
+
+// increment exponent
+MOVF R6
+ADDR R14
+MOVT R6
+
+// sign mask logic shift right
+MOVF R5
+LSHR R14
+MOVT R5
+
+// loop back
+// R0 ? 0    #47.while (reg_sign_mask)
+CMPR R15
+BNEQ $label_3
+
+// have exponent; shift
+// upper: set exponent + bias in upper byte out
+$label_1:
+MOVF R7
+ADDR R6
+LSHL R13
+BORR R3
+MOVT R3
+MOVI 1
+CMPR R12
+// long branch stepping stone
+BREQ $label_5
+// should never hit
+HALT
+
+// lower: set exponent + bias in upper byte out
+$label_4:
+MOVF R7
+SUBR R6
+LSHL R13
+BORR R3
+MOVT R3
+MOVI 0
+CMPR R12
+// long branch stepping stone
+BREQ $label_7
+// should never hit
+HALT
+
+//**************** upper shift exp >= 2 ****************/
+// adjust exp for hidden 1
+$label_5:
+MOVF R6
+CMPR R13
+// handle lead up exp < 2
+BRLT $label_7
+SUBR R13
+MOVT R11
+
+// build up_out
+MOVF R1
+LSHR R11
+MOVT R10
+// hide 1
+// b1011
+MOVI 11
+BAND R10
+MOVT R10
+// upper mantissa
+MOVF R3
+BORR R10
+STOR R3
+
+// build low_out
+MOVF R2
+LSHR R11
+MOVT R2
+MOVI 8
+SUBR R11
+MOVT R11
+MOVF R1
+LSHL R11
+BORR R2
+STOR R2
+HALT
+
+$label_7:
+MOVI 0
+// long branch stepping stone
+CMPR R12
+BREQ $label_6
+//**************** upper shift exp < 2 ****************/
+// adjust for hidden 1
+MOVF R13
+SUBR R6
+MOVT R11
+
+// build low_out
+MOVF R2
+LSHL R11
+STOR R2
+
+// build up_out
+MOVF R1
+LSHL R11
+// hide 1
+MOVT R8
+MOVI 4
+BNOT R0
+BAND R8
+// end hide
+BORR R3
+MOVT R3
+MOVI 8
+SUBR R11
+MOVT R11
+MOVF R2
+LSHR R11
+// hide 1
+MOVT R8
+MOVI 4
+BNOT R0
+BAND R8
+// end hide
+BORR R3
+STOR R3
+HALT
+
+//**************** lower shift exp ****************/
+// adjust exp for hidden 1
+$label_6:
+MOVF R6
+ADDRR R13
+MOVT R11
+
+// build low_out
+MOVF R2
+LSHL R11
+STOR R2
+
+// build up_out
+MOVI 8
+CMPR R11
+BRLT $low_exp_plus_2_gtoeqt_8
+SUBR R11
+MOVT R11
+MOVF R2
+LSHR R11
+
+$low_exp_plus_2_gtoeqt_8
+MOVT R9
+MOVF R11
+SUBR R9
+MOVT R11
+MOVF R2
+LSHL R11
+
+// hide 1
+MOVT R8
+MOVI 4
+BNOT R0
+BAND R8
+// end hide
+BORR R3
+STOR R3
+HALT

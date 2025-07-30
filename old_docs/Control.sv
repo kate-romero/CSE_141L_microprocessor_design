@@ -30,7 +30,7 @@ module Control (
   input [8:8] instrType,	// instruction type (B=1 or R=0)
   input [7:6] bopcode,    	// branch opcode
   input [7:4] ropcode,		// r-type intruction opcode
-  input [0:0] equalQ, less_thanQ, greater_thanQ,
+  input logic equalQ, less_thanQ, greater_thanQ,
   output logic RelBranch, AbsBranch, MemtoReg, MemWrite, 
 			   ALUSrc, RegWrite, RegWAddr);
   
@@ -50,10 +50,10 @@ always_comb begin
 	  begin
 		RegWrite = 'b0;
 	    case(bopcode)
-		  00: AbsBranch = equalQ;
-		  01: AbsBranch = less_thanQ;
-		  10: AbsBranch = greater_thanQ;
-		  11: AbsBranch = less_thanQ | greater_thanQ;
+		  2'b00: AbsBranch = equalQ;
+		  2'b01: AbsBranch = less_thanQ;
+		  2'b10: AbsBranch = greater_thanQ;
+		  2'b11: AbsBranch = less_thanQ | greater_thanQ;
 		endcase
 		// uncomment if change to relative branching
 		// case(bopcode)

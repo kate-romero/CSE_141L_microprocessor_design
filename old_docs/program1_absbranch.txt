@@ -44,24 +44,24 @@ BNOT R5
 // determine which byte contains leading 1
 CMPR R15
 // branch if leading 1 in upper byte
-BNEQ $label_0
+BNEQ $find_up_lead1
 MOVF R2
 CMPR R15
 // branch if leading 1 in lower byte
-BNEQ $label_2
+BNEQ $prep_find_low_lead1
 STOR R2
 MOVF R3
 STOR R3
 HALT
 
 // find leading 1 in upper byte
-$label_0:
+$find_up_lead1:
 // re-get upper byte
 MOVF R1
 BAND R5
 // #49.if ((reg_imp & reg_sign_mask) != 0)
 CMPR R15
-BNEQ $label_1
+BNEQ $up_set_exp_plus_bias
 
 // decrement exponent
 MOVF R6
@@ -76,21 +76,21 @@ MOVT R5
 // loop back
 // R0 ? 0    #47.while (reg_sign_mask)
 CMPR R15
-BNEQ $label_0
+BNEQ $find_up_lead1
 
 // prep to find leading 1 in lower byte
-$label_2:
+$prep_find_low_lead1:
 MOVI 0
 MOVT R12
 MOVI 1
 MOVT R6
 // find leading 1 in lower byte
-$label_3:
+$find_low_lead1:
 MOVF R2
 BAND R5
 // #49.if ((reg_imp & reg_sign_mask) != 0)
 CMPR R15
-BNEQ $label_4
+BNEQ $low_set_exp_plus_bias
 
 // increment exponent
 MOVF R6
@@ -105,44 +105,23 @@ MOVT R5
 // loop back
 // R0 ? 0    #47.while (reg_sign_mask)
 CMPR R15
-BNEQ $label_3
+BNEQ $find_low_lead1
 
 // have exponent; shift
 // upper: set exponent + bias in upper byte out
-$label_1:
+$up_set_exp_plus_bias:
 MOVF R7
 ADDR R6
 LSHL R13
 BORR R3
 MOVT R3
-MOVI 1
-CMPR R12
-// long branch stepping stone
-BREQ $label_5
-// should never hit
-HALT
-
-// lower: set exponent + bias in upper byte out
-$label_4:
-MOVF R7
-SUBR R6
-LSHL R13
-BORR R3
-MOVT R3
-MOVI 0
-CMPR R12
-// long branch stepping stone
-BREQ $label_7
-// should never hit
-HALT
 
 //**************** upper shift exp >= 2 ****************/
 // adjust exp for hidden 1
-$label_5:
 MOVF R6
 CMPR R13
 // handle lead up exp < 2
-BRLT $label_7
+BRLT $up_lead_shift
 SUBR R13
 MOVT R11
 
@@ -173,11 +152,18 @@ BORR R2
 STOR R2
 HALT
 
-$label_7:
+// lower: set exponent + bias in upper byte out
+$low_set_exp_plus_bias:
+MOVF R7
+SUBR R6
+LSHL R13
+BORR R3
+MOVT R3
+
+$up_lead_shift:
 MOVI 0
-// long branch stepping stone
 CMPR R12
-BREQ $label_6
+BREQ $low_lead_shift
 //**************** upper shift exp < 2 ****************/
 // adjust for hidden 1
 MOVF R13
@@ -217,7 +203,7 @@ HALT
 
 //**************** lower shift exp ****************/
 // adjust exp for hidden 1
-$label_6:
+$low_lead_shift:
 MOVF R6
 ADDR R13
 MOVT R11
@@ -229,10 +215,21 @@ STOR R2
 
 // build up_out
 MOVI 8
+CMPR R11
+BRLT $low_exp_plus_2_gtoeqt_8
 SUBR R11
 MOVT R11
 MOVF R2
 LSHR R11
+
+$low_exp_plus_2_gtoeqt_8
+MOVT R9
+MOVF R11
+SUBR R9
+MOVT R11
+MOVF R2
+LSHL R11
+
 // hide 1
 MOVT R8
 MOVI 4
