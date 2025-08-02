@@ -1,0 +1,1288 @@
+# Errors: 1, Warnings: 0
+# Errors: 1, Warnings: 0
+# Errors: 0, Warnings: 0
+# Compile of data_mem1.sv was successful.
+# Errors: 0, Warnings: 0
+# Compile of definitions.sv was successful.
+# Errors: 0, Warnings: 0
+# Compile of instr_ROM.sv was successful.
+# Errors: 0, Warnings: 0
+# Compile of PC.sv was successful.
+# Errors: 0, Warnings: 0
+# Compile of PC_LUT.sv was successful.
+# Errors: 0, Warnings: 0
+# Compile of reg_file.sv was successful.
+# Errors: 0, Warnings: 0
+# Compile of TopLevel.sv was successful.
+# Errors: 0, Warnings: 0
+# Compile of data_mem.sv was successful.
+# Errors: 0, Warnings: 0
+# Compile of flt2fix_tb.sv was successful.
+# Errors: 0, Warnings: 0
+# Compile of flt2fix0.sv was successful.
+# Errors: 0, Warnings: 0
+# Compile of alu.sv was successful.
+# Errors: 0, Warnings: 0
+# Compile of Control.sv was successful.
+vsim -gui work.flt2fix_tb_noround
+# vsim -gui work.flt2fix_tb_noround 
+# Start time: 22:17:39 on Aug 01,2025
+# Loading sv_std.std
+# Loading work.flt2fix_tb_noround
+# Loading work.TopLevel0
+# Loading work.data_mem
+# Loading work.definitions
+# Loading work.TopLevel_sv_unit
+# Loading work.TopLevel
+# Loading work.PC
+# Loading work.PC_LUT
+# Loading work.instr_ROM
+# Loading work.Control_sv_unit
+# Loading work.Control
+# Loading work.reg_file
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.data_mem1
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'alu1'.  Expected 10, found 9.
+#    Time: 0 ps  Iteration: 0  Instance: /flt2fix_tb_noround/f3/alu1 File: C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/TopLevel.sv Line: 97
+# ** Warning: (vsim-3722) C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/TopLevel.sv(97): [TFMPC] - Missing connection for port 'zero'.
+run -all
+# 0.000000 * 2**-15 = 0.000000 =          0
+# original binary = 0_00000_0000000000
+# from MAT = 0000000000000000 = 0000
+# from dum = 0000000000000000 = 0000
+# from DUT = 0000000000000000 = 0000
+#                 ct =           1, score0 =           1, score1 =            1
+# 1.000000 * 2**  0 = 0.000000 =          1
+# original binary = 0_01111_0000000000
+# from MAT = 0000000100000000 = 0100
+# from dum = 0000000100000000 = 0100
+# from DUT = 0000000100000000 = 0100
+#                 ct =           2, score0 =           2, score1 =            2
+# 1.500000 * 2**  0 = 0.000000 =          2
+# original binary = 0_01111_1000000000
+# from MAT = 0000000110000000 = 0180
+# from dum = 0000000110000000 = 0180
+# from DUT = 0000000110000000 = 0180
+#                 ct =           3, score0 =           3, score1 =            3
+# 1.250000 * 2**  0 = 0.000000 =          1
+# original binary = 0_01111_0100000000
+# from MAT = 0000000101000000 = 0140
+# from dum = 0000000101000000 = 0140
+# from DUT = 0000000101000000 = 0140
+#                 ct =           4, score0 =           4, score1 =            4
+# 1.750000 * 2**  0 = 0.000000 =          2
+# original binary = 0_01111_1100000000
+# from MAT = 0000000111000000 = 01c0
+# from dum = 0000000111000000 = 01c0
+# from DUT = 0000000111000000 = 01c0
+#                 ct =           5, score0 =           5, score1 =            5
+# 1.000000 * 2**  1 = 0.000000 =          2
+# original binary = 0_10000_0000000000
+# from MAT = 0000001000000000 = 0200
+# from dum = 0000001000000000 = 0200
+# from DUT = 0000001000000000 = 0200
+#                 ct =           6, score0 =           6, score1 =            6
+# 1.500000 * 2**  1 = 0.000000 =          3
+# original binary = 0_10000_1000000000
+# from MAT = 0000001100000000 = 0300
+# from dum = 0000001100000000 = 0300
+# from DUT = 0000001100000000 = 0300
+#                 ct =           7, score0 =           7, score1 =            7
+# 1.750000 * 2**  1 = 0.000000 =          4
+# original binary = 0_10000_1100000000
+# from MAT = 0000001110000000 = 0380
+# from dum = 0000001110000000 = 0380
+# from DUT = 0000001110000000 = 0380
+#                 ct =           8, score0 =           8, score1 =            8
+# 1.875000 * 2**  1 = 0.000000 =          4
+# original binary = 0_10000_1110000000
+# from MAT = 0000001111000000 = 03c0
+# from dum = 0000001111000000 = 03c0
+# from DUT = 0000001111000000 = 03c0
+#                 ct =           9, score0 =           9, score1 =            9
+# 1.062500 * 2**  1 = 0.000000 =          2
+# original binary = 0_10000_0001000000
+# from MAT = 0000001000100000 = 0220
+# from dum = 0000001000100000 = 0220
+# from DUT = 0000001000100000 = 0220
+#                 ct =          10, score0 =          10, score1 =           10
+# 1.312500 * 2**  1 = 0.000000 =          3
+# original binary = 0_10000_0101000000
+# from MAT = 0000001010100000 = 02a0
+# from dum = 0000001010100000 = 02a0
+# from DUT = 0000001010100000 = 02a0
+#                 ct =          11, score0 =          11, score1 =           11
+# 1.437500 * 2**  1 = 0.000000 =          3
+# original binary = 0_10000_0111000000
+# from MAT = 0000001011100000 = 02e0
+# from dum = 0000001011100000 = 02e0
+# from DUT = 0000001011100000 = 02e0
+#                 ct =          12, score0 =          12, score1 =           12
+# 1.750000 * 2**  3 = 0.000000 =         14
+# original binary = 0_10010_1100000000
+# from MAT = 0000111000000000 = 0e00
+# from dum = 0000111000000000 = 0e00
+# from DUT = 0000111000000000 = 0e00
+#                 ct =          13, score0 =          13, score1 =           13
+# 1.875000 * 2**  3 = 0.000000 =         15
+# original binary = 0_10010_1110000000
+# from MAT = 0000111100000000 = 0f00
+# from dum = 0000111100000000 = 0f00
+# from DUT = 0000111100000000 = 0f00
+#                 ct =          14, score0 =          14, score1 =           14
+# 1.750000 * 2**  9 = 0.000000 =         15
+# original binary = 0_11000_1100000000
+# from MAT = 0111111111111111 = 7fff
+# from dum = 0111111111111111 = 7fff
+# from DUT = 1000000000000000 = 8000
+#                 ct =          15, score0 =          14, score1 =           14
+# 1.750000 * 2** 10 = 0.000000 =         15
+# original binary = 0_11001_1100000000
+# from MAT = 0111111111111111 = 7fff
+# from dum = 0111111111111111 = 7fff
+# from DUT = 0000000000000000 = 0000
+#                 ct =          16, score0 =          14, score1 =           14
+# 1.875000 * 2** 14 = 0.000000 =         15
+# original binary = 0_11101_1110000000
+# from MAT = 0111111111111111 = 7fff
+# from dum = 0111111111111111 = 7fff
+# from DUT = 0000000000000000 = 0000
+#                 ct =          17, score0 =          14, score1 =           14
+# 1.875000 * 2** 15 = 0.000000 =         15
+# original binary = 0_11110_1110000000
+# from MAT = 0111111111111111 = 7fff
+# from dum = 0111111111111111 = 7fff
+# from DUT = 0000000000000000 = 0000
+#                 ct =          18, score0 =          14, score1 =           14
+# 0.000000 * 2**-15 = 0.000000 =          0
+# original binary = 1_00000_0000000000
+# from MAT = 1000000000000000 = 8000
+# from dum = 1000000000000000 = 8000
+# from DUT = 1000000000000000 = 8000
+#                 ct =          19, score0 =          15, score1 =           15
+# 1.000000 * 2**  0 = 0.000000 =          1
+# original binary = 1_01111_0000000000
+# from MAT = 1000000100000000 = 8100
+# from dum = 1000000100000000 = 8100
+# from DUT = 1000000100000000 = 8100
+#                 ct =          20, score0 =          16, score1 =           16
+# 1.250000 * 2**  0 = 0.000000 =          1
+# original binary = 1_01111_0100000000
+# from MAT = 1000000101000000 = 8140
+# from dum = 1000000101000000 = 8140
+# from DUT = 1000000101000000 = 8140
+#                 ct =          21, score0 =          17, score1 =           17
+# 1.000000 * 2**  1 = 0.000000 =          2
+# original binary = 1_10000_0000000000
+# from MAT = 1000001000000000 = 8200
+# from dum = 1000001000000000 = 8200
+# from DUT = 1000001000000000 = 8200
+#                 ct =          22, score0 =          18, score1 =           18
+# 1.500000 * 2**  1 = 0.000000 =          3
+# original binary = 1_10000_1000000000
+# from MAT = 1000001100000000 = 8300
+# from dum = 1000001100000000 = 8300
+# from DUT = 1000001100000000 = 8300
+#                 ct =          23, score0 =          19, score1 =           19
+# 1.062500 * 2**  1 = 0.000000 =          2
+# original binary = 1_10000_0001000000
+# from MAT = 1000001000100000 = 8220
+# from dum = 1000001000100000 = 8220
+# from DUT = 1000001000100000 = 8220
+#                 ct =          24, score0 =          20, score1 =           20
+# 1.062500 * 2**  1 = 0.000000 =          2
+# original binary = 1_10000_0001000000
+# from MAT = 1000001000100000 = 8220
+# from dum = 1000001000100000 = 8220
+# from DUT = 1000001000100000 = 8220
+#                 ct =          25, score0 =          21, score1 =           21
+# 1.750000 * 2**  3 = 0.000000 =         14
+# original binary = 1_10010_1100000000
+# from MAT = 1000111000000000 = 8e00
+# from dum = 1000111000000000 = 8e00
+# from DUT = 1000111000000000 = 8e00
+#                 ct =          26, score0 =          22, score1 =           22
+# 1.875000 * 2**  3 = 0.000000 =         15
+# original binary = 1_10010_1110000000
+# from MAT = 1000111100000000 = 8f00
+# from dum = 1000111100000000 = 8f00
+# from DUT = 1000111100000000 = 8f00
+#                 ct =          27, score0 =          23, score1 =           23
+# 1.750000 * 2**  9 = 0.000000 =         15
+# original binary = 1_11000_1100000000
+# from MAT = 1111111111111111 = ffff
+# from dum = 1111111111111111 = ffff
+# from DUT = 1000000000000000 = 8000
+#                 ct =          28, score0 =          23, score1 =           23
+# 1.750000 * 2** 10 = 0.000000 =         15
+# original binary = 1_11001_1100000000
+# from MAT = 1111111111111111 = ffff
+# from dum = 1111111111111111 = ffff
+# from DUT = 1000000000000000 = 8000
+#                 ct =          29, score0 =          23, score1 =           23
+# 1.875000 * 2** 14 = 0.000000 =         15
+# original binary = 1_11101_1110000000
+# from MAT = 1111111111111111 = ffff
+# from dum = 1111111111111111 = ffff
+# from DUT = 1000000000000000 = 8000
+#                 ct =          30, score0 =          23, score1 =           23
+# 1.875000 * 2** 15 = 0.000000 =         15
+# original binary = 1_11110_1110000000
+# from MAT = 1111111111111111 = ffff
+# from dum = 1111111111111111 = ffff
+# from DUT = 1000000000000000 = 8000
+#                 ct =          31, score0 =          23, score1 =           23
+# correct          23 out of total          31
+# correct          23 out of total          31
+# ** Note: $stop    : C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/flt2fix_tb.sv(113)
+#    Time: 20055 ns  Iteration: 0  Instance: /flt2fix_tb_noround
+# Break in Module flt2fix_tb_noround at C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/flt2fix_tb.sv line 113
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'alu1'.  Expected 10, found 9.
+#    Time: 0 ps  Iteration: 0  Instance: /flt2fix_tb_noround/f3/alu1 File: C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/TopLevel.sv Line: 97
+# ** Warning: (vsim-3722) C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/TopLevel.sv(97): [TFMPC] - Missing connection for port 'zero'.
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# 0.000000 * 2**-15 = 0.000000 =          0
+# original binary = 0_00000_0000000000
+# from MAT = 0000000000000000 = 0000
+# from dum = 0000000000000000 = 0000
+# from DUT = 0000000000000000 = 0000
+#                 ct =           1, score0 =           1, score1 =            1
+# 1.000000 * 2**  0 = 0.000000 =          1
+# original binary = 0_01111_0000000000
+# from MAT = 0000000100000000 = 0100
+# from dum = 0000000100000000 = 0100
+# from DUT = 0000000100000000 = 0100
+#                 ct =           2, score0 =           2, score1 =            2
+# 1.500000 * 2**  0 = 0.000000 =          2
+# original binary = 0_01111_1000000000
+# from MAT = 0000000110000000 = 0180
+# from dum = 0000000110000000 = 0180
+# from DUT = 0000000110000000 = 0180
+#                 ct =           3, score0 =           3, score1 =            3
+# 1.250000 * 2**  0 = 0.000000 =          1
+# original binary = 0_01111_0100000000
+# from MAT = 0000000101000000 = 0140
+# from dum = 0000000101000000 = 0140
+# from DUT = 0000000101000000 = 0140
+#                 ct =           4, score0 =           4, score1 =            4
+# 1.750000 * 2**  0 = 0.000000 =          2
+# original binary = 0_01111_1100000000
+# from MAT = 0000000111000000 = 01c0
+# from dum = 0000000111000000 = 01c0
+# from DUT = 0000000111000000 = 01c0
+#                 ct =           5, score0 =           5, score1 =            5
+# 1.000000 * 2**  1 = 0.000000 =          2
+# original binary = 0_10000_0000000000
+# from MAT = 0000001000000000 = 0200
+# from dum = 0000001000000000 = 0200
+# from DUT = 0000001000000000 = 0200
+#                 ct =           6, score0 =           6, score1 =            6
+# 1.500000 * 2**  1 = 0.000000 =          3
+# original binary = 0_10000_1000000000
+# from MAT = 0000001100000000 = 0300
+# from dum = 0000001100000000 = 0300
+# from DUT = 0000001100000000 = 0300
+#                 ct =           7, score0 =           7, score1 =            7
+# 1.750000 * 2**  1 = 0.000000 =          4
+# original binary = 0_10000_1100000000
+# from MAT = 0000001110000000 = 0380
+# from dum = 0000001110000000 = 0380
+# from DUT = 0000001110000000 = 0380
+#                 ct =           8, score0 =           8, score1 =            8
+# 1.875000 * 2**  1 = 0.000000 =          4
+# original binary = 0_10000_1110000000
+# from MAT = 0000001111000000 = 03c0
+# from dum = 0000001111000000 = 03c0
+# from DUT = 0000001111000000 = 03c0
+#                 ct =           9, score0 =           9, score1 =            9
+# 1.062500 * 2**  1 = 0.000000 =          2
+# original binary = 0_10000_0001000000
+# from MAT = 0000001000100000 = 0220
+# from dum = 0000001000100000 = 0220
+# from DUT = 0000001000100000 = 0220
+#                 ct =          10, score0 =          10, score1 =           10
+# 1.312500 * 2**  1 = 0.000000 =          3
+# original binary = 0_10000_0101000000
+# from MAT = 0000001010100000 = 02a0
+# from dum = 0000001010100000 = 02a0
+# from DUT = 0000001010100000 = 02a0
+#                 ct =          11, score0 =          11, score1 =           11
+# 1.437500 * 2**  1 = 0.000000 =          3
+# original binary = 0_10000_0111000000
+# from MAT = 0000001011100000 = 02e0
+# from dum = 0000001011100000 = 02e0
+# from DUT = 0000001011100000 = 02e0
+#                 ct =          12, score0 =          12, score1 =           12
+# 1.750000 * 2**  3 = 0.000000 =         14
+# original binary = 0_10010_1100000000
+# from MAT = 0000111000000000 = 0e00
+# from dum = 0000111000000000 = 0e00
+# from DUT = 0000111000000000 = 0e00
+#                 ct =          13, score0 =          13, score1 =           13
+# 1.875000 * 2**  3 = 0.000000 =         15
+# original binary = 0_10010_1110000000
+# from MAT = 0000111100000000 = 0f00
+# from dum = 0000111100000000 = 0f00
+# from DUT = 0000111100000000 = 0f00
+#                 ct =          14, score0 =          14, score1 =           14
+# 1.750000 * 2**  9 = 0.000000 =         15
+# original binary = 0_11000_1100000000
+# from MAT = 0111111111111111 = 7fff
+# from dum = 0111111111111111 = 7fff
+# from DUT = 0111111111111111 = 7fff
+#                 ct =          15, score0 =          15, score1 =           15
+# 1.750000 * 2** 10 = 0.000000 =         15
+# original binary = 0_11001_1100000000
+# from MAT = 0111111111111111 = 7fff
+# from dum = 0111111111111111 = 7fff
+# from DUT = 0111111111111111 = 7fff
+#                 ct =          16, score0 =          16, score1 =           16
+# 1.875000 * 2** 14 = 0.000000 =         15
+# original binary = 0_11101_1110000000
+# from MAT = 0111111111111111 = 7fff
+# from dum = 0111111111111111 = 7fff
+# from DUT = 0111111111111111 = 7fff
+#                 ct =          17, score0 =          17, score1 =           17
+# 1.875000 * 2** 15 = 0.000000 =         15
+# original binary = 0_11110_1110000000
+# from MAT = 0111111111111111 = 7fff
+# from dum = 0111111111111111 = 7fff
+# from DUT = 0111111111111111 = 7fff
+#                 ct =          18, score0 =          18, score1 =           18
+# 0.000000 * 2**-15 = 0.000000 =          0
+# original binary = 1_00000_0000000000
+# from MAT = 1000000000000000 = 8000
+# from dum = 1000000000000000 = 8000
+# from DUT = 1000000000000000 = 8000
+#                 ct =          19, score0 =          19, score1 =           19
+# 1.000000 * 2**  0 = 0.000000 =          1
+# original binary = 1_01111_0000000000
+# from MAT = 1000000100000000 = 8100
+# from dum = 1000000100000000 = 8100
+# from DUT = 1000000100000000 = 8100
+#                 ct =          20, score0 =          20, score1 =           20
+# 1.250000 * 2**  0 = 0.000000 =          1
+# original binary = 1_01111_0100000000
+# from MAT = 1000000101000000 = 8140
+# from dum = 1000000101000000 = 8140
+# from DUT = 1000000101000000 = 8140
+#                 ct =          21, score0 =          21, score1 =           21
+# 1.000000 * 2**  1 = 0.000000 =          2
+# original binary = 1_10000_0000000000
+# from MAT = 1000001000000000 = 8200
+# from dum = 1000001000000000 = 8200
+# from DUT = 1000001000000000 = 8200
+#                 ct =          22, score0 =          22, score1 =           22
+# 1.500000 * 2**  1 = 0.000000 =          3
+# original binary = 1_10000_1000000000
+# from MAT = 1000001100000000 = 8300
+# from dum = 1000001100000000 = 8300
+# from DUT = 1000001100000000 = 8300
+#                 ct =          23, score0 =          23, score1 =           23
+# 1.062500 * 2**  1 = 0.000000 =          2
+# original binary = 1_10000_0001000000
+# from MAT = 1000001000100000 = 8220
+# from dum = 1000001000100000 = 8220
+# from DUT = 1000001000100000 = 8220
+#                 ct =          24, score0 =          24, score1 =           24
+# 1.062500 * 2**  1 = 0.000000 =          2
+# original binary = 1_10000_0001000000
+# from MAT = 1000001000100000 = 8220
+# from dum = 1000001000100000 = 8220
+# from DUT = 1000001000100000 = 8220
+#                 ct =          25, score0 =          25, score1 =           25
+# 1.750000 * 2**  3 = 0.000000 =         14
+# original binary = 1_10010_1100000000
+# from MAT = 1000111000000000 = 8e00
+# from dum = 1000111000000000 = 8e00
+# from DUT = 1000111000000000 = 8e00
+#                 ct =          26, score0 =          26, score1 =           26
+# 1.875000 * 2**  3 = 0.000000 =         15
+# original binary = 1_10010_1110000000
+# from MAT = 1000111100000000 = 8f00
+# from dum = 1000111100000000 = 8f00
+# from DUT = 1000111100000000 = 8f00
+#                 ct =          27, score0 =          27, score1 =           27
+# 1.750000 * 2**  9 = 0.000000 =         15
+# original binary = 1_11000_1100000000
+# from MAT = 1111111111111111 = ffff
+# from dum = 1111111111111111 = ffff
+# from DUT = 1111111111111111 = ffff
+#                 ct =          28, score0 =          28, score1 =           28
+# 1.750000 * 2** 10 = 0.000000 =         15
+# original binary = 1_11001_1100000000
+# from MAT = 1111111111111111 = ffff
+# from dum = 1111111111111111 = ffff
+# from DUT = 1111111111111111 = ffff
+#                 ct =          29, score0 =          29, score1 =           29
+# 1.875000 * 2** 14 = 0.000000 =         15
+# original binary = 1_11101_1110000000
+# from MAT = 1111111111111111 = ffff
+# from dum = 1111111111111111 = ffff
+# from DUT = 1111111111111111 = ffff
+#                 ct =          30, score0 =          30, score1 =           30
+# 1.875000 * 2** 15 = 0.000000 =         15
+# original binary = 1_11110_1110000000
+# from MAT = 1111111111111111 = ffff
+# from dum = 1111111111111111 = ffff
+# from DUT = 1111111111111111 = ffff
+#                 ct =          31, score0 =          31, score1 =           31
+# correct          31 out of total          31
+# correct          31 out of total          31
+# ** Note: $stop    : C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/flt2fix_tb.sv(113)
+#    Time: 20315 ns  Iteration: 0  Instance: /flt2fix_tb_noround
+# Break in Module flt2fix_tb_noround at C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/flt2fix_tb.sv line 113
+quit -sim
+# End time: 23:01:59 on Aug 01,2025, Elapsed time: 0:44:20
+# Errors: 0, Warnings: 3
+# reading C:/intelFPGA/20.1/modelsim_ase/win32aloem/../modelsim.ini
+# Loading project fd_prog3
+# Errors: 0, Warnings: 0
+# Compile of alu.sv was successful.
+# Errors: 0, Warnings: 0
+# Compile of Control.sv was successful.
+# Errors: 0, Warnings: 0
+# Compile of data_mem.sv was successful.
+# Errors: 0, Warnings: 0
+# Compile of data_mem1.sv was successful.
+# Errors: 0, Warnings: 0
+# Compile of definitions.sv was successful.
+# Errors: 0, Warnings: 0
+# Compile of flt2fix_tb.sv was successful.
+# Errors: 0, Warnings: 0
+# Compile of flt2fix0.sv was successful.
+# Errors: 0, Warnings: 0
+# Compile of instr_ROM.sv was successful.
+# Errors: 0, Warnings: 0
+# Compile of PC.sv was successful.
+# Errors: 0, Warnings: 0
+# Compile of PC_LUT.sv was successful.
+# Errors: 0, Warnings: 0
+# Compile of reg_file.sv was successful.
+# Errors: 0, Warnings: 0
+# Compile of TopLevel.sv was successful.
+vsim -gui work.flt2fix_tb_noround
+# vsim -gui work.flt2fix_tb_noround 
+# Start time: 23:09:38 on Aug 01,2025
+# Loading sv_std.std
+# Loading work.flt2fix_tb_noround
+# Loading work.TopLevel0
+# Loading work.data_mem
+# Loading work.definitions
+# Loading work.TopLevel_sv_unit
+# Loading work.TopLevel
+# Loading work.PC
+# Loading work.PC_LUT
+# Loading work.instr_ROM
+# Loading work.Control_sv_unit
+# Loading work.Control
+# Loading work.reg_file
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.data_mem1
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'alu1'.  Expected 10, found 9.
+#    Time: 0 ps  Iteration: 0  Instance: /flt2fix_tb_noround/f3/alu1 File: C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/TopLevel.sv Line: 97
+# ** Warning: (vsim-3722) C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/TopLevel.sv(97): [TFMPC] - Missing connection for port 'zero'.
+run -all
+# 0.000000 * 2**-15 = 0.000000 =          0
+# original binary = 0_00000_0000000000
+# from MAT = 0000000000000000 = 0000
+# from dum = 0000000000000000 = 0000
+# from DUT = 0000000000000000 = 0000
+#                 ct =           1, score0 =           1, score1 =            1
+# 1.000000 * 2**  0 = 0.000000 =          1
+# original binary = 0_01111_0000000000
+# from MAT = 0000000100000000 = 0100
+# from dum = 0000000100000000 = 0100
+# from DUT = 0000000100000000 = 0100
+#                 ct =           2, score0 =           2, score1 =            2
+# 1.500000 * 2**  0 = 0.000000 =          2
+# original binary = 0_01111_1000000000
+# from MAT = 0000000110000000 = 0180
+# from dum = 0000000110000000 = 0180
+# from DUT = 0000000110000000 = 0180
+#                 ct =           3, score0 =           3, score1 =            3
+# 1.250000 * 2**  0 = 0.000000 =          1
+# original binary = 0_01111_0100000000
+# from MAT = 0000000101000000 = 0140
+# from dum = 0000000101000000 = 0140
+# from DUT = 0000000101000000 = 0140
+#                 ct =           4, score0 =           4, score1 =            4
+# 1.750000 * 2**  0 = 0.000000 =          2
+# original binary = 0_01111_1100000000
+# from MAT = 0000000111000000 = 01c0
+# from dum = 0000000111000000 = 01c0
+# from DUT = 0000000111000000 = 01c0
+#                 ct =           5, score0 =           5, score1 =            5
+# 1.000000 * 2**  1 = 0.000000 =          2
+# original binary = 0_10000_0000000000
+# from MAT = 0000001000000000 = 0200
+# from dum = 0000001000000000 = 0200
+# from DUT = 0000001000000000 = 0200
+#                 ct =           6, score0 =           6, score1 =            6
+# 1.500000 * 2**  1 = 0.000000 =          3
+# original binary = 0_10000_1000000000
+# from MAT = 0000001100000000 = 0300
+# from dum = 0000001100000000 = 0300
+# from DUT = 0000001100000000 = 0300
+#                 ct =           7, score0 =           7, score1 =            7
+# 1.750000 * 2**  1 = 0.000000 =          4
+# original binary = 0_10000_1100000000
+# from MAT = 0000001110000000 = 0380
+# from dum = 0000001110000000 = 0380
+# from DUT = 0000001110000000 = 0380
+#                 ct =           8, score0 =           8, score1 =            8
+# 1.875000 * 2**  1 = 0.000000 =          4
+# original binary = 0_10000_1110000000
+# from MAT = 0000001111000000 = 03c0
+# from dum = 0000001111000000 = 03c0
+# from DUT = 0000001111000000 = 03c0
+#                 ct =           9, score0 =           9, score1 =            9
+# 1.062500 * 2**  1 = 0.000000 =          2
+# original binary = 0_10000_0001000000
+# from MAT = 0000001000100000 = 0220
+# from dum = 0000001000100000 = 0220
+# from DUT = 0000001000100000 = 0220
+#                 ct =          10, score0 =          10, score1 =           10
+# 1.312500 * 2**  1 = 0.000000 =          3
+# original binary = 0_10000_0101000000
+# from MAT = 0000001010100000 = 02a0
+# from dum = 0000001010100000 = 02a0
+# from DUT = 0000001010100000 = 02a0
+#                 ct =          11, score0 =          11, score1 =           11
+# 1.437500 * 2**  1 = 0.000000 =          3
+# original binary = 0_10000_0111000000
+# from MAT = 0000001011100000 = 02e0
+# from dum = 0000001011100000 = 02e0
+# from DUT = 0000001011100000 = 02e0
+#                 ct =          12, score0 =          12, score1 =           12
+# 1.750000 * 2**  3 = 0.000000 =         14
+# original binary = 0_10010_1100000000
+# from MAT = 0000111000000000 = 0e00
+# from dum = 0000111000000000 = 0e00
+# from DUT = 0000111000000000 = 0e00
+#                 ct =          13, score0 =          13, score1 =           13
+# 1.875000 * 2**  3 = 0.000000 =         15
+# original binary = 0_10010_1110000000
+# from MAT = 0000111100000000 = 0f00
+# from dum = 0000111100000000 = 0f00
+# from DUT = 0000111100000000 = 0f00
+#                 ct =          14, score0 =          14, score1 =           14
+# 1.750000 * 2**  9 = 0.000000 =         15
+# original binary = 0_11000_1100000000
+# from MAT = 0111111111111111 = 7fff
+# from dum = 0111111111111111 = 7fff
+# from DUT = 0111111111111111 = 7fff
+#                 ct =          15, score0 =          15, score1 =           15
+# 1.750000 * 2** 10 = 0.000000 =         15
+# original binary = 0_11001_1100000000
+# from MAT = 0111111111111111 = 7fff
+# from dum = 0111111111111111 = 7fff
+# from DUT = 0111111111111111 = 7fff
+#                 ct =          16, score0 =          16, score1 =           16
+# 1.875000 * 2** 14 = 0.000000 =         15
+# original binary = 0_11101_1110000000
+# from MAT = 0111111111111111 = 7fff
+# from dum = 0111111111111111 = 7fff
+# from DUT = 0111111111111111 = 7fff
+#                 ct =          17, score0 =          17, score1 =           17
+# 1.875000 * 2** 15 = 0.000000 =         15
+# original binary = 0_11110_1110000000
+# from MAT = 0111111111111111 = 7fff
+# from dum = 0111111111111111 = 7fff
+# from DUT = 0111111111111111 = 7fff
+#                 ct =          18, score0 =          18, score1 =           18
+# 0.000000 * 2**-15 = 0.000000 =          0
+# original binary = 1_00000_0000000000
+# from MAT = 1000000000000000 = 8000
+# from dum = 1000000000000000 = 8000
+# from DUT = 1000000000000000 = 8000
+#                 ct =          19, score0 =          19, score1 =           19
+# 1.000000 * 2**  0 = 0.000000 =          1
+# original binary = 1_01111_0000000000
+# from MAT = 1000000100000000 = 8100
+# from dum = 1000000100000000 = 8100
+# from DUT = 1000000100000000 = 8100
+#                 ct =          20, score0 =          20, score1 =           20
+# 1.250000 * 2**  0 = 0.000000 =          1
+# original binary = 1_01111_0100000000
+# from MAT = 1000000101000000 = 8140
+# from dum = 1000000101000000 = 8140
+# from DUT = 1000000101000000 = 8140
+#                 ct =          21, score0 =          21, score1 =           21
+# 1.000000 * 2**  1 = 0.000000 =          2
+# original binary = 1_10000_0000000000
+# from MAT = 1000001000000000 = 8200
+# from dum = 1000001000000000 = 8200
+# from DUT = 1000001000000000 = 8200
+#                 ct =          22, score0 =          22, score1 =           22
+# 1.500000 * 2**  1 = 0.000000 =          3
+# original binary = 1_10000_1000000000
+# from MAT = 1000001100000000 = 8300
+# from dum = 1000001100000000 = 8300
+# from DUT = 1000001100000000 = 8300
+#                 ct =          23, score0 =          23, score1 =           23
+# 1.062500 * 2**  1 = 0.000000 =          2
+# original binary = 1_10000_0001000000
+# from MAT = 1000001000100000 = 8220
+# from dum = 1000001000100000 = 8220
+# from DUT = 1000001000100000 = 8220
+#                 ct =          24, score0 =          24, score1 =           24
+# 1.062500 * 2**  1 = 0.000000 =          2
+# original binary = 1_10000_0001000000
+# from MAT = 1000001000100000 = 8220
+# from dum = 1000001000100000 = 8220
+# from DUT = 1000001000100000 = 8220
+#                 ct =          25, score0 =          25, score1 =           25
+# 1.750000 * 2**  3 = 0.000000 =         14
+# original binary = 1_10010_1100000000
+# from MAT = 1000111000000000 = 8e00
+# from dum = 1000111000000000 = 8e00
+# from DUT = 1000111000000000 = 8e00
+#                 ct =          26, score0 =          26, score1 =           26
+# 1.875000 * 2**  3 = 0.000000 =         15
+# original binary = 1_10010_1110000000
+# from MAT = 1000111100000000 = 8f00
+# from dum = 1000111100000000 = 8f00
+# from DUT = 1000111100000000 = 8f00
+#                 ct =          27, score0 =          27, score1 =           27
+# 1.750000 * 2**  9 = 0.000000 =         15
+# original binary = 1_11000_1100000000
+# from MAT = 1111111111111111 = ffff
+# from dum = 1111111111111111 = ffff
+# from DUT = 1111111111111111 = ffff
+#                 ct =          28, score0 =          28, score1 =           28
+# 1.750000 * 2** 10 = 0.000000 =         15
+# original binary = 1_11001_1100000000
+# from MAT = 1111111111111111 = ffff
+# from dum = 1111111111111111 = ffff
+# from DUT = 1111111111111111 = ffff
+#                 ct =          29, score0 =          29, score1 =           29
+# 1.875000 * 2** 14 = 0.000000 =         15
+# original binary = 1_11101_1110000000
+# from MAT = 1111111111111111 = ffff
+# from dum = 1111111111111111 = ffff
+# from DUT = 1111111111111111 = ffff
+#                 ct =          30, score0 =          30, score1 =           30
+# 1.875000 * 2** 15 = 0.000000 =         15
+# original binary = 1_11110_1110000000
+# from MAT = 1111111111111111 = ffff
+# from dum = 1111111111111111 = ffff
+# from DUT = 1111111111111111 = ffff
+#                 ct =          31, score0 =          31, score1 =           31
+# correct          31 out of total          31
+# correct          31 out of total          31
+# ** Note: $stop    : C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/flt2fix_tb.sv(113)
+#    Time: 20315 ns  Iteration: 0  Instance: /flt2fix_tb_noround
+# Break in Module flt2fix_tb_noround at C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/flt2fix_tb.sv line 113
+quit -sim
+# End time: 23:11:00 on Aug 01,2025, Elapsed time: 0:01:22
+# Errors: 0, Warnings: 7
+# reading C:/intelFPGA/20.1/modelsim_ase/win32aloem/../modelsim.ini
+# Loading project fd_prog3
+# Errors: 1, Warnings: 0
+# Errors: 1, Warnings: 0
+# Errors: 0, Warnings: 0
+# Compile of data_mem.sv was successful.
+# Errors: 0, Warnings: 0
+# Compile of data_mem1.sv was successful.
+# Errors: 0, Warnings: 0
+# Compile of definitions.sv was successful.
+# Errors: 0, Warnings: 0
+# Compile of fltflt_no_rnd_tb.sv was successful.
+# Errors: 0, Warnings: 0
+# Compile of fltflt0_no_rnd.sv was successful.
+# Errors: 0, Warnings: 0
+# Compile of instr_ROM.sv was successful.
+# Errors: 0, Warnings: 0
+# Compile of PC.sv was successful.
+# Errors: 0, Warnings: 0
+# Compile of PC_LUT.sv was successful.
+# Errors: 0, Warnings: 0
+# Compile of reg_file.sv was successful.
+# Errors: 0, Warnings: 0
+# Compile of TopLevel.sv was successful.
+# Errors: 0, Warnings: 0
+# Compile of alu.sv was successful.
+# Errors: 0, Warnings: 0
+# Compile of Control.sv was successful.
+vsim -gui work.fltflt_tb
+# vsim -gui work.fltflt_tb 
+# Start time: 23:12:49 on Aug 01,2025
+# Loading sv_std.std
+# Loading work.fltflt_tb
+# Loading work.TopLevel0
+# Loading work.data_mem
+# Loading work.definitions
+# Loading work.TopLevel_sv_unit
+# Loading work.TopLevel
+# Loading work.PC
+# Loading work.PC_LUT
+# Loading work.instr_ROM
+# Loading work.Control_sv_unit
+# Loading work.Control
+# Loading work.reg_file
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.data_mem1
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'alu1'.  Expected 10, found 9.
+#    Time: 0 ps  Iteration: 0  Instance: /fltflt_tb/t1/alu1 File: C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog3/TopLevel.sv Line: 97
+# ** Warning: (vsim-3722) C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog3/TopLevel.sv(97): [TFMPC] - Missing connection for port 'zero'.
+run -all
+# diff =  0
+# flt1b = 0  00110  1000000100
+# flt2b = 0  00110  1000000100
+# flt3b =  x  xxxxx  xxxxxxxxxx
+# flt3_testb =  00111   1000000100
+# scores =           0,           0 out of           1
+# clock cycle ct =         150
+#  
+# diff =  0
+# flt1b = 0  10000  1000000100
+# flt2b = 0  10000  1000000100
+# flt3b =  x  xxxxx  xxxxxxxxxx
+# flt3_testb =  10001   1000000100
+# scores =           0,           0 out of           2
+# clock cycle ct =         149
+#  
+# diff =  2
+# flt1b = 0  10010  1000010000
+# flt2b = 0  10000  1000000100
+# flt3b =  x  xxxxx  xxxxxxxxxx
+# flt3_testb =  10010   1110010001
+# scores =           0,           0 out of           3
+# clock cycle ct =         149
+#  
+# diff = 20
+# flt1b = 0  10100  1000001111
+# flt2b = 0  00000  0001000000
+# flt3b =  x  xxxxx  xxxxxxxxxx
+# flt3_testb =  10100   1000001111
+# scores =           0,           0 out of           4
+# clock cycle ct =         149
+#  
+# diff = 63
+# flt1b = 0  00110  1000000100
+# flt2b = 0  00111  1000000100
+# flt3b =  x  xxxxx  xxxxxxxxxx
+# flt3_testb =  01000   0010000011
+# scores =           0,           0 out of           5
+# clock cycle ct =         149
+#  
+# diff = 59
+# flt1b = 0  10000  1000000000
+# flt2b = 0  10101  1000000100
+# flt3b =  x  xxxxx  xxxxxxxxxx
+# flt3_testb =  10101   1000110100
+# scores =           0,           0 out of           6
+# clock cycle ct =         149
+#  
+# diff = 59
+# flt1b = 0  10010  1000000000
+# flt2b = 0  10111  1000000100
+# flt3b =  x  xxxxx  xxxxxxxxxx
+# flt3_testb =  10111   1000110100
+# scores =           0,           0 out of           7
+# clock cycle ct =         149
+#  
+# diff = 20
+# flt1b = 0  10100  1000000000
+# flt2b = 0  00000  1000000100
+# flt3b =  x  xxxxx  xxxxxxxxxx
+# flt3_testb =  10100   1000000000
+# scores =           0,           0 out of           8
+# clock cycle ct =         149
+#  
+# diff =  0
+# flt1b = 0  00110  1000000100
+# flt2b = 0  00110  1000000100
+# flt3b =  x  xxxxx  xxxxxxxxxx
+# flt3_testb =  00111   1000000100
+# scores =           0,           0 out of           9
+# clock cycle ct =         149
+#  
+# diff =  0
+# flt1b = 0  10110  1000000100
+# flt2b = 0  10110  1000000100
+# flt3b =  x  xxxxx  xxxxxxxxxx
+# flt3_testb =  10111   1000000100
+# scores =           0,           0 out of          10
+# clock cycle ct =         149
+#  
+# diff =  2
+# flt1b = 0  10010  1000010000
+# flt2b = 0  10000  1000000100
+# flt3b =  x  xxxxx  xxxxxxxxxx
+# flt3_testb =  10010   1110010001
+# scores =           0,           0 out of          11
+# clock cycle ct =         149
+#  
+# diff =  6
+# flt1b = 0  11010  1000001111
+# flt2b = 0  10100  1000000000
+# flt3b =  x  xxxxx  xxxxxxxxxx
+# flt3_testb =  11010   1000100111
+# scores =           0,           0 out of          12
+# clock cycle ct =         149
+#  
+# score1 =           0, score2 =           0, out of          12
+# ** Note: $stop    : C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog3/fltflt_no_rnd_tb.sv(105)
+#    Time: 18265 ns  Iteration: 0  Instance: /fltflt_tb
+# Break in Module fltflt_tb at C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog3/fltflt_no_rnd_tb.sv line 105
+# Compile of alu.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.alu_sv_unit
+# Loading work.alu
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'alu1'.  Expected 10, found 9.
+#    Time: 0 ps  Iteration: 0  Instance: /fltflt_tb/t1/alu1 File: C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog3/TopLevel.sv Line: 97
+# ** Warning: (vsim-3722) C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog3/TopLevel.sv(97): [TFMPC] - Missing connection for port 'zero'.
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# diff =  0
+# flt1b = 0  00110  1000000100
+# flt2b = 0  00110  1000000100
+# flt3b =  x  xxxxx  xxxxxxxxxx
+# flt3_testb =  00111   1000000100
+# scores =           0,           0 out of           1
+# clock cycle ct =         150
+#  
+# diff =  0
+# flt1b = 0  10000  1000000100
+# flt2b = 0  10000  1000000100
+# flt3b =  x  xxxxx  xxxxxxxxxx
+# flt3_testb =  10001   1000000100
+# scores =           0,           0 out of           2
+# clock cycle ct =         149
+#  
+# diff =  2
+# flt1b = 0  10010  1000010000
+# flt2b = 0  10000  1000000100
+# flt3b =  x  xxxxx  xxxxxxxxxx
+# flt3_testb =  10010   1110010001
+# scores =           0,           0 out of           3
+# clock cycle ct =         149
+#  
+# diff = 20
+# flt1b = 0  10100  1000001111
+# flt2b = 0  00000  0001000000
+# flt3b =  x  xxxxx  xxxxxxxxxx
+# flt3_testb =  10100   1000001111
+# scores =           0,           0 out of           4
+# clock cycle ct =         149
+#  
+# diff = 63
+# flt1b = 0  00110  1000000100
+# flt2b = 0  00111  1000000100
+# flt3b =  x  xxxxx  xxxxxxxxxx
+# flt3_testb =  01000   0010000011
+# scores =           0,           0 out of           5
+# clock cycle ct =         149
+#  
+# diff = 59
+# flt1b = 0  10000  1000000000
+# flt2b = 0  10101  1000000100
+# flt3b =  x  xxxxx  xxxxxxxxxx
+# flt3_testb =  10101   1000110100
+# scores =           0,           0 out of           6
+# clock cycle ct =         149
+#  
+# diff = 59
+# flt1b = 0  10010  1000000000
+# flt2b = 0  10111  1000000100
+# flt3b =  x  xxxxx  xxxxxxxxxx
+# flt3_testb =  10111   1000110100
+# scores =           0,           0 out of           7
+# clock cycle ct =         149
+#  
+# diff = 20
+# flt1b = 0  10100  1000000000
+# flt2b = 0  00000  1000000100
+# flt3b =  x  xxxxx  xxxxxxxxxx
+# flt3_testb =  10100   1000000000
+# scores =           0,           0 out of           8
+# clock cycle ct =         149
+#  
+# diff =  0
+# flt1b = 0  00110  1000000100
+# flt2b = 0  00110  1000000100
+# flt3b =  x  xxxxx  xxxxxxxxxx
+# flt3_testb =  00111   1000000100
+# scores =           0,           0 out of           9
+# clock cycle ct =         149
+#  
+# diff =  0
+# flt1b = 0  10110  1000000100
+# flt2b = 0  10110  1000000100
+# flt3b =  x  xxxxx  xxxxxxxxxx
+# flt3_testb =  10111   1000000100
+# scores =           0,           0 out of          10
+# clock cycle ct =         149
+#  
+# diff =  2
+# flt1b = 0  10010  1000010000
+# flt2b = 0  10000  1000000100
+# flt3b =  x  xxxxx  xxxxxxxxxx
+# flt3_testb =  10010   1110010001
+# scores =           0,           0 out of          11
+# clock cycle ct =         149
+#  
+# diff =  6
+# flt1b = 0  11010  1000001111
+# flt2b = 0  10100  1000000000
+# flt3b =  x  xxxxx  xxxxxxxxxx
+# flt3_testb =  11010   1000100111
+# scores =           0,           0 out of          12
+# clock cycle ct =         149
+#  
+# score1 =           0, score2 =           0, out of          12
+# ** Note: $stop    : C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog3/fltflt_no_rnd_tb.sv(105)
+#    Time: 18265 ns  Iteration: 0  Instance: /fltflt_tb
+# Break in Module fltflt_tb at C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog3/fltflt_no_rnd_tb.sv line 105
+quit -sim
+# End time: 14:13:15 on Aug 02,2025, Elapsed time: 15:00:26
+# Errors: 0, Warnings: 3
+project open C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/fd_prog2
+# reading C:/intelFPGA/20.1/modelsim_ase/win32aloem/../modelsim.ini
+# Loading project fd_prog2
+# Compile of alu.sv was successful.
+vsim -gui work.flt2fix_tb_noround
+# vsim -gui work.flt2fix_tb_noround 
+# Start time: 14:13:47 on Aug 02,2025
+# Loading sv_std.std
+# Loading work.flt2fix_tb_noround
+# Loading work.TopLevel0
+# Loading work.data_mem
+# Loading work.definitions
+# Loading work.TopLevel_sv_unit
+# Loading work.TopLevel
+# Loading work.PC
+# Loading work.PC_LUT
+# Loading work.instr_ROM
+# Loading work.Control_sv_unit
+# Loading work.Control
+# Loading work.reg_file
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.data_mem1
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'alu1'.  Expected 10, found 9.
+#    Time: 0 ps  Iteration: 0  Instance: /flt2fix_tb_noround/f3/alu1 File: C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/TopLevel.sv Line: 97
+# ** Warning: (vsim-3722) C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/TopLevel.sv(97): [TFMPC] - Missing connection for port 'zero'.
+run -all
+# 0.000000 * 2**-15 = 0.000000 =          0
+# original binary = 0_00000_0000000000
+# from MAT = 0000000000000000 = 0000
+# from dum = 0000000000000000 = 0000
+# from DUT = 0000000000000000 = 0000
+#                 ct =           1, score0 =           1, score1 =            1
+# 1.000000 * 2**  0 = 0.000000 =          1
+# original binary = 0_01111_0000000000
+# from MAT = 0000000100000000 = 0100
+# from dum = 0000000100000000 = 0100
+# from DUT = 0000000100000000 = 0100
+#                 ct =           2, score0 =           2, score1 =            2
+# 1.500000 * 2**  0 = 0.000000 =          2
+# original binary = 0_01111_1000000000
+# from MAT = 0000000110000000 = 0180
+# from dum = 0000000110000000 = 0180
+# from DUT = 0000000110000000 = 0180
+#                 ct =           3, score0 =           3, score1 =            3
+# 1.250000 * 2**  0 = 0.000000 =          1
+# original binary = 0_01111_0100000000
+# from MAT = 0000000101000000 = 0140
+# from dum = 0000000101000000 = 0140
+# from DUT = 0000000101000000 = 0140
+#                 ct =           4, score0 =           4, score1 =            4
+# 1.750000 * 2**  0 = 0.000000 =          2
+# original binary = 0_01111_1100000000
+# from MAT = 0000000111000000 = 01c0
+# from dum = 0000000111000000 = 01c0
+# from DUT = 0000000111000000 = 01c0
+#                 ct =           5, score0 =           5, score1 =            5
+# 1.000000 * 2**  1 = 0.000000 =          2
+# original binary = 0_10000_0000000000
+# from MAT = 0000001000000000 = 0200
+# from dum = 0000001000000000 = 0200
+# from DUT = 0000001000000000 = 0200
+#                 ct =           6, score0 =           6, score1 =            6
+# 1.500000 * 2**  1 = 0.000000 =          3
+# original binary = 0_10000_1000000000
+# from MAT = 0000001100000000 = 0300
+# from dum = 0000001100000000 = 0300
+# from DUT = 0000001100000000 = 0300
+#                 ct =           7, score0 =           7, score1 =            7
+# 1.750000 * 2**  1 = 0.000000 =          4
+# original binary = 0_10000_1100000000
+# from MAT = 0000001110000000 = 0380
+# from dum = 0000001110000000 = 0380
+# from DUT = 0000001110000000 = 0380
+#                 ct =           8, score0 =           8, score1 =            8
+# 1.875000 * 2**  1 = 0.000000 =          4
+# original binary = 0_10000_1110000000
+# from MAT = 0000001111000000 = 03c0
+# from dum = 0000001111000000 = 03c0
+# from DUT = 0000001111000000 = 03c0
+#                 ct =           9, score0 =           9, score1 =            9
+# 1.062500 * 2**  1 = 0.000000 =          2
+# original binary = 0_10000_0001000000
+# from MAT = 0000001000100000 = 0220
+# from dum = 0000001000100000 = 0220
+# from DUT = 0000001000100000 = 0220
+#                 ct =          10, score0 =          10, score1 =           10
+# 1.312500 * 2**  1 = 0.000000 =          3
+# original binary = 0_10000_0101000000
+# from MAT = 0000001010100000 = 02a0
+# from dum = 0000001010100000 = 02a0
+# from DUT = 0000001010100000 = 02a0
+#                 ct =          11, score0 =          11, score1 =           11
+# 1.437500 * 2**  1 = 0.000000 =          3
+# original binary = 0_10000_0111000000
+# from MAT = 0000001011100000 = 02e0
+# from dum = 0000001011100000 = 02e0
+# from DUT = 0000001011100000 = 02e0
+#                 ct =          12, score0 =          12, score1 =           12
+# 1.750000 * 2**  3 = 0.000000 =         14
+# original binary = 0_10010_1100000000
+# from MAT = 0000111000000000 = 0e00
+# from dum = 0000111000000000 = 0e00
+# from DUT = 0000111000000000 = 0e00
+#                 ct =          13, score0 =          13, score1 =           13
+# 1.875000 * 2**  3 = 0.000000 =         15
+# original binary = 0_10010_1110000000
+# from MAT = 0000111100000000 = 0f00
+# from dum = 0000111100000000 = 0f00
+# from DUT = 0000111100000000 = 0f00
+#                 ct =          14, score0 =          14, score1 =           14
+# 1.750000 * 2**  9 = 0.000000 =         15
+# original binary = 0_11000_1100000000
+# from MAT = 0111111111111111 = 7fff
+# from dum = 0111111111111111 = 7fff
+# from DUT = 0111111111111111 = 7fff
+#                 ct =          15, score0 =          15, score1 =           15
+# 1.750000 * 2** 10 = 0.000000 =         15
+# original binary = 0_11001_1100000000
+# from MAT = 0111111111111111 = 7fff
+# from dum = 0111111111111111 = 7fff
+# from DUT = 0111111111111111 = 7fff
+#                 ct =          16, score0 =          16, score1 =           16
+# 1.875000 * 2** 14 = 0.000000 =         15
+# original binary = 0_11101_1110000000
+# from MAT = 0111111111111111 = 7fff
+# from dum = 0111111111111111 = 7fff
+# from DUT = 0111111111111111 = 7fff
+#                 ct =          17, score0 =          17, score1 =           17
+# 1.875000 * 2** 15 = 0.000000 =         15
+# original binary = 0_11110_1110000000
+# from MAT = 0111111111111111 = 7fff
+# from dum = 0111111111111111 = 7fff
+# from DUT = 0111111111111111 = 7fff
+#                 ct =          18, score0 =          18, score1 =           18
+# 0.000000 * 2**-15 = 0.000000 =          0
+# original binary = 1_00000_0000000000
+# from MAT = 1000000000000000 = 8000
+# from dum = 1000000000000000 = 8000
+# from DUT = 1000000000000000 = 8000
+#                 ct =          19, score0 =          19, score1 =           19
+# 1.000000 * 2**  0 = 0.000000 =          1
+# original binary = 1_01111_0000000000
+# from MAT = 1000000100000000 = 8100
+# from dum = 1000000100000000 = 8100
+# from DUT = 1000000100000000 = 8100
+#                 ct =          20, score0 =          20, score1 =           20
+# 1.250000 * 2**  0 = 0.000000 =          1
+# original binary = 1_01111_0100000000
+# from MAT = 1000000101000000 = 8140
+# from dum = 1000000101000000 = 8140
+# from DUT = 1000000101000000 = 8140
+#                 ct =          21, score0 =          21, score1 =           21
+# 1.000000 * 2**  1 = 0.000000 =          2
+# original binary = 1_10000_0000000000
+# from MAT = 1000001000000000 = 8200
+# from dum = 1000001000000000 = 8200
+# from DUT = 1000001000000000 = 8200
+#                 ct =          22, score0 =          22, score1 =           22
+# 1.500000 * 2**  1 = 0.000000 =          3
+# original binary = 1_10000_1000000000
+# from MAT = 1000001100000000 = 8300
+# from dum = 1000001100000000 = 8300
+# from DUT = 1000001100000000 = 8300
+#                 ct =          23, score0 =          23, score1 =           23
+# 1.062500 * 2**  1 = 0.000000 =          2
+# original binary = 1_10000_0001000000
+# from MAT = 1000001000100000 = 8220
+# from dum = 1000001000100000 = 8220
+# from DUT = 1000001000100000 = 8220
+#                 ct =          24, score0 =          24, score1 =           24
+# 1.062500 * 2**  1 = 0.000000 =          2
+# original binary = 1_10000_0001000000
+# from MAT = 1000001000100000 = 8220
+# from dum = 1000001000100000 = 8220
+# from DUT = 1000001000100000 = 8220
+#                 ct =          25, score0 =          25, score1 =           25
+# 1.750000 * 2**  3 = 0.000000 =         14
+# original binary = 1_10010_1100000000
+# from MAT = 1000111000000000 = 8e00
+# from dum = 1000111000000000 = 8e00
+# from DUT = 1000111000000000 = 8e00
+#                 ct =          26, score0 =          26, score1 =           26
+# 1.875000 * 2**  3 = 0.000000 =         15
+# original binary = 1_10010_1110000000
+# from MAT = 1000111100000000 = 8f00
+# from dum = 1000111100000000 = 8f00
+# from DUT = 1000111100000000 = 8f00
+#                 ct =          27, score0 =          27, score1 =           27
+# 1.750000 * 2**  9 = 0.000000 =         15
+# original binary = 1_11000_1100000000
+# from MAT = 1111111111111111 = ffff
+# from dum = 1111111111111111 = ffff
+# from DUT = 1111111111111111 = ffff
+#                 ct =          28, score0 =          28, score1 =           28
+# 1.750000 * 2** 10 = 0.000000 =         15
+# original binary = 1_11001_1100000000
+# from MAT = 1111111111111111 = ffff
+# from dum = 1111111111111111 = ffff
+# from DUT = 1111111111111111 = ffff
+#                 ct =          29, score0 =          29, score1 =           29
+# 1.875000 * 2** 14 = 0.000000 =         15
+# original binary = 1_11101_1110000000
+# from MAT = 1111111111111111 = ffff
+# from dum = 1111111111111111 = ffff
+# from DUT = 1111111111111111 = ffff
+#                 ct =          30, score0 =          30, score1 =           30
+# 1.875000 * 2** 15 = 0.000000 =         15
+# original binary = 1_11110_1110000000
+# from MAT = 1111111111111111 = ffff
+# from dum = 1111111111111111 = ffff
+# from DUT = 1111111111111111 = ffff
+#                 ct =          31, score0 =          31, score1 =           31
+# correct          31 out of total          31
+# correct          31 out of total          31
+# ** Note: $stop    : C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/flt2fix_tb.sv(113)
+#    Time: 20315 ns  Iteration: 0  Instance: /flt2fix_tb_noround
+# Break in Module flt2fix_tb_noround at C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/flt2fix_tb.sv line 113
+quit -sim
+# End time: 14:14:20 on Aug 02,2025, Elapsed time: 0:00:33
+# Errors: 0, Warnings: 4
+project open C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog1/fd_prog1
+# reading C:/intelFPGA/20.1/modelsim_ase/win32aloem/../modelsim.ini
+# Loading project fd_prog1
+# Compile of alu.sv was successful.
+vsim -gui work.new_int2flt_tb
+# vsim -gui work.new_int2flt_tb 
+# Start time: 14:15:16 on Aug 02,2025
+# Loading sv_std.std
+# Loading work.new_int2flt_tb
+# Loading work.definitions
+# Loading work.TopLevel_sv_unit
+# Loading work.TopLevel
+# Loading work.PC
+# Loading work.PC_LUT
+# Loading work.instr_ROM
+# Loading work.Control_sv_unit
+# Loading work.Control
+# Loading work.reg_file
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.data_mem1
+# Loading work.TopLevel0
+# Loading work.data_mem0
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'alu1'.  Expected 10, found 9.
+#    Time: 0 ps  Iteration: 0  Instance: /new_int2flt_tb/f1/alu1 File: C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog1/TopLevel.sv Line: 97
+# ** Warning: (vsim-3722) C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog1/TopLevel.sv(97): [TFMPC] - Missing connection for port 'zero'.
+run -all
+#  
+# what's feeding the case 0000000000000000
+# IN=0x0000,  DUT=0x0000, REF=0x0000, MATH=0x0000
+# Scores so far: vs REF=1, vs MATH=1, tests=1
+#  
+# what's feeding the case 1000000000000000
+# IN=0x8000,  DUT=0x8000, REF=0x8000, MATH=0x8000
+# Scores so far: vs REF=2, vs MATH=2, tests=2
+#  
+# what's feeding the case 0000000000000001
+# IN=0x0001,  DUT=0x1c00, REF=0x1c00, MATH=0x1c00
+# Scores so far: vs REF=3, vs MATH=3, tests=3
+#  
+# what's feeding the case 1000000000000001
+# IN=0x8001,  DUT=0x9c00, REF=0x9c00, MATH=0x9c00
+# Scores so far: vs REF=4, vs MATH=4, tests=4
+#  
+# what's feeding the case 0000000000000010
+# IN=0x0002,  DUT=0x2000, REF=0x2000, MATH=0x2000
+# Scores so far: vs REF=5, vs MATH=5, tests=5
+#  
+# what's feeding the case 1000000000000010
+# IN=0x8002,  DUT=0xa000, REF=0xa000, MATH=0xa000
+# Scores so far: vs REF=6, vs MATH=6, tests=6
+#  
+# what's feeding the case 0000000000000011
+# IN=0x0003,  DUT=0x2200, REF=0x2200, MATH=0x2200
+# Scores so far: vs REF=7, vs MATH=7, tests=7
+#  
+# what's feeding the case 1000000000000011
+# IN=0x8003,  DUT=0xa200, REF=0xa200, MATH=0xa200
+# Scores so far: vs REF=8, vs MATH=8, tests=8
+#  
+# what's feeding the case 0000000000001100
+# IN=0x000c,  DUT=0x2a00, REF=0x2a00, MATH=0x2a00
+# Scores so far: vs REF=9, vs MATH=9, tests=9
+#  
+# what's feeding the case 0000000000110000
+# IN=0x0030,  DUT=0x3200, REF=0x3200, MATH=0x3200
+# Scores so far: vs REF=10, vs MATH=10, tests=10
+#  
+# what's feeding the case 0001111111111111
+# IN=0x1fff,  DUT=0x4fff, REF=0x4fff, MATH=0x4fff
+# Scores so far: vs REF=11, vs MATH=11, tests=11
+#  
+# what's feeding the case 0011111111111111
+# IN=0x3fff,  DUT=0x53ff, REF=0x53ff, MATH=0x53ff
+# Scores so far: vs REF=12, vs MATH=12, tests=12
+#  
+# what's feeding the case 0111111111111111
+# IN=0x7fff,  DUT=0x57ff, REF=0x57ff, MATH=0x57ff
+# Scores so far: vs REF=13, vs MATH=13, tests=13
+#  
+# what's feeding the case 1111111111111111
+# IN=0xffff,  DUT=0xd7ff, REF=0xd7ff, MATH=0xd7ff
+# Scores so far: vs REF=14, vs MATH=14, tests=14
+#  
+# what's feeding the case 1100000000000000
+# IN=0xc000,  DUT=0xd400, REF=0xd400, MATH=0xd400
+# Scores so far: vs REF=15, vs MATH=15, tests=15
+#  
+# what's feeding the case 0100000000000000
+# IN=0x4000,  DUT=0x5400, REF=0x5400, MATH=0x5400
+# Scores so far: vs REF=16, vs MATH=16, tests=16
+#  
+# what's feeding the case 0011010100100100
+# IN=0x3524,  DUT=0x52a4, REF=0x52a4, MATH=0x52a4
+# Scores so far: vs REF=17, vs MATH=17, tests=17
+#  
+# what's feeding the case 0101111010000001
+# IN=0x5e81,  DUT=0x55e8, REF=0x55e8, MATH=0x55e8
+# Scores so far: vs REF=18, vs MATH=18, tests=18
+#  
+# what's feeding the case 1101011000001001
+# IN=0xd609,  DUT=0xd560, REF=0xd560, MATH=0xd560
+# Scores so far: vs REF=19, vs MATH=19, tests=19
+#  
+# what's feeding the case 0101011001100011
+# IN=0x5663,  DUT=0x5566, REF=0x5566, MATH=0x5566
+# Scores so far: vs REF=20, vs MATH=20, tests=20
+# scores =          20          20 out of          20
+# ** Note: $stop    : C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog1/new_fix2flt_tb.sv(92)
+#    Time: 19585 ns  Iteration: 0  Instance: /new_int2flt_tb
+# Break in Module new_int2flt_tb at C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog1/new_fix2flt_tb.sv line 92
+quit -sim
+# End time: 14:15:56 on Aug 02,2025, Elapsed time: 0:00:40
+# Errors: 0, Warnings: 4
+project open C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog3/fd_prog3

@@ -1,0 +1,171 @@
+// get input
+LOAD R9
+MOVT R1
+LOAD R8
+MOVT R2
+LOAD R11
+MOVT R3
+LOAD R10
+MOVT R4
+
+// get registers ready
+// sign mask R5 = b10000000
+MOVI 4
+MOVT R5
+MOVI 8
+LSHL R5
+MOVT R5
+// exponent mask R6 = b01111100
+MOVI 3
+MOVT R7
+MOVI 4
+MOVT R6
+MOVI 15
+LSHL R7
+BORR R6
+MOVT R6
+// leading 1 mask R7 = b00000100 (4)
+MOVI 4
+MOVT R7
+// overflow mask R8 = b00001000 (8)
+MOVI 8
+MOVT R8
+// shift val R11 = 2
+MOVI 2
+MOVT R11
+
+// compare exponents
+MOVF R1
+BAND R6
+MOVT R9
+MOVF R3
+BAND R6
+MOVT R10
+CMPR R9
+BRLT $set_sign_and_exp
+
+// swap inA and inB; swap expA and expB
+MOVF R1
+MOVT R12
+MOVF R2
+MOVT R13
+MOVF R3
+MOVT R1
+MOVF R4
+MOVT R2
+MOVF R12
+MOVT R3
+MOVF R13
+MOVT R4
+MOVF R9
+MOVT R12
+MOVF R10
+MOVT R9
+MOVF R12
+MOVT R10
+
+$set_sign_and_exp
+// mask off exponents
+BNOT R6
+MOVF R1
+BAND R6
+MOVT R1
+MOVF R3
+BAND R6
+MOVT R3
+BNOT R6
+// mask on leading 1s
+MOVF R1
+BORR R7
+MOVT R1
+MOVF R3
+BORR R7
+MOVT R3
+// grab signs, store signA and expA
+MOVF R3
+BAND R5
+MOVT R13
+MOVF R1
+BAND R5
+MOVT R12
+BORR R9
+STOR R13
+
+// mask off signs
+BNOT R5
+MOVF R1
+BAND R5
+MOVT R1
+MOVF R3
+BAND R5
+MOVT R3
+BNOT R5
+
+// find exponent difference
+MOVF R9
+SUBR R10
+LSHR R11
+// store new shift value
+MOVT R11
+
+// inB >> (expA - expB)
+// shift inB
+// shift upB and lowB
+MOVF R3
+LSHR R11
+MOVT R14
+MOVF R4
+LSHR R11
+MOVT R15
+// carry upB shift out to lowB
+MOVF R11
+CMPR R8
+BRGT $shift_val_gt_8
+MOVF R8
+SUBR R11
+MOVT R11
+MOVF R3
+LSHL R11
+BORR R15
+MOVT R4
+CMPR R0     // debug start: cmpr R0 to R0
+BREQ $mov_new_upB    // always branch
+
+$shift_val_gt_8:
+SUBR R8
+MOVT R11
+MOVF R3
+LSHR R11
+BORR R15
+MOVT R4
+
+$mov_new_upB:
+MOVF R14
+MOVT R3
+
+// compare signs
+MOVF R13
+CMPR R12
+BRNE $subtract
+
+// add
+MOVF R2
+ADDR R4
+MOVT R15
+MOVF R1
+ADDC R3
+MOVT R14
+CMPR R0     // debug start: cmpr R0 to R0
+BREQ $build_up_out    // always branch
+
+$subtract:
+MOVF R1
+SUBR R3
+MOVT R14
+MOVF R2
+SUBC R4
+MOVT R15
+
+$build_up_out:
+// check for overflow
+

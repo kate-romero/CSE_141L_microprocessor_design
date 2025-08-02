@@ -1,0 +1,403 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog1
+valu
+Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z1 DXx4 work 11 definitions 0 22 bad7P<4Th`[o0P?2]3Gjh2
+DXx4 work 11 alu_sv_unit 0 22 biQBoB9I16?B?1l1oSbSX0
+Z2 !s110 1754169215
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+!i10b 1
+!s100 5^4:CT82:V=mOzMa20:`d3
+II_k5o0Hlfho:TOU1og5gZ3
+!s105 alu_sv_unit
+S1
+Z4 dC:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2
+Z5 w1754169116
+Z6 8C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/alu.sv
+Z7 FC:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/alu.sv
+!i122 24
+L0 13 61
+Z8 OV;L;2020.1;71
+31
+Z9 !s108 1754169215.000000
+!s107 C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/alu.sv|
+Z10 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/alu.sv|
+!i113 1
+Z11 o-work work -sv
+Z12 tCvgOpt 0
+Xalu_sv_unit
+R0
+R1
+R2
+VbiQBoB9I16?B?1l1oSbSX0
+r1
+!s85 0
+!i10b 1
+!s100 Hg_:nQ@U6T6;R@giai2ao2
+IbiQBoB9I16?B?1l1oSbSX0
+!i103 1
+S1
+R4
+R5
+R6
+R7
+!i122 24
+L0 11 0
+R8
+31
+R9
+Z13 !s107 C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/alu.sv|
+R10
+!i113 1
+R11
+R12
+vControl
+R0
+R1
+DXx4 work 15 Control_sv_unit 0 22 KMVS;R73U<ZR7V^4i?jPY1
+Z14 !s110 1754114960
+R3
+r1
+!s85 0
+!i10b 1
+!s100 5LB<2]TiKV95WGbRLTC6l1
+IPRQj1zP9RZfnRJ5VCe9ki3
+!s105 Control_sv_unit
+S1
+R4
+Z15 w1753834567
+Z16 8C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/Control.sv
+Z17 FC:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/Control.sv
+!i122 13
+L0 7 72
+R8
+31
+Z18 !s108 1754114959.000000
+Z19 !s107 C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/Control.sv|
+Z20 !s90 -reportprogress|300|-work|work|-sv|C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/Control.sv|
+!i113 1
+R11
+R12
+n@control
+XControl_sv_unit
+R0
+R1
+R14
+VKMVS;R73U<ZR7V^4i?jPY1
+r1
+!s85 0
+!i10b 1
+!s100 e>e::cZ?63A_[DI[B2IY72
+IKMVS;R73U<ZR7V^4i?jPY1
+!i103 1
+S1
+R4
+R15
+R16
+R17
+!i122 13
+Z21 L0 5 0
+R8
+31
+R18
+R19
+R20
+!i113 1
+R11
+R12
+n@control_sv_unit
+vdata_mem
+R0
+R14
+!i10b 1
+!s100 7Y5z2eO@9LiXh8DUdO:P:2
+Z22 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IXz??jB6D`?QiPWg_GQo7d0
+R3
+S1
+R4
+Z23 w1754111716
+8C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/data_mem.sv
+FC:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/data_mem.sv
+!i122 14
+L0 9 31
+R8
+r1
+!s85 0
+31
+Z24 !s108 1754114960.000000
+!s107 C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/data_mem.sv|
+!s90 -reportprogress|300|-work|work|-sv|C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/data_mem.sv|
+!i113 1
+R11
+R12
+vdata_mem1
+R0
+R14
+!i10b 1
+!s100 7mfS6X16FhcfgoUO?BQn42
+R22
+I;YkQYfN?N]ZMS5P5BQBC_0
+R3
+S1
+R4
+w1753829200
+8C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/data_mem1.sv
+FC:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/data_mem1.sv
+!i122 15
+L0 3 18
+R8
+r1
+!s85 0
+31
+R24
+!s107 C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/data_mem1.sv|
+!s90 -reportprogress|300|-work|work|-sv|C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/data_mem1.sv|
+!i113 1
+R11
+R12
+Xdefinitions
+R0
+R14
+!i10b 1
+!s100 Io6[]I>2h4zQW>bYIbX3]1
+R22
+Ibad7P<4Th`[o0P?2]3Gjh2
+Vbad7P<4Th`[o0P?2]3Gjh2
+S1
+R4
+w1753728868
+8C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/definitions.sv
+FC:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/definitions.sv
+!i122 16
+L0 4 0
+R8
+r1
+!s85 0
+31
+R24
+!s107 C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/definitions.sv|
+!s90 -reportprogress|300|-work|work|-sv|C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/definitions.sv|
+!i113 1
+R11
+R12
+vflt2fix_tb_noround
+R0
+R14
+!i10b 1
+!s100 a<?dD]?B9E5NK:1B?9b4S0
+R22
+I0k2[f6n2_zh7E8kCiCYg=0
+R3
+S1
+R4
+R23
+8C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/flt2fix_tb.sv
+FC:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/flt2fix_tb.sv
+!i122 17
+L0 5 147
+R8
+r1
+!s85 0
+31
+R24
+!s107 C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/flt2fix_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/flt2fix_tb.sv|
+!i113 1
+R11
+R12
+vinstr_ROM
+R0
+R14
+!i10b 1
+!s100 41ZD;EQmFTDahUcizPkKf1
+R22
+IVni6L@6d>;ff3g8gTJVf[2
+R3
+S1
+R4
+w1752117770
+8C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/instr_ROM.sv
+FC:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/instr_ROM.sv
+!i122 19
+L0 4 11
+R8
+r1
+!s85 0
+31
+R24
+!s107 C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/instr_ROM.sv|
+!s90 -reportprogress|300|-work|work|-sv|C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/instr_ROM.sv|
+!i113 1
+R11
+R12
+ninstr_@r@o@m
+vPC
+R0
+Z25 !s110 1754114961
+!i10b 1
+!s100 B=83h]H=P;R`FTRG8JUgM0
+R22
+In9CE]=6];a5UbbGIE@8Wj0
+R3
+S1
+R4
+w1753674522
+8C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/PC.sv
+FC:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/PC.sv
+!i122 20
+L0 4 21
+R8
+r1
+!s85 0
+31
+Z26 !s108 1754114961.000000
+!s107 C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/PC.sv|
+!s90 -reportprogress|300|-work|work|-sv|C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/PC.sv|
+!i113 1
+R11
+R12
+n@p@c
+vPC_LUT
+R0
+R25
+!i10b 1
+!s100 kJRiVZ7]dDakmaM@Jfh8Z0
+R22
+I^M8VIlH;]8U9AKU4WP=GV2
+R3
+S1
+R4
+w1753848443
+8C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/PC_LUT.sv
+FC:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/PC_LUT.sv
+!i122 21
+L0 1 11
+R8
+r1
+!s85 0
+31
+R26
+!s107 C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/PC_LUT.sv|
+!s90 -reportprogress|300|-work|work|-sv|C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/PC_LUT.sv|
+!i113 1
+R11
+R12
+n@p@c_@l@u@t
+vreg_file
+R0
+R25
+!i10b 1
+!s100 TnJG4QXVJ659YlmcG<zM^0
+R22
+I9=DFEZ9M43a6eWhjSTb4c1
+R3
+S1
+R4
+w1753768145
+8C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/reg_file.sv
+FC:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/reg_file.sv
+!i122 22
+L0 3 22
+R8
+r1
+!s85 0
+31
+R26
+!s107 C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/reg_file.sv|
+!s90 -reportprogress|300|-work|work|-sv|C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/reg_file.sv|
+!i113 1
+R11
+R12
+vTopLevel
+R0
+R1
+DXx4 work 16 TopLevel_sv_unit 0 22 9J0>`NjFAc<`4;O4KkH@@2
+R25
+R3
+r1
+!s85 0
+!i10b 1
+!s100 T8QWcKJnQ[zQIj`4BB5HL1
+II;mKom0T@zbB60?c9RZGg2
+!s105 TopLevel_sv_unit
+S1
+R4
+Z27 w1753829916
+Z28 8C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/TopLevel.sv
+Z29 FC:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/TopLevel.sv
+!i122 23
+L0 7 117
+R8
+31
+R26
+Z30 !s107 C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/TopLevel.sv|
+Z31 !s90 -reportprogress|300|-work|work|-sv|C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/TopLevel.sv|
+!i113 1
+R11
+R12
+n@top@level
+vTopLevel0
+R0
+R14
+!i10b 1
+!s100 R>Wcl^l8cgMbD=[UYP[fS3
+R22
+I7bICS?g[cB4nXReT`E[PX1
+R3
+S1
+R4
+R23
+8C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/flt2fix0.sv
+FC:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/flt2fix0.sv
+!i122 18
+L0 4 61
+R8
+r1
+!s85 0
+31
+R24
+!s107 C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/flt2fix0.sv|
+!s90 -reportprogress|300|-work|work|-sv|C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/flt2fix0.sv|
+!i113 1
+R11
+R12
+n@top@level0
+XTopLevel_sv_unit
+R0
+R1
+R25
+V9J0>`NjFAc<`4;O4KkH@@2
+r1
+!s85 0
+!i10b 1
+!s100 Z]<1Rh]kfCNz^T0H^@hJ41
+I9J0>`NjFAc<`4;O4KkH@@2
+!i103 1
+S1
+R4
+R27
+R28
+R29
+!i122 23
+R21
+R8
+31
+R26
+R30
+R31
+!i113 1
+R11
+R12
+n@top@level_sv_unit

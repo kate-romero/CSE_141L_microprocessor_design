@@ -1,0 +1,127 @@
+C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/PC.sv {1 {vlog -work work -sv C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/PC.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+Start time: 23:09:21 on Aug 01,2025
+vlog -reportprogress 300 -work work -sv C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/PC.sv 
+-- Compiling module PC
+
+Top level modules:
+	PC
+End time: 23:09:21 on Aug 01,2025, Elapsed time: 0:00:00
+
+} {} {}} C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/definitions.sv {1 {vlog -work work -sv C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/definitions.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+Start time: 23:09:20 on Aug 01,2025
+vlog -reportprogress 300 -work work -sv C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/definitions.sv 
+-- Compiling package definitions
+
+Top level modules:
+	--none--
+End time: 23:09:20 on Aug 01,2025, Elapsed time: 0:00:00
+
+} {} {}} C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/reg_file.sv {1 {vlog -work work -sv C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/reg_file.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+Start time: 23:09:21 on Aug 01,2025
+vlog -reportprogress 300 -work work -sv C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/reg_file.sv 
+-- Compiling module reg_file
+
+Top level modules:
+	reg_file
+End time: 23:09:21 on Aug 01,2025, Elapsed time: 0:00:00
+
+} {} {}} C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/PC_LUT.sv {1 {vlog -work work -sv C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/PC_LUT.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+Start time: 23:09:21 on Aug 01,2025
+vlog -reportprogress 300 -work work -sv C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/PC_LUT.sv 
+-- Compiling module PC_LUT
+
+Top level modules:
+	PC_LUT
+End time: 23:09:21 on Aug 01,2025, Elapsed time: 0:00:00
+
+} {} {}} C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/data_mem1.sv {1 {vlog -work work -sv C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/data_mem1.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+Start time: 23:09:20 on Aug 01,2025
+vlog -reportprogress 300 -work work -sv C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/data_mem1.sv 
+-- Compiling module data_mem1
+
+Top level modules:
+	data_mem1
+End time: 23:09:20 on Aug 01,2025, Elapsed time: 0:00:00
+
+} {} {}} C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/alu.sv {1 {vlog -work work -sv C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/alu.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+Start time: 23:09:19 on Aug 01,2025
+vlog -reportprogress 300 -work work -sv C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/alu.sv 
+-- Compiling package alu_sv_unit
+-- Importing package definitions
+-- Compiling module alu
+
+Top level modules:
+	alu
+End time: 23:09:19 on Aug 01,2025, Elapsed time: 0:00:00
+
+} {} {}} C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/TopLevel.sv {1 {vlog -work work -sv C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/TopLevel.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+Start time: 23:09:21 on Aug 01,2025
+vlog -reportprogress 300 -work work -sv C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/TopLevel.sv 
+-- Compiling package TopLevel_sv_unit
+-- Importing package definitions
+-- Compiling module TopLevel
+
+Top level modules:
+	TopLevel
+End time: 23:09:21 on Aug 01,2025, Elapsed time: 0:00:00
+
+} {} {}} C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/flt2fix_tb.sv {1 {vlog -work work -sv C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/flt2fix_tb.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+Start time: 23:09:20 on Aug 01,2025
+vlog -reportprogress 300 -work work -sv C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/flt2fix_tb.sv 
+-- Compiling module flt2fix_tb_noround
+
+Top level modules:
+	flt2fix_tb_noround
+End time: 23:09:20 on Aug 01,2025, Elapsed time: 0:00:00
+
+} {} {}} C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/instr_ROM.sv {1 {vlog -work work -sv C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/instr_ROM.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+Start time: 23:09:20 on Aug 01,2025
+vlog -reportprogress 300 -work work -sv C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/instr_ROM.sv 
+-- Compiling module instr_ROM
+
+Top level modules:
+	instr_ROM
+End time: 23:09:21 on Aug 01,2025, Elapsed time: 0:00:01
+
+} {} {}} C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/flt2fix0.sv {1 {vlog -work work -sv C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/flt2fix0.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+Start time: 23:09:20 on Aug 01,2025
+vlog -reportprogress 300 -work work -sv C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/flt2fix0.sv 
+-- Compiling module TopLevel0
+
+Top level modules:
+	TopLevel0
+End time: 23:09:20 on Aug 01,2025, Elapsed time: 0:00:00
+
+} {} {}} C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/data_mem.sv {1 {vlog -work work -sv C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/data_mem.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+Start time: 23:09:20 on Aug 01,2025
+vlog -reportprogress 300 -work work -sv C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/data_mem.sv 
+-- Compiling module data_mem
+
+Top level modules:
+	data_mem
+End time: 23:09:20 on Aug 01,2025, Elapsed time: 0:00:00
+
+} {} {}} C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/Control.sv {1 {vlog -work work -sv C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/Control.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+Start time: 23:09:19 on Aug 01,2025
+vlog -reportprogress 300 -work work -sv C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog2/Control.sv 
+-- Compiling package Control_sv_unit
+-- Importing package definitions
+-- Compiling module Control
+
+Top level modules:
+	Control
+End time: 23:09:20 on Aug 01,2025, Elapsed time: 0:00:01
+
+} {} {}}

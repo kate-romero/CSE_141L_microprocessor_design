@@ -1,0 +1,2 @@
+000000101111	// exponent_suff_small	//line: 47	//op2: 0000
+000001001011	// exp_gt_17	//line: 75	//op2: 0001
