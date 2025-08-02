@@ -64,9 +64,9 @@ MOVT R9
 MOVF R12
 MOVT R10
 
-$set_sign_and_exp
+$set_sign_and_exp:
 // mask off exponents
-BNOT R6
+BNOT R6     // $set_sign_and_exp
 MOVF R1
 BAND R6
 MOVT R1
@@ -132,7 +132,7 @@ CMPR R0     // debug start: cmpr R0 to R0
 BREQ $mov_new_upB    // always branch
 
 $shift_val_gt_8:
-SUBR R8
+SUBR R8     // $shift_val_gt_8
 MOVT R11
 MOVF R3
 LSHR R11
@@ -140,13 +140,13 @@ BORR R15
 MOVT R4
 
 $mov_new_upB:
-MOVF R14
+MOVF R14        // $mov_new_upB
 MOVT R3
 
 // compare signs
 MOVF R13
 CMPR R12
-BRNE $subtract
+BNEQ $subtract
 
 // add
 MOVF R2
@@ -159,7 +159,7 @@ CMPR R0     // debug start: cmpr R0 to R0
 BREQ $build_up_out    // always branch
 
 $subtract:
-MOVF R1
+MOVF R1     // $subtract
 SUBR R3
 MOVT R14
 MOVF R2
@@ -168,4 +168,44 @@ MOVT R15
 
 $build_up_out:
 // check for overflow
+MOVI 0      // $build_up_out
+MOVT R1
+MOVF R14
+BAND R8
+CMPR R1
+BREQ $mask_off_lead1
+// right shift
+MOVI 1
+MOVT R11
+MOVI 7
+MOVT R10
+// build low
+MOVF R15
+LSHR R11
+MOVT R15
+MOVF R14
+LSHL R10
+BORR R15
+MOVT R15
+// shift up
+MOVF R14
+LSHR R11
+MOVT R11
+// increment exponent
+LOAD R13
+ADDR R7
+STOR R13
 
+$mask_off_lead1:
+BNOT R7     // $mask_off_lead1:
+MOVF R14
+BAND R7
+MOVT R14
+BNOT R7
+// mask on sign and exp
+LOAD R13
+BORR R14
+STOR R13
+MOVF R15
+STOR R12
+HALT

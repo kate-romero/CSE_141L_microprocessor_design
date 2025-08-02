@@ -1,4 +1,6 @@
-000000110111	// label_0	//line: 55	//op2: 0000
-000001000011	// label_1	//line: 67	//op2: 0001
-000001101110	// label_2	//line: 110	//op2: 0010
-000010010000	// label_3	//line: 144	//op2: 0011
+000000110101	// set_sign_and_exp	//line: 53	//op2: 0000
+000001101001	// shift_val_gt_8	//line: 105	//op2: 0001
+000001101111	// mov_new_upB	//line: 111	//op2: 0010
+000001111100	// subtract	//line: 124	//op2: 0011
+000010000010	// build_up_out	//line: 130	//op2: 0100
+000010011001	// mask_off_lead1	//line: 153	//op2: 0101

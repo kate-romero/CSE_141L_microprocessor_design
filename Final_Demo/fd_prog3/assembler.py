@@ -13,7 +13,7 @@ def convert(inFile, outFile1, outFile2):
 	opcodes = {'LOAD' : '0000', 'STOR' : '0001', 'MOVF' : '0010', 'MOVT' : '0011',
 	'MOVI' : '0100', 'CMPR' : '0101', 'BNOT' : '0110', 'BORR' : '0111',
 	'BAND' : '1000', 'LSHL' : '1001', 'LSHR' : '1010', 'ADDR' : '1011', 
-	'SUBR' : '1100', 'HALT' : '1101', 'ADDC ' : '1110', 'SUBC' : '1111'}
+	'SUBR' : '1100', 'HALT' : '1101', 'ADDC' : '1110', 'SUBC' : '1111'}
 	
 	# Branch opcodes (2-bit for b-type instructions)
 	branch_opcodes = {'BREQ' : '00', 'BRLT' : '01', 'BRGT' : '10', 'BNEQ' : '11'}

@@ -1,0 +1,123 @@
+vsim -gui work.fltflt_tb
+# vsim -gui work.fltflt_tb 
+# Start time: 14:48:13 on Aug 02,2025
+# Loading sv_std.std
+# Loading work.fltflt_tb
+# Loading work.TopLevel0
+# Loading work.data_mem
+# Loading work.definitions
+# Loading work.TopLevel_sv_unit
+# Loading work.TopLevel
+# Loading work.PC
+# Loading work.PC_LUT
+# Loading work.instr_ROM
+# Loading work.Control_sv_unit
+# Loading work.Control
+# Loading work.reg_file
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.data_mem1
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'alu1'.  Expected 10, found 9.
+#    Time: 0 ps  Iteration: 0  Instance: /fltflt_tb/t1/alu1 File: C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog3/TopLevel.sv Line: 97
+# ** Warning: (vsim-3722) C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog3/TopLevel.sv(97): [TFMPC] - Missing connection for port 'zero'.
+run -all
+# diff =  0
+# flt1b = 0  00110  1000000100
+# flt2b = 0  00110  1000000100
+# flt3b =  0  00111  0000000100
+# flt3_testb =  00111   1000000100
+# scores =           0,           0 out of           1
+# clock cycle ct =         151
+#  
+# diff =  0
+# flt1b = 0  10000  1000000100
+# flt2b = 0  10000  1000000100
+# flt3b =  0  10011  0000000100
+# flt3_testb =  10001   1000000100
+# scores =           0,           0 out of           2
+# clock cycle ct =         150
+#  
+# diff =  2
+# flt1b = 0  10010  1000010000
+# flt2b = 0  10000  1000000100
+# flt3b =  0  10010  1110010001
+# flt3_testb =  10010   1110010001
+# scores =           1,           1 out of           3
+# clock cycle ct =         115
+#  
+# diff = 20
+# flt1b = 0  10100  1000001111
+# flt2b = 0  00000  0001000000
+# flt3b =  0  10100  1000001111
+# flt3_testb =  10100   1000001111
+# scores =           2,           2 out of           4
+# clock cycle ct =         112
+#  
+# diff = 63
+# flt1b = 0  00110  1000000100
+# flt2b = 0  00111  1000000100
+# flt3b =  0  01010  0110000011
+# flt3_testb =  01000   0010000011
+# scores =           2,           2 out of           5
+# clock cycle ct =         150
+#  
+# diff = 59
+# flt1b = 0  10000  1000000000
+# flt2b = 0  10101  1000000100
+# flt3b =  0  10101  1000110100
+# flt3_testb =  10101   1000110100
+# scores =           3,           3 out of           6
+# clock cycle ct =         133
+#  
+# diff = 59
+# flt1b = 0  10010  1000000000
+# flt2b = 0  10111  1000000100
+# flt3b =  0  10111  1000110100
+# flt3_testb =  10111   1000110100
+# scores =           4,           4 out of           7
+# clock cycle ct =         133
+#  
+# diff = 20
+# flt1b = 0  10100  1000000000
+# flt2b = 0  00000  1000000100
+# flt3b =  0  10100  1000000000
+# flt3_testb =  10100   1000000000
+# scores =           5,           5 out of           8
+# clock cycle ct =         112
+#  
+# diff =  0
+# flt1b = 0  00110  1000000100
+# flt2b = 0  00110  1000000100
+# flt3b =  0  00111  0000000100
+# flt3_testb =  00111   1000000100
+# scores =           5,           5 out of           9
+# clock cycle ct =         150
+#  
+# diff =  0
+# flt1b = 0  10110  1000000100
+# flt2b = 0  10110  1000000100
+# flt3b =  0  10111  0000000100
+# flt3_testb =  10111   1000000100
+# scores =           5,           5 out of          10
+# clock cycle ct =         150
+#  
+# diff =  2
+# flt1b = 0  10010  1000010000
+# flt2b = 0  10000  1000000100
+# flt3b =  0  10010  1110010001
+# flt3_testb =  10010   1110010001
+# scores =           6,           6 out of          11
+# clock cycle ct =         115
+#  
+# diff =  6
+# flt1b = 0  11010  1000001111
+# flt2b = 0  10100  1000000000
+# flt3b =  0  11010  1000100111
+# flt3_testb =  11010   1000100111
+# scores =           7,           7 out of          12
+# clock cycle ct =         115
+#  
+# score1 =           7, score2 =           7, out of          12
+# ** Note: $stop    : C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog3/fltflt_no_rnd_tb.sv(105)
+#    Time: 16235 ns  Iteration: 0  Instance: /fltflt_tb
+# Break in Module fltflt_tb at C:/Users/kate_/OneDrive/Desktop/CSE_141L/Final_Demo/fd_prog3/fltflt_no_rnd_tb.sv line 105
