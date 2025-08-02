@@ -190,7 +190,7 @@ MOVT R15
 // shift up
 MOVF R14
 LSHR R11
-MOVT R11
+MOVT R14
 // increment exponent
 LOAD R13
 ADDR R7
