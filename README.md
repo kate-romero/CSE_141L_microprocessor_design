@@ -29,7 +29,7 @@ Our architecture is named Paccumulator. Our overall philosophy is similar to an 
 
 2. #  Architectural Overview
 
-![][image1]
+![Top Level RTL](schematics/TopLevel.png)
 
 3. #  Machine Specification
 
@@ -101,30 +101,30 @@ Yes, our ALU will be used for the non-arithmetic compare and move functions. Thi
       1. Module file name: top\_level.sv  
       2. Functionality Description: Main component that instantiates all other components and adds connections between modules  
       3. Schematic:   
-         ![][image2]  
+         ![Top Level RTL](schematics/TopLevel.png)
    2. Program Counter   
       1. Module file name: PC.sv  
       2. Module testbench file name: PC\_tb.sv  
       3. Functionality Description: 12 bit program counter that increments the processor to perform certain instructions for the program based on given signals.  
       4. (Optional) Testbench Description: The testbench tests if the program counter is able to increment successfully as well as if it jumps correctly given the signals: reljump\_en and reset.  
       5. Schematic:  
-          ![][image3]  
+          ![Program Counter RTL](schematics/ProgramCoutner.png)
       6. (Optional) Timing Diagram: I was unable to attain a timing diagram for this testbench.  
    3. Instruction Memory   
       1. Module file name: inst\_ROM.sv  
       2. Functionality Description: Loads generated machine code from an assembler onto a lookup table holding up to 4096 instructions.  
       3. Schematic:   
-         ![][image4]  
+         ![Instruction Memory RTL](schematics/InstructionMemory.png)
    4. Control Decoder  
       1. Module file name: Control.sv  
       2. Functionality Description: Generates control signals based on the current instruction, determining the instrType, bopcode, and ropcode. It also has 1 bit input flags used for branching that is determined from compares, and outputs signals that tell the processor whether to branch, write to memory, choose ALU sources or write to registers, etc.  
       3. Schematic:   
-         ![][image5]  
+         ![Control Decoder RTL](schematics/ControlDecoder.png)
    5. Register File   
       1. Module file name: reg\_file.sv  
       2. Functionality Description: Contains 16 registers and 2 combinational read ports with a synchronous write port determined by wr\_en to write values to a desired register  
       3. Schematic:   
-         ![][image6]  
+         ![Register File RTL](schematics/RegisterFile.png)
    6. ALU   
       1. Module file name: alu.sv  
       2. Module testbench file name: alu\_tb.sv  
