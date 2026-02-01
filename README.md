@@ -1,6 +1,6 @@
 # Paccumulator - CSE 141L microprocessor project
 
-![Top Level RTL](TopLevel.png)
+![Top Level RTL](schematics/TopLevel.png)
 
 ## Assembler Usage:
 1. Go to the designated directory for the program you want to assemble.
