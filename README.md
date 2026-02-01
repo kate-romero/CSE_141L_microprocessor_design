@@ -142,18 +142,18 @@ Yes, our ALU will be used for the non-arithmetic compare and move functions. Thi
             2. ADDR, SUBR are adding and subtracting register values respectfully
 
       6. Schematic:  
-         ![][image7]  
+         ![ALU RTL](schematics/ALU.png)
       7. (Optional) Timing Diagram: TODO. Show us a screenshot of the timing diagram that demonstrates all relevant operations you mentioned in the ALU Operations section.  
    7. Data Memory  
       1. Module file name: dat\_mem.sv  
       2. Functionality Description: 8 bit wide 256 bit deep memory that uses combinational reads so that dat\_out is always the value stored at addr without requiring a signal. It uses a write enable to update the value at addr.  
       3. Schematic:   
-         ![][image8]  
+         ![Data Memory RTL](schematics/DataMemory.png)
    8. Branch LUT  
       1. Module file name: PC\_LUT.sv  
       2. Functionality Description: looks up 6 bit targets and returns 12 bit PC target  
       3. Schematic:   
-         ![][image9]
+         ![Branch LUT RTL](schematics/BranchLUT.png)
 
 6. #  Program Implementation / Software \- provide as attachments
 
